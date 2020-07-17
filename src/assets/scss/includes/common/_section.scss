@@ -1,0 +1,19 @@
+.section {
+  &_inner {
+    padding: 60px 0;
+    @include r(1200) {
+      padding: 35px 0
+    }
+  }
+  &__ttl {
+    font-size: 38px;
+    font-family: $h-bold;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+    text-align: center;
+    @include r(1200) {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+  }
+}

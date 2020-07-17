@@ -1,0 +1,18 @@
+$h-black: 'HelveticaNeueCyr-Black';
+$h-bold: 'HelveticaNeueCyr-Bold';
+$h-hev: 'HelveticaNeueCyr-Heavy';
+$h-med: 'HelveticaNeueCyr-Medium';
+$h-reg: 'HelveticaNeueCyr-Roman';
+$h-lig: 'HelveticaNeueCyr-Light';
+$h-thin: 'HelveticaNeueCyr-Thin';
+
+$f-reg: 'Formular-Regular';
+$f-bold: 'Formular-Bold';
+
+.h-bold {
+  font-family: $h-bold;
+}
+
+.f-bold {
+  font-family: $f-bold;
+}

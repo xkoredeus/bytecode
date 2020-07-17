@@ -1,0 +1,41 @@
+input,
+textarea,
+select {
+  color: $dark;
+  font-family: $h-reg, Roboto, sans-serif;
+  font-size: 14px;
+  padding: 12px 25px;
+  border-radius: 2px;
+  border: none;
+  border: 1px solid $dark;
+  transition: all .4s ease;
+}
+option {
+  color: $dark;
+}
+textarea {
+  resize: none !important;
+  overflow: hidden;
+  &::placeholder {
+    color: $dark;
+  }
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  color: $dark;
+}
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  color: $dark;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

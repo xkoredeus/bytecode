@@ -1,0 +1,33 @@
+@import "mixins";
+@import "fonts";
+@import "common/fonts";
+@import "common/colors";
+@import "common/one-classes";
+@import "common/selections";
+@import "common/states";
+@import "common/inputs";
+@import "common/buttons";
+@import "common/checkbox";
+@import "common/section";
+@import "common/owl-custom";
+
+html, body {
+  position: relative;
+  font-family: $h-reg, Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $dark;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  &.fixed {
+    overflow: hidden;
+    padding-right: 15px;
+  }
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
+}
