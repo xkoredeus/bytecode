@@ -1,14 +1,14 @@
 input,
 textarea,
 select {
-  color: $dark;
-  font-family: $h-reg, Roboto, sans-serif;
-  font-size: 14px;
-  padding: 12px 25px;
-  border-radius: 2px;
+  color: $pink;
+  font-family: $mlig, Roboto, sans-serif;
+  font-size: $p1;
+  padding: 18px 0;
+  background-color: $tr;
   border: none;
-  border: 1px solid $dark;
-  transition: all .4s ease;
+  border-bottom: 1px solid $pink;
+  @include ease;
 }
 option {
   color: $dark;
@@ -17,19 +17,19 @@ textarea {
   resize: none !important;
   overflow: hidden;
   &::placeholder {
-    color: $dark;
+    color: $pink;
   }
 }
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="tel"]::placeholder {
-  color: $dark;
+  color: $pink;
 }
 input:focus,
 textarea:focus,
 input:active,
 textarea:active {
-  color: $dark;
+  outline: none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

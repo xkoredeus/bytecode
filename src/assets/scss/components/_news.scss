@@ -1,0 +1,41 @@
+.news {
+  &__item {
+    background-color: #fff;
+    padding: 30px;
+    &-date {
+      margin-bottom: 30px;
+      span {
+        font-size: $p2;
+      }
+    }
+    &-link {
+      font-family: $mbold;
+      font-size: $h3;
+      &:hover {
+        .news__item-arrow {
+          width: 41px;
+        }
+        svg {
+          stroke: $red;
+          transform: translateX(0);
+        }
+      }
+    }
+    &-arrow {
+      width: 10px;
+      height: 30px;
+      overflow: hidden;
+      display: inline-block;
+      @include ease;
+      svg {
+        stroke: $dark;
+        transform: translateX(-31px);
+        @include ease;
+      }
+    }
+    &-descr {
+      font-size: $p2;
+      margin-top: 35px;
+    }
+  }
+}

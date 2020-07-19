@@ -1,0 +1,34 @@
+.tech {
+  &__brand {
+    position: relative;
+    background-color: #fff;
+    min-height: 165px;
+    @include flex-center;
+    &-image {
+      filter: grayscale(100%);
+      max-width: 100%;
+      height: auto;
+      @include ease;
+    }
+    &-arrow {
+      position: absolute;
+      stroke: $red;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-60%);
+      opacity: 0;
+      @include ease;
+    }
+    &:hover {
+      .tech__brand {
+        &-image {
+          filter: grayscale(0);
+        }
+        &-arrow {
+          opacity: 1;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.cases {
+  background-color: #fff;
+  &__item {
+    border: 20px solid $lgray2;
+    @include cv;
+    &-top {
+      min-height: 278px;
+      display: flex;
+      align-items: center;
+      padding-left: 26px;
+    }
+    &-image {
+      max-width: 328px;
+    }
+    &-bot {
+      position: relative;
+      padding: 34px 0 0;
+      color: #fff;
+      &::before {
+        @include ovl;
+        background-color: $black;
+        opacity: .7;
+      }
+      & > * {
+        position: relative;
+      }
+    }
+    &-descr {
+      font-size: $p2;
+      line-height: 1.4;
+      padding: 20px 23px 40px;
+    }
+  }
+  .link-arrow {
+    min-height: 195px;
+    &__title {
+      font-size: $h3;
+      &-bg {
+        outline-width: .6em;
+        span {
+          color: #fff;
+          padding: 4px 0;
+        }
+      }
+    }
+    &__button {
+      left: 5px;
+      top: calc(100% + 18px);
+    }
+    &:hover {
+      .link-arrow {
+        &__title {
+          &-bg {
+            outline-width: .6em;
+          }
+        }
+      }
+    }
+  }
+}

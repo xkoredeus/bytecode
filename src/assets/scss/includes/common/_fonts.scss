@@ -1,18 +1,34 @@
-$h-black: 'HelveticaNeueCyr-Black';
-$h-bold: 'HelveticaNeueCyr-Bold';
-$h-hev: 'HelveticaNeueCyr-Heavy';
-$h-med: 'HelveticaNeueCyr-Medium';
-$h-reg: 'HelveticaNeueCyr-Roman';
-$h-lig: 'HelveticaNeueCyr-Light';
-$h-thin: 'HelveticaNeueCyr-Thin';
+$mthin: 'MullerThin';
+$mulig: 'MullerUltraLight';
+$mlig: 'MullerLight';
+$mreg: 'MullerRegular';
+$mmed: 'MullerMedium';
+$mhev: 'MullerHeavy';
+$mhair: 'MullerHairline';
+$mbold: 'MullerBold';
+$mebold: 'MullerExtraBold';
 
-$f-reg: 'Formular-Regular';
-$f-bold: 'Formular-Bold';
-
-.h-bold {
-  font-family: $h-bold;
+.bold {
+  font-family: $mbold;
+}
+.light {
+  font-family: $mlig;
+}
+.ulight {
+  font-family: $mulig;
 }
 
-.f-bold {
-  font-family: $f-bold;
+$h1: 50px;
+$h2: 40px;
+$h3: 30px;
+$h4: 20px;
+
+$p1: 25px;
+$p2: 16px;
+
+.p1 {
+  font-size: $p1;
+}
+.p2 {
+  font-size: $p2;
 }

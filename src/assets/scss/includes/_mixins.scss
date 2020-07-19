@@ -17,8 +17,15 @@
   top: 0;
 }
 @mixin ease {
-  transition: .3s all ease;
+  transition: .43s all ease-in-out;
 }
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin r($width) {
   @media only screen and (max-width: $width + "px") {
     @content
@@ -27,5 +34,22 @@
 @mixin rmin($width) {
   @media only screen and (min-width: $width + "px") {
     @content
+  }
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: $orange;
   }
 }

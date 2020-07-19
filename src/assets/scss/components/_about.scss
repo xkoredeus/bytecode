@@ -1,0 +1,29 @@
+.about {
+  position: relative;
+  color: $gray2;
+  background-color: $dark;
+  display: flex;
+  &__left {
+    width: 100%;
+    max-width: 600px;
+  }
+  &__image {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    background-image: url('../img/about__image.jpg');
+    @include cv;
+  }
+  &__right {
+    margin-left: 107px;
+    width: calc(1440px - 481px);
+    padding-left: 15px;
+  }
+  &__descr {
+    font-family: $mulig;
+    max-width: 570px;
+  }
+}

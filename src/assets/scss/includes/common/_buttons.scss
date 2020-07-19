@@ -1,16 +1,150 @@
-.btn {
+.button {
   position: relative;
-  font-size: 14px;
-  font-family: $h-bold;
-  letter-spacing: .5px;
+  font-size: $h4;
+  font-family: $mreg;
   text-align: center;
   display: inline-block;
   outline: none;
-  padding: 12px 20px;
+  padding: 36px 69px;
   color: #fff;
-  background-color: $dark;
-  border: 1px solid $dark;
-  border-radius: 2px;
-  box-shadow: inset 0 0 0 2px #fff;
+  border: 1px solid $orange;
+  background-color: $orange;
+  text-transform: uppercase;
   @include ease;
+  &:hover {
+    color: #fff;
+  }
+  &--red {
+    border-color: $red;
+    background-color: $red;
+  }
+  &--white {
+    color: $dark;
+    border-color: #fff;
+    background-color: #fff;
+    &:hover {
+      color: $dark;
+    }
+  }
+  &--tr {
+    background-color: $tr;
+    &-dark {
+      color: $dark;
+      border-color: $dark;
+      &:hover {
+        color: $dark;
+      }
+    }
+    &-white {
+      border-color: #fff;
+    }
+  }
+  &--file {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+}
+
+.link-arrow {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  &__title {
+    position: relative;
+    font-family: $mbold;
+    font-size: $h1;
+    @include ease;
+    z-index: 1;
+    padding: 0 23px;
+    display: inline-block;
+    &-bg {
+      position: relative;
+      outline: $tr solid 0.46em;
+      -moz-outline-offset: -0.04em;
+      @include ease;
+      span {
+        color: $dark;
+        position: relative;
+        padding: 7px 0;
+        background-color: $tr;
+        @include ease;
+      }
+    }
+  }
+  &__button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: $orange;
+    @include flex-center;
+    @include ease;
+    top: calc(100% + 22px);
+    opacity: 0;
+    visibility: hidden;
+    svg {
+      stroke: #fff;
+    }
+  }
+  &:hover {
+    .link-arrow {
+      &__title {
+        &-bg {
+          outline: $orange solid 0.46em;
+          span {
+            color: #fff;
+            background-color: $orange;
+          }
+        }
+      }
+      &__button {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.file {
+  position: relative;
+  font-size: $p2;
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 36px;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -18px;
+      background-color: #ffe0ce54;
+    }
+  }
+  &__name {
+    flex-grow: 1;
+  }
+  &__button {
+    background-color: $tr;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    svg {
+      fill: #fff;
+      stroke: $tr;
+      path {
+        @include ease;
+      }
+    }
+    &:hover {
+      svg {
+        stroke: #fff;
+        path {
+        }
+      }
+    }
+  }
 }

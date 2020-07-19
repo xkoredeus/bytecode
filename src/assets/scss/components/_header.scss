@@ -1,0 +1,113 @@
+.header {
+  color: $gray;
+  a {
+    color: $gray;
+    &:hover {
+      color: $red;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top {
+    padding: 26px 0;
+  }
+  &__logo {
+    font-size: 13px;
+    color: $gray;
+    display: flex;
+    align-items: center;
+    &-text {
+      position: relative;
+      margin-left: 40px;
+      max-width: 140px;
+      @include ease;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 43px;
+        background-color: $gray;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: $p2;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &-link {
+      color: $gray;
+      svg {
+        @include ease;
+      }
+      &:hover {
+        color: $red;
+        svg {
+          path {
+            fill: $red;
+            stroke: $red !important;
+          }
+        }
+      }
+    }
+  }
+  &__tel {
+    color: #fff;
+    font-family: $mbold;
+    font-size: 25px;
+  }
+  &__bot {
+    margin-top: 30px;
+  }
+  &__button {
+    position: relative;
+    font-family: $mmed;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    background: $tr;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $orange;
+      left: 0;
+      bottom: -6px;
+      @include ease;
+    }
+    //&:hover {
+    //  &::after {
+    //    bottom: -3px;
+    //  }
+    //}
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 1090px;
+    &-link {
+      font-family: $mmed;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+  }
+}

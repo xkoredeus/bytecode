@@ -1,19 +1,34 @@
 .section {
-  &_inner {
-    padding: 60px 0;
+  &--inner {
+    padding: 90px 0;
     @include r(1200) {
       padding: 35px 0
     }
   }
-  &__ttl {
-    font-size: 38px;
-    font-family: $h-bold;
-    letter-spacing: 1px;
-    margin-bottom: 35px;
-    text-align: center;
-    @include r(1200) {
-      font-size: 22px;
-      margin-bottom: 25px;
+  &__title {
+    font-size: $h1;
+    font-family: $mbold;
+    line-height: 1.1;
+  }
+  &__link {
+    position: relative;
+    font-family: $mlig;
+    font-size: $p1;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 1px;
+      background-color: $dark;
+      left: 0;
+      bottom: -2px;
+      @include ease;
+    }
+    &:hover {
+      color: $dark;
+      &::after {
+        width: 70%;
+      }
     }
   }
 }

@@ -1,0 +1,11 @@
+.feed {
+  color: $pink;
+  background-color: $red;
+  padding: 140px 0;
+  &__textarea {
+    min-height: 257px;
+  }
+  .button {
+    padding: 26px 9px;
+  }
+}

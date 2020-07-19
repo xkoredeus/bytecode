@@ -1,10 +1,30 @@
-$dark: #343434;
-$red: #9B0606;
+$black: #1E2127;
+$dark: #34363C;
+
+$red: #E10000;
+$orange: #FF4013;
+$green: #20C964;
+
+$gray: #A7A8AF;
+$gray2: #D9DFEC;
+$lgray: #A2AFC9;
+$lgray2: #F6F6F6;
+
+$pink: #FFE0CE;
+
 $tr: transparent;
 
-.wt {
-  color: #fff;
+.orange {
+  color: $orange;
 }
-.black {
-  color: #000;
+.red {
+  color: $red;
+}
+.pink {
+  color: $pink;
+}
+a.pink {
+  &:hover {
+    color: $pink;
+  }
 }
