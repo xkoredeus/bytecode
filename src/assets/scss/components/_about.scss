@@ -2,7 +2,8 @@
   position: relative;
   color: $gray2;
   background-color: $dark;
-  display: flex;
+  display: grid;
+  grid-template-columns: 5fr 1131px 1fr;
   &__left {
     width: 100%;
     max-width: 600px;
@@ -19,7 +20,6 @@
   }
   &__right {
     margin-left: 107px;
-    width: calc(1440px - 481px);
     padding-left: 15px;
   }
   &__descr {
