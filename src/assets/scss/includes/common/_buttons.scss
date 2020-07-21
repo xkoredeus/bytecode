@@ -43,6 +43,24 @@
     margin-bottom: 0;
     cursor: pointer;
   }
+  &--square {
+    width: 100px;
+    height: 100px;
+    background-color: $orange;
+    @include flex-center;
+    @include ease;
+    border: none;
+    box-shadow: none;
+    svg {
+      stroke: #fff;
+    }
+    &--white {
+      background-color: #fff;
+      svg {
+        stroke: $black;
+      }
+    }
+  }
 }
 
 .link-arrow {
@@ -73,17 +91,9 @@
   }
   &__button {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: $orange;
-    @include flex-center;
-    @include ease;
     top: calc(100% + 22px);
     opacity: 0;
     visibility: hidden;
-    svg {
-      stroke: #fff;
-    }
   }
   &:hover {
     .link-arrow {
