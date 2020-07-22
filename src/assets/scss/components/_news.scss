@@ -1,4 +1,10 @@
 .news {
+  &__in {
+    overflow: hidden;
+  }
+  .owl-stage-outer {
+    overflow: visible;
+  }
   &__item {
     background-color: #fff;
     padding: 30px;

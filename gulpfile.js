@@ -88,10 +88,10 @@ gulp.task('font', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         'src/assets/js/vendor/jquery/jquery.min.js',
+        'src/assets/js/vendor/jquery/jquery.maskedinput.min.js',
         'src/assets/js/vendor/fancybox/jquery.fancybox.min.js',
-        'src/assets/js/vendor/owl.carousel/owl.carousel.min.js',
-        'src/assets/js/vendor/select2/select2.min.js',
-        'src/assets/js/app.js'
+        'src/assets/js/vendor/owl-carousel/owl.carousel.min.js',
+        'src/assets/js/app.js',
     ])
     // .pipe(sourcemaps.init())
     //If concatenating more than one JS file

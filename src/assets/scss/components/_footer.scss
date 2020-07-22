@@ -59,5 +59,8 @@
     &-text {
       @include ease;
     }
+    &:hover {
+      color: #fff;
+    }
   }
 }

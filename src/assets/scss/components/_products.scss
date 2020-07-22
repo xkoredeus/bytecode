@@ -1,13 +1,25 @@
 .products {
   padding: 150px 0;
+  background-color: #fff;
+  &__in {
+    padding: 0 150px 0 64px;
+    overflow: hidden;
+  }
+  .owl-stage-outer {
+    overflow: visible;
+  }
 }
 .product {
+  &__title {
+    min-height: 195px;
+    display: inline-block;
+  }
   &__num {
     font-family: $mlig;
     font-size: 18px;
     padding-left: 23px;
     margin-bottom: 40px;
-    span {
+    span:nth-child(1) {
       font-size: $p1;
     }
   }

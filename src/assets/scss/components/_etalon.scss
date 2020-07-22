@@ -1,10 +1,10 @@
 .etalon {
   font-family: $mlig;
   color: $gray2;
-  background-color: $black;
+  background-color: $dark;
   overflow: hidden;
   &--red {
-    background: linear-gradient(90deg, $black, $black 50.8%, $red 50.8%);
+    background: linear-gradient(90deg, $dark, $dark 50.8%, $red 50.8%);
     line-height: 1.4;
   }
 }

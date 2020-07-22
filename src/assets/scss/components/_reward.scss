@@ -18,7 +18,15 @@
     }
   }
   &__brands {
-    padding: 76px 0;
+    padding: 76px 115px;
+    overflow: hidden;
+    .owl-stage-outer {
+      overflow: visible;
+    }
+    &-item {
+      min-height: 80px;
+      @include flex-center;
+    }
     &-image {
       @include ease;
       filter: grayscale(100%);
