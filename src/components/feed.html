@@ -18,6 +18,7 @@
                 <div class="d-flex">
                     <button class="button button--white w-50 mr-3" type="submit">Отправить заявку</button>
                     <label class="button button--tr button--tr-white button--file w-50">
+                        <input class="button--file__input js-file-input" type="file" multiple>
                         <span>Прикрепить файл</span>
                         <svg class="ml-2" width="45" height="45">
                             <use xlink:href="#brace"></use>
@@ -26,26 +27,7 @@
                 </div>
             </div>
             <div class="col-xl-6 mb-4">
-                <div class="file-list">
-                    <div class="file">
-                        <div class="file__name">Наименование файла.pdf</div>
-                        <div class="file__size">12 mb</div>
-                        <button class="file__button" type="button">
-                            <svg width="23" height="24">
-                                <use xlink:href="#cross"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="file">
-                        <div class="file__name">Наименование второго файла.png</div>
-                        <div class="file__size">35 kb</div>
-                        <button class="file__button" type="button">
-                            <svg width="23" height="24">
-                                <use xlink:href="#cross"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                <div class="file-list"></div>
             </div>
             <div class="text-center w-100">
                 <span class="p2">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink und" href="#">обработку персональных данных</a></span>

@@ -12,7 +12,7 @@ $(() => {
 
         // myMap.behaviors.disable('drag');
         myMap.behaviors.disable('scrollZoom');
-        var placemarks = [
+        const placemarks = [
             {
                 coords: [53.190699, 50.187959],
                 icon: 'assets/img/marker.svg',
@@ -22,7 +22,7 @@ $(() => {
         ];
 
         placemarks.forEach(function(item){
-            var obj = new ymaps.Placemark(
+            const obj = new ymaps.Placemark(
                 item.coords,
                 {},
                 {
@@ -59,8 +59,7 @@ $(() => {
             }
         },
         onInitialized: function(e) {
-            $('.product__count').text('0' + this.items().length)
-            console.log();
+            $('.product__count').text('0' + this.items().length);
         }
     });
 });
@@ -109,7 +108,175 @@ $(() => {
 $(() => {
     $('[data-fancybox]').fancybox({
         animationDuration: 600,
-        animationEffect: 'slide-in-in',
+        // animationEffect: 'slide-in-in',
         touch: false
     });
+});
+$(() => {
+    $('.js-popup__close').on('click', function toggleMenu(e) {
+        e.preventDefault();
+        $.fancybox.close();
+    });
+});
+$(() => {
+    $('.js-scroll-top').on('click', function scrollToTop() {
+        $('html, body').animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+});
+$(() => {
+    $('.js-toggle-menu').on('click', function toggleMenu() {
+        $('body').toggleClass('show-menu');
+    });
+    $('.js-header__overlay').on('click', function hideMenu() {
+        $('body').removeClass('show-menu');
+    });
+});
+$(() => {
+    //sticky header
+    if ( $(window).width() > 1200 ) {
+        $(window)
+            .scroll(function windowScroll() {
+                if ($(this).scrollTop() > 4) {
+                    $('body').addClass('sticky');
+                }
+                else {
+                    $('body').removeClass('sticky');
+                }
+            });
+    } else {
+        $(window)
+            .scroll( function windowScroll() {
+                $('.header__hamb').removeClass('active');
+                $('.main-nav').slideUp(0);
+
+                if ($(this).scrollTop() > 260) {
+                    $('body').addClass('sticky');
+                }
+                else {
+                    $('body').removeClass('sticky');
+                }
+            });
+    }
+});
+
+// $(() => {
+//     $('.js-dir__switch-button--prev').on('click', function dirSwitchPrevClick () {
+//         $('.owl-carousel').trigger('prev.owl.carousel');
+//     });
+//     $('.js-dir__switch-button--next').on('click', function dirSwitchNextClick () {
+//         $('.owl-carousel').trigger('next.owl.carousel');
+//     });
+// });
+$(() => {
+    let state = {};
+    // state management
+    function updateState(newState) {
+        state = { ...state, ...newState };
+        console.log(state);
+    }
+
+    // event handlers
+    $('.feed .js-file-input').change(function(e) {
+        let files = $('.feed .js-file-input')[0].files;
+        let filesArr = Array.from(files);
+        updateState({ files: files, filesArr: filesArr });
+
+        renderFileList();
+    });
+
+    $('.feed .file-list').on('click', '.js-file__button', function(e) {
+        e.preventDefault();
+        console.log('clicked on file delete');
+        let key = $(this)
+            .parent()
+            .attr('key');
+        let curArr = state.filesArr;
+        curArr.splice(key, 1);
+        updateState({ filesArr: curArr });
+        renderFileList();
+    });
+
+    // render functions
+    function renderFileList() {
+        let fileMap = state.filesArr.map((file, index) => {
+            let suffix = 'bt';
+            let size = file.size;
+            if (size >= 1024 && size < 1024000) {
+                suffix = 'kb';
+                size = Math.round(size / 1024 * 100) / 100;
+            } else if (size >= 1024000) {
+                suffix = 'mb';
+                size = Math.round(size / 1024000 * 100) / 100;
+            }
+
+            return (`<div class="file" key="${index}">
+                        <div class="file__name">${file.name}</div>
+                        <div class="file__size">${size} ${suffix}</div>
+                        <button class="file__button js-file__button" type="button">
+                            <svg width="23" height="24">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>`);
+        });
+
+        $('.feed .file-list').html(fileMap);
+    };
+});
+$(() => {
+    let state = {};
+    // state management
+    function updateState(newState) {
+        state = { ...state, ...newState };
+        console.log(state);
+    }
+
+    // event handlers
+    $('.popup--call .js-file-input').change(function(e) {
+        let files = $('.popup--call .js-file-input')[0].files;
+        let filesArr = Array.from(files);
+        updateState({ files: files, filesArr: filesArr });
+
+        renderFileList();
+    });
+
+    $('.popup--call .file-list').on('click', '.js-file__button', function(e) {
+        e.preventDefault();
+        console.log('clicked on file delete');
+        let key = $(this)
+            .parent()
+            .attr('key');
+        let curArr = state.filesArr;
+        curArr.splice(key, 1);
+        updateState({ filesArr: curArr });
+        renderFileList();
+    });
+
+    // render functions
+    function renderFileList() {
+        let fileMap = state.filesArr.map((file, index) => {
+            let suffix = 'bt';
+            let size = file.size;
+            if (size >= 1024 && size < 1024000) {
+                suffix = 'kb';
+                size = Math.round(size / 1024 * 100) / 100;
+            } else if (size >= 1024000) {
+                suffix = 'mb';
+                size = Math.round(size / 1024000 * 100) / 100;
+            }
+
+            return (`<div class="file" key="${index}">
+                        <div class="file__name">${file.name}</div>
+                        <div class="file__size">${size} ${suffix}</div>
+                        <button class="file__button js-file__button" type="button">
+                            <svg width="23" height="24">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>`);
+        });
+
+        $('.popup--call .file-list').html(fileMap);
+    };
 });

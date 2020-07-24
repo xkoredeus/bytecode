@@ -1,0 +1,44 @@
+<div id="popup--call" class="popup--call-wrp" style="display: none;">
+    <form class="popup--call">
+        <div class="container">
+            <div class="text-center mb-3 mb-xl-4 d-flex flex-column align-items-center">
+                <button class="popup__close mb-2 mb-xl-3 js-popup__close">
+                    <svg width="36" height="36">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <div class="section__title mb-2 mb-xl-3">Задайте вопрос</div>
+                <div class="ulight">Задайте вопрос нашим специалистам <br>
+                    Мы отвечаем на все запросы в течение дня</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 mb-5">
+                    <input class="w-100 mb-3" type="text" placeholder="Имя*">
+                    <input class="w-100 mb-3" type="email" placeholder="E-mail*">
+                    <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
+                </div>
+                <div class="col-xl-6 mb-5">
+                    <textarea class="popup--call__textarea w-100" placeholder="Ваше сообщение*"></textarea>
+                </div>
+                <div class="col-xl-6 mb-4">
+                    <div class="d-flex">
+                        <button class="button button--orange w-50 mr-3" type="submit">Отправить сообщение</button>
+                        <label class="button button--tr button--tr-white button--file w-50">
+                            <input class="button--file__input js-file-input" type="file" multiple>
+                            <span>Прикрепить файл</span>
+                            <svg class="ml-2" width="45" height="45">
+                                <use xlink:href="#brace--2"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-6 mb-4">
+                    <div class="file-list white"></div>
+                </div>
+                <div class="text-center w-100 pink">
+                    <span class="p2">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink und" href="#">обработку персональных данных</a></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

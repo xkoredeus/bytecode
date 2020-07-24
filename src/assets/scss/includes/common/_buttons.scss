@@ -40,8 +40,14 @@
     }
   }
   &--file {
+    position: relative;
     margin-bottom: 0;
     cursor: pointer;
+    &__input {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
   &--square {
     width: 100px;
@@ -145,6 +151,7 @@
     svg {
       fill: #fff;
       stroke: $tr;
+      @include ease;
       path {
         @include ease;
       }

@@ -4,6 +4,21 @@
   background-color: $black;
   padding-top: 93px;
   padding-bottom: 20px;
+  overflow: hidden;
+  &:hover {
+    .footer__button {
+      bottom: -20px;
+    }
+  }
+  .container {
+    position: relative;
+  }
+  &__button {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    @include ease;
+  }
   &__divider {
     margin: 0 1px;
   }

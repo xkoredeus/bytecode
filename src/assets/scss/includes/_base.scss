@@ -10,6 +10,7 @@
 @import "common/checkbox";
 @import "common/section";
 @import "common/owl-custom";
+@import "common/popup";
 
 html, body {
   position: relative;
@@ -21,6 +22,8 @@ html, body {
   padding: 0;
   margin: 0;
   max-width: 100%;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   &.fixed {
     overflow: hidden;
