@@ -1,4 +1,9 @@
 $(() => {
+    $(window).on('load', function () {
+        $('.preloader__wrp').fadeOut();
+    });
+});
+$(() => {
     let myMap;
     ymaps.ready(init);
     function init(){
