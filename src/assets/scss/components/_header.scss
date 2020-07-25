@@ -1,7 +1,9 @@
 .header {
   position: fixed;
-  width: 100%;
   color: $gray2;
+  width: 100%;
+  max-height: 90px;
+  top: 0;
   z-index: 2;
   a {
     color: $gray2;

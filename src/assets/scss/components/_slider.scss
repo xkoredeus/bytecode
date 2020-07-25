@@ -1,0 +1,37 @@
+.slider {
+  &__in {
+  }
+  &__item {
+    position: relative;
+    min-height: 500px;
+    height: calc(100vh - 240px);
+    .container {
+      height: 100%;
+    }
+    &-in {
+      overflow: hidden;
+    }
+    &--1 {
+      color: $gray2;
+    }
+    &-img {
+      position: relative;
+      z-index: 1;
+      &-wrp {
+        position: relative;
+      }
+    }
+    &-blur {
+      position: absolute;
+      left: 50%;
+      bottom: 50px;
+      transform: translateX(-50%);
+    }
+  }
+  &__nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  }
+}
