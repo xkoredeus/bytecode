@@ -11,12 +11,21 @@
   background-color: $orange;
   text-transform: uppercase;
   @include ease;
+  @include r(1531) {
+    font-size: $h4-medium;
+  }
   &:hover {
     color: #fff;
+    background-color: #F43F14;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.1);
   }
   &--red {
     border-color: $red;
     background-color: $red;
+    &:hover {
+      border-color: #D70101;
+      background-color: #D70101;
+    }
   }
   &--white {
     color: $dark;
@@ -24,10 +33,15 @@
     background-color: #fff;
     &:hover {
       color: $dark;
+      background-color: #F2F2F2;
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.15);
     }
   }
   &--tr {
     background-color: $tr;
+    &:hover {
+      background-color: $tr;
+    }
     &-dark {
       color: $dark;
       border-color: $dark;
@@ -60,10 +74,36 @@
     svg {
       stroke: #fff;
     }
+    &:hover {
+      background-color: #F43F14;
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
     &--white {
       background-color: #fff;
       svg {
         stroke: $black;
+      }
+      &:hover {
+        background-color: #F2F2F2;
+        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.15);
+      }
+    }
+    &--red {
+      background-color: $red;
+      &:hover {
+        background: #D70101;
+      }
+    }
+    &--gray {
+      background-color: $gray;
+      &:hover {
+        background-color: $gray;
+      }
+    }
+    &--dark {
+      background-color: $dark;
+      &:hover {
+        background-color: $dark;
       }
     }
   }
@@ -81,6 +121,12 @@
     z-index: 1;
     padding: 0 23px;
     display: inline-block;
+    @include r(1531) {
+      font-size: $h1-medium;
+    }
+    @include r(1200) {
+      font-size: $h1-small;
+    }
     &-bg {
       position: relative;
       outline: $tr solid 0.46em;

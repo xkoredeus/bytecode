@@ -30,6 +30,12 @@ html, body {
     padding-right: 15px;
   }
   @include scroll;
+  @include r(1531) {
+    font-size: $p1-medium;
+  }
+  @include r(1200) {
+    font-size: $p1-small;
+  }
 }
 
 a {
@@ -42,10 +48,16 @@ a {
 }
 
 $container: 1440px;
+$container2: 1300px;
+
 
 .container {
   max-width: $container;
+  @include r(1531) {
+    max-width: $container2;
+  }
 }
+
 
 .svg-sprite {
   position: absolute;

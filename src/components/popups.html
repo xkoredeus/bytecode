@@ -1,5 +1,5 @@
-<div id="popup--call" class="popup--call-wrp" style="display: none;">
-    <form class="popup--call">
+<div id="popup--call" class="popup__wrp" style="display: none;">
+    <form class="popup">
         <div class="container">
             <div class="text-center mb-3 mb-xl-4 d-flex flex-column align-items-center">
                 <button class="popup__close mb-2 mb-xl-3 js-popup__close">
@@ -18,7 +18,7 @@
                     <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
                 </div>
                 <div class="col-xl-6 mb-5">
-                    <textarea class="popup--call__textarea w-100" placeholder="Ваше сообщение*"></textarea>
+                    <textarea class="popup__textarea w-100" placeholder="Ваше сообщение*"></textarea>
                 </div>
                 <div class="col-xl-6 mb-4">
                     <div class="d-flex">
@@ -36,7 +36,26 @@
                     <div class="file-list white"></div>
                 </div>
                 <div class="text-center w-100 pink">
-                    <span class="p2">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink und" href="#">обработку персональных данных</a></span>
+                    <span class="p2">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink popup__policy" href="#popup--success" data-fancybox>обработку персональных данных</a></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="popup--success" class="popup__wrp" style="display: none;">
+    <form class="popup">
+        <div class="container h-100">
+            <div class="text-center mb-3 mb-xl-4 d-flex flex-column justify-content-between align-items-center popup--success__in">
+                <button class="popup__close mb-2 mb-xl-3 js-popup__close">
+                    <svg width="36" height="36">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <div class="d-flex flex-column justify-content-center align-items-center flex-grow-1">
+                    <div class="section__title mb-2 mb-xl-3">Ваше сообщение отправлено</div>
+                    <svg class="popup__gal" width="148" height="118">
+                        <use xlink:href="#gal"></use>
+                    </svg>
                 </div>
             </div>
         </div>

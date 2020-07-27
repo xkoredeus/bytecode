@@ -218,7 +218,7 @@
           .header__dropdown {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: translateY(0) translateX(-50%);
           }
         }
       }
@@ -226,9 +226,9 @@
   }
   &__dropdown {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 100%;
-    width: 100%;
+    width: calc(100% - 30px);
     max-width: $container;
     background-color: $dark;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
@@ -236,11 +236,13 @@
     z-index: 1;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(10px) translateX(-50%);
     @include cubic2;
+    @include r(1531) {
+      max-width: $container2;
+    }
     &-in {
       padding: 44px;
-      min-width: 979px;
     }
     &-list {
       display: flex;
@@ -252,7 +254,6 @@
     }
     &-item {
       width: 100%;
-      max-width: 418px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -262,16 +263,26 @@
       font-family: $mbold;
       font-size: $h3;
       line-height: 1.1;
+      @include r(1531) {
+        font-size: $h3-medium;
+      }
+      @include r(1200) {
+        font-size: $h3-small;
+      }
       &:hover {
         color: $red !important;
       }
     }
   }
   &__promo {
-    min-width: 457px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    min-width: 467px;
     @include cv;
+    @include r(1531) {
+      min-width: 300px;
+    }
     &-in {
       flex-grow: 1;
       padding: 53px 40px;
@@ -282,6 +293,12 @@
       font-family: $mbold;
       font-size: $h3;
       color: #fff;
+      @include r(1531) {
+        font-size: $h3-medium;
+      }
+      @include r(1200) {
+        font-size: $h3-small;
+      }
     }
     &-descr {
       color: #fff;

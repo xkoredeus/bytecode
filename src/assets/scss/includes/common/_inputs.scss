@@ -9,6 +9,12 @@ select {
   border: none;
   border-bottom: 1px solid $pink;
   @include ease;
+  @include r(1531) {
+    font-size: $p1-medium;
+  }
+  @include r(1200) {
+    font-size: $p1-small;
+  }
 }
 option {
   color: $dark;

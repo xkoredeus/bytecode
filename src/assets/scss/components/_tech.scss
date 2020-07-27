@@ -6,6 +6,7 @@
     @include flex-center;
     &-image {
       filter: grayscale(100%);
+      opacity: .6;
       max-width: 100%;
       height: auto;
       @include ease;
@@ -23,6 +24,7 @@
       .tech__brand {
         &-image {
           filter: grayscale(0);
+          opacity: 1;
         }
         &-arrow {
           opacity: 1;

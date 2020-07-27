@@ -46,6 +46,47 @@ $(() => {
 });
 
 $(() => {
+    $('.slider__in').owlCarousel({
+        loop: true,
+        dots: false,
+        items: 1,
+        smartSpeed: 1600,
+        margin: 0,
+        nav: false,
+        mouseDrag: false,
+        // navText: ["<svg width='28' height='9'> <use xlink:href='#steps__arrow--prev'></use></svg><span class='ml-3 d-none d-xl-block'>Предыдущий шаг</span>","<span class='mr-3 d-none d-xl-block'>Следующий шаг</span><svg width='28' height='9'> <use xlink:href='#steps__arrow--next'></use></svg>"],
+        responsive : {
+            0   : {
+                autoHeight: true
+            },
+            1200 : {
+                autoHeight: false
+            }
+        },
+        onInitialized: function(e) {
+            $('.slider__item-count').text('0' + this.items().length);
+        },
+        onChanged: function () {
+            $('.slider .owl-item').removeClass('hover-on-promo');
+        }
+    });
+
+    $('.js-slider-prev').on('click', function sliderPrevSlide () {
+        $('.owl-carousel').trigger('prev.owl.carousel');
+    });
+    $('.js-slider-next').on('click', function sliderNextSlide () {
+        $('.owl-carousel').trigger('next.owl.carousel');
+    });
+
+    const triggerElem = $('.slider .owl-item');
+    triggerElem.on('mouseenter', function triggerElemMouseEnter () {
+        $(this).siblings('.owl-item').addClass('hover-on-promo');
+    });
+    triggerElem.on('mouseleave', function triggerElemMouseLeave () {
+        $(this).siblings('.owl-item').removeClass('hover-on-promo');
+    });
+});
+$(() => {
     $('.products__slider').owlCarousel({
         loop: false,
         dots: false,
@@ -164,15 +205,6 @@ $(() => {
             });
     }
 });
-
-// $(() => {
-//     $('.js-dir__switch-button--prev').on('click', function dirSwitchPrevClick () {
-//         $('.owl-carousel').trigger('prev.owl.carousel');
-//     });
-//     $('.js-dir__switch-button--next').on('click', function dirSwitchNextClick () {
-//         $('.owl-carousel').trigger('next.owl.carousel');
-//     });
-// });
 $(() => {
     let state = {};
     // state management

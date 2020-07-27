@@ -1,59 +1,67 @@
 .cases {
   background-color: #fff;
   &__item {
-    border: 20px solid $lgray2;
+    position: relative;
+    min-height: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
     @include cv;
-    &-top {
-      min-height: 278px;
-      display: flex;
-      align-items: center;
-      padding-left: 26px;
+    padding: 40px;
+    &::before {
+      @include ovl;
+      background-color: #fff;
+      opacity: .8;
+      @include ease;
     }
-    &-image {
-      max-width: 328px;
-    }
-    &-bot {
+    & > * {
       position: relative;
-      padding: 34px 0 0;
-      color: #fff;
-      &::before {
-        @include ovl;
-        background-color: $black;
-        opacity: .7;
+    }
+    &-logo {
+      font-family: $mbold;
+      font-size: $h1;
+      @include r(1531) {
+        font-size: $h1-medium;
       }
-      & > * {
-        position: relative;
+      @include r(1200) {
+        font-size: $h1-small;
       }
     }
-    &-descr {
-      font-size: $p2;
-      line-height: 1.4;
-      padding: 20px 23px 40px;
-    }
-  }
-  .link-arrow {
-    min-height: 195px;
-    &__title {
+    &-link {
+      font-family: $mbold;
       font-size: $h3;
-      &-bg {
-        outline-width: .6em;
-        span {
-          color: #fff;
-          padding: 4px 0;
-        }
+      @include r(1531) {
+        font-size: $h3-medium;
+      }
+      @include r(1200) {
+        font-size: $h3-small;
       }
     }
-    &__button {
-      left: 5px;
-      top: calc(100% + 18px);
+    &-arrow {
+      width: 10px;
+      height: 30px;
+      overflow: hidden;
+      display: inline-block;
+      @include ease;
+      svg {
+        stroke: $dark;
+        transform: translateX(-31px);
+        @include ease;
+      }
     }
     &:hover {
-      .link-arrow {
-        &__title {
-          &-bg {
-            outline-width: .6em;
-          }
-        }
+      color: #fff;
+      &::before {
+        background-color: $dark;
+      }
+      .cases__item-arrow {
+        width: 41px;
+      }
+      .cases__item-link svg {
+        stroke: #fff;
+        transform: translateX(0);
       }
     }
   }
