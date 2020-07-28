@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#6232ad">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <style>
+        .preloader__wrp {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            min-height: 300px;
+            width: 100vw;
+            background-color: #F6F6F6;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            z-index: 100;
+        }
+    
+        .preloader {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 50px;
+            width: 50px;
+            margin: -25px 0 0 -25px;
+        }
+    
+        .preloader span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            background: #34363C;
+            -webkit-animation: preloader 1.7s infinite ease-in-out both;
+            animation: preloader 1.7s infinite ease-in-out both;
+            margin-right: 5px;
+        }
+    
+        .preloader span:nth-child(1) {
+            left: 0;
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+    
+        .preloader span:nth-child(2) {
+            left: 15px;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+    
+        .preloader span:nth-child(3) {
+            left: 30px;
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+    
+        .preloader span:nth-child(4) {
+            left: 45px;
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+    
+        @-webkit-keyframes preloader {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                transform: scale(0);
+                opacity: 0;
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes preloader {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                transform: scale(0);
+                opacity: 0;
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+    <div class="preloader__wrp">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <section class="banner">
+        <header class="header">
+            <div class="header__overlay js-header__overlay"></div>
+            <div class="header__top">
+                <div class="header__top-in">
+                    <div class="header__ui header__logo--fixed">
+                        <svg width="29" height="39">
+                            <use xlink:href="#logo-first"></use>
+                        </svg>
+                    </div>
+                    <div class="container">
+                        <div class="header__row">
+                            <a href="#" class="header__logo">
+                                <svg class="header__logo-icon" width="177" height="37">
+                                    <use xlink:href="#logo"></use>
+                                </svg>
+                                <span class="header__logo-text">автоматизация<br> CRM-процессов</span>
+                            </a>
+                            <div class="header__contacts">
+                                <div class="header__item">
+                                    <svg width="18" height="23">
+                                        <use xlink:href="#geo"></use>
+                                        <span class="ml-2">Москва, ул. Казакова, д. 8, стр. 2</span>
+                                    </svg>
+                                </div>
+                                <div class="header__item">
+                                    <svg width="23" height="23">
+                                        <use xlink:href="#clocks"></use>
+                                        <span class="ml-2">пн-пт с 9 до 18 по мск</span>
+                                    </svg>
+                                </div>
+                                <a class="header__item header__item-link" href="mailto:sales@bytecodecrm.ru">
+                                    <svg width="25" height="20">
+                                        <use xlink:href="#mail"></use>
+                                        <span class="ml-2">sales@bytecodecrm.ru</span>
+                                    </svg>
+                                </a>
+                            </div>
+                            <a class="header__tel" href="tel:84954814696">8 495 481-46-96</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="header__ui header__hmb js-toggle-menu" type="button">
+                    <div class="header__hmb-in">
+                        <div class="header__hmb-icon header__hmb-icon--1">
+                            <svg width="47" height="16">
+                                <use xlink:href="#hamburger"></use>
+                            </svg>
+                        </div>
+                        <div class="header__hmb-icon header__hmb-icon--2">
+                            <svg width="36" height="36">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="header__bot">
+                <div class="container">
+                    <div class="header__row">
+                        <nav class="header__nav">
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">
+                                    <span>Продукты</span>
+                                    <span class="header__nav-link-arrow">
+                                        <svg width="9" height="45">
+                                            <use xlink:href="#long-arrow-bottom"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="header__dropdown">
+                                    <div class="header__dropdown-in">
+                                        <div class="light mb-4">CRM-решения</div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Distributors Creatio</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Marketing Creatio</a>
+                                                    <div class="p2">Мультиканальная платформа для управления
+                                                        маркетинговыми кампаниями</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="header__promo" style="background-image: url('/assets/img/header__promo-bg.jpg');">
+                                        <div class="header__promo-in">
+                                            <div class="header__promo-title">25% на Marketing Creatio</div>
+                                            <div class="header__promo-descr light">Первые 2000 лицензий со скидкой 25%! Предложение ограничено. Внедрение не
+                                                входит в стоимость приобретения.</div>
+                                        </div>
+                                        <button class="button--square button--square--white">
+                                            <svg width="13" height="22">
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">
+                                    <span>Услуги</span>
+                                    <span class="header__nav-link-arrow">
+                                        <svg width="9" height="45">
+                                            <use xlink:href="#long-arrow-bottom"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="header__dropdown">
+                                    <div class="header__dropdown-in">
+                                        <div class="light mb-4">CRM-решения</div>
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Название Услуги номер 1</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Название Услуги для по
+                                                        ускоренному внедрению</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Новая услуга</a>
+                                                    <div class="p2">Мультиканальная платформа для управления
+                                                        маркетинговыми кампаниями</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="header__dropdown-item">
+                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                    <div class="p2">Платформа Creatio — это полный набор
+                                                        инструментов для быстрого изменения бизнес-
+                                                        процессов, включая проектирование, исполнение и
+                                                        мониторинг.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">Кейсы</a>
+                            </div>
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">Клиенты</a>
+                            </div>
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">Новости</a>
+                            </div>
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">О компании</a>
+                            </div>
+                            <div class="header__nav-link-wrp">
+                                <a class="header__nav-link" href="#">Контакты</a>
+                            </div>
+                        </nav>
+                        <button class="header__button" data-fancybox data-src="#popup--call">Задать вопрос</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="slider">
+            <div class="slider__in owl-carousel">
+                <div class="slider__item slider__item--1">
+                    <div class="slider__item-overlay"></div>
+                    <div class="slider__item-promo">
+                        <div class="slider__item-count-wrp">
+                            01<span>/<span class="slider__item-count"></span></span>
+                        </div>
+                        <div class="slider__item-promo-title">Заголовок для примера, где будет написана главная мысль</div>
+                    </div>
+                    <div class="container h-100">
+                        <div class="slider__item-in h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-5 h-100">
+                                    <div class="d-flex flex-column justify-content-between align-items-start h-100 slider__item-descr">
+                                        <div class="d-flex flex-column justify-content-center mb-2 flex-grow-1">
+                                            <div class="section__title mb-3">Заголовок для примера, где будет написана главная мысль</div>
+                                            <p class="ulight">по внедрению BPM и CRM решений<br> на LOW-CODE платформах</p>
+                                        </div>
+                                        <a class="button button--white" href="#">Кнопка перехода</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 slider__item-img-wrp">
+                                    <img class="slider__item-img img-responsive" src="assets/img/slider__img--1.png" alt="slider__image">
+                                    <svg width="600" height="600" class="slider__item-blur">
+                                        <use xlink:href="#slider-blur"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__nav">
+                        <button class="button--square button--square--white js-slider-prev">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="button--square button--square--dark js-slider-next">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="slider__item slider__item--2">
+                    <div class="slider__item-overlay"></div>
+                    <div class="slider__item-promo">
+                        <div class="slider__item-count-wrp">
+                            02<span>/<span class="slider__item-count"></span></span>
+                        </div>
+                        <div class="slider__item-promo-title">Заголовок для примера, где будет написана главная мысль</div>
+                    </div>
+                    <div class="container h-100">
+                        <div class="slider__item-in h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-5 h-100">
+                                    <div class="d-flex flex-column justify-content-between align-items-start h-100 slider__item-descr">
+                                        <div class="d-flex flex-column justify-content-center mb-2 flex-grow-1">
+                                            <div class="section__title mb-3">Заголовок для примера, где будет написана главная мысль</div>
+                                            <p class="ulight">по внедрению BPM и CRM<br>
+                                                решений на LOW-CODE<br> платформах</p>
+                                        </div>
+                                        <a class="button button--red" href="#">Кнопка перехода</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 slider__item-img-wrp">
+                                    <img class="slider__item-img img-responsive" src="assets/img/slider__img--2.png" alt="slider__image">
+                                    <svg width="600" height="600" class="slider__item-blur">
+                                        <use xlink:href="#slider-blur"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__nav">
+                        <button class="button--square button--square--white js-slider-prev">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="button--square js-slider-next">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="slider__item slider__item--3">
+                    <div class="slider__item-overlay"></div>
+                    <div class="slider__item-promo">
+                        <div class="slider__item-count-wrp">
+                            03<span>/<span class="slider__item-count"></span></span>
+                        </div>
+                        <div class="slider__item-promo-title">Заголовок для примера, где будет написана главная мысль</div>
+                    </div>
+                    <div class="container h-100">
+                        <div class="slider__item-in h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-4 h-100">
+                                    <div class="d-flex flex-column justify-content-between align-items-start h-100 slider__item-descr">
+                                        <div class="d-flex flex-column justify-content-center mb-2 flex-grow-1">
+                                            <div class="section__title mb-3">Заголовок для примера, где будет написана главная мысль</div>
+                                            <p class="ulight">по внедрению BPM и CRM<br>
+                                                решений на LOW-CODE<br> платформах</p>
+                                        </div>
+                                        <a class="button" href="#">Кнопка перехода</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 slider__item-img-wrp">
+                                    <img class="slider__item-img img-responsive" src="assets/img/slider__img--3.png" alt="slider__image">
+                                    <svg width="600" height="600" class="slider__item-blur">
+                                        <use xlink:href="#slider-blur"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__nav">
+                        <button class="button--square button--square--white js-slider-prev">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="button--square button--square--gray js-slider-next">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="slider__item slider__item--4">
+                    <div class="slider__item-overlay"></div>
+                    <div class="slider__item-promo">
+                        <div class="slider__item-count-wrp">
+                            04<span>/<span class="slider__item-count"></span></span>
+                        </div>
+                        <div class="slider__item-promo-title">Заголовок для примера, где будет написана главная мысль</div>
+                    </div>
+                    <div class="container h-100">
+                        <div class="slider__item-in h-100">
+                            <div class="row h-100">
+                                <div class="col-xl-4 h-100">
+                                    <div class="d-flex flex-column justify-content-between align-items-start h-100 slider__item-descr">
+                                        <div class="d-flex flex-column justify-content-center mb-2 flex-grow-1">
+                                            <div class="section__title mb-3">Заголовок для примера, где будет написана главная мысль</div>
+                                            <p class="ulight">по внедрению BPM и CRM<br>
+                                                решений на LOW-CODE<br> платформах</p>
+                                        </div>
+                                        <a class="button button--white" href="#">Кнопка перехода</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 slider__item-img-wrp">
+                                    <img class="slider__item-img img-responsive" src="assets/img/slider__img--4.png" alt="slider__image">
+                                    <svg width="600" height="600" class="slider__item-blur">
+                                        <use xlink:href="#slider-blur"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__nav">
+                        <button class="button--square button--square--white js-slider-prev">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="button--square button--square--red js-slider-next">
+                            <svg width="13" height="22">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section></section>    <section class="products section--inner">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <div class="section__title">Продукты</div>
+                <a class="section__link" href="#">Все продукты</a>
+            </div>
+        </div>
+        <div class="products__in">
+            <div class="products__slider owl-carousel">
+                <div class="product">
+                    <div class="product__num">
+                        <span>01</span>/<span class="product__count"></span>
+                    </div>
+                    <a class="product__title" href="#">
+                        <span class="link-arrow">
+                            <span class="link-arrow__title">
+                                <span class="link-arrow__title-bg">
+                                    <span>Название продукта, например это будет Distributors Creatio</span>
+                                </span>
+                            </span>
+                            <div class="link-arrow__button button--square">
+                                <svg width="13" height="22">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="product__descr">
+                        Комплексное решение для управления
+                        внутренним и внешним сервисом
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__num">
+                        <span>02</span>/<span class="product__count"></span>
+                    </div>
+                    <a class="product__title" href="#">
+                        <span class="link-arrow">
+                            <span class="link-arrow__title">
+                                <span class="link-arrow__title-bg">
+                                    <span>Название продукта, например это будет Sales Creatio</span>
+                                </span>
+                            </span>
+                            <div class="link-arrow__button button--square">
+                                <svg width="13" height="22">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="product__descr">
+                        Комплексное решение для управления
+                        внутренним и внешним сервисом
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__num">
+                        <span>03</span>/<span class="product__count"></span>
+                    </div>
+                    <a class="product__title" href="#">
+                        <span class="link-arrow">
+                            <span class="link-arrow__title">
+                                <span class="link-arrow__title-bg">
+                                    <span>Marketing Creatio</span>
+                                </span>
+                            </span>
+                            <div class="link-arrow__button button--square">
+                                <svg width="13" height="22">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="product__descr">
+                        Комплексное решение для управления
+                        внутренним и внешним сервисом
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__num">
+                        <span>04</span>/<span class="product__count"></span>
+                    </div>
+                    <a class="product__title" href="#">
+                        <span class="link-arrow">
+                            <span class="link-arrow__title">
+                                <span class="link-arrow__title-bg">
+                                    <span>Название продукты, например это будет Cervice Creatio</span>
+                                </span>
+                            </span>
+                            <div class="link-arrow__button button--square">
+                                <svg width="13" height="22">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="product__descr">
+                        Комплексное решение для управления
+                        внутренним и внешним сервисом
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="etalon section--inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 mb-5">
+                    <div class="section__title">Эталонные процессы и&nbsp;интеграции для автоматизации</div>
+                </div>
+                <div class="col-xl-7 mb-5">
+                    <img src="assets/img/etalon__image--1.jpg" class="etalon__image--video img-responsive" alt="etalon__image--1">
+                </div>
+                <div class="col-xl-5">
+                    Платформа Creatio — это полный набор инструментов для быстрого изменения бизнес-процессов
+                </div>
+                <div class="col-xl-7 p2">
+                    <p>включая проектирование, исполнение и мониторинг. Creatio помогает объединить
+                        данные, процессы и людей, чтобы лучше взаимодействовать с потребителями в цифровую эпоху и мгновенно адаптироваться с учетом изменения внешней среды. Принимая во внимание
+                        показатели успешности, экономическая повестка сегодняшнего дня создаёт предпосылки для модели развития. А ещё многие известные личности набирают популярность среди
+                        определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.</p>
+    
+                    <p>Но явные признаки победы институционализации подвергнуты целой серии независимых исследований. Банальные, но неопровержимые выводы, а также действия представителей
+                        оппозиции формируют глобальную экономическую сеть и при этом - описаны максимально подробно. Не следует, однако, забывать, что синтетическое тестирование.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="etalon etalon--red section--inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="section__title mb-5">Эталонные процессы и&nbsp;интеграции для&nbsp;автоматизации</div>
+                    <p class="p2 mb-4">Платформа Creatio — это полный набор инструментов для быстрого изменения бизнес-процессов, включая проектирование, исполнение и мониторинг. Creatio помогает объединить
+                        данные, процессы и людей, чтобы лучше взаимодействовать с потребителями в цифровую эпоху и мгновенно адаптироваться с учетом изменения внешней среды. Принимая во внимание
+                        показатели успешности, экономическая повестка сегодняшнего дня создаёт предпосылки для модели развития. А ещё многие известные личности набирают популярность среди
+                        определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.</p>
+                    <p class="p2">Но явные признаки победы институционализации подвергнуты целой серии независимых исследований. Банальные, но неопровержимые выводы, а также действия представителей оппозиции формируют глобальную экономическую сеть и при этом - описаны максимально подробно. Не следует, однако, забывать, что синтетическое тестирование предоставляет
+                        широкие возможности для новых предложений.</p>
+                </div>
+                <div class="col-xl-7">
+                    <img src="assets/img/etalon__image--2.png" class="etalon__image " alt="etalon__image--2">
+                </div>
+            </div>
+        </div>
+    </section><section class="reward">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-xl-6">
+                    <div class="section--inner pb-0 d-flex flex-column h-100 pr-xl-2">
+                        <div class="section__title">Отечественный софт
+                            с&nbsp;международным признанием</div>
+                        <div class="reward__descr flex-grow-1 d-flex flex-column justify-content-center">
+                            <div class="bold mb-4">Creatio удостоен награды Stevie® Award в 2019 году American Business
+                                Awards®
+                            </div>
+                            <p class="p2">Creatio всегда была сосредоточена на предоставлении своим клиентам лучших в своем классе технологий с низким кодом, BPM и CRM. Программное обеспечение стремится помочь организациям всех размеров и типов быть в состоянии соответствовать постоянно меняющимся требованиям делового мира. Каждый год bpm'online получает самые авторитетные отраслевые награды, и 2019 год не является исключением.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="reward__right">
+                        <img src="assets/img/reward__image--1.jpg" alt="reward__image--1">
+                        <div class="reward__logo-wrapper">
+                            <img src="assets/img/reward__image--2.jpg" alt="reward__logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reward__brands">
+            <div class="reward__brands-slider owl-carousel">
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--1.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--2.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--3.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--4.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--5.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--6.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--1.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--2.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--3.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--4.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--5.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--6.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--1.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--2.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--3.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--4.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--5.png" alt="reward__brand">
+                </div>
+                <div class="reward__brands-item">
+                    <img class="reward__brands-image" src="assets/img/reward__brands-image--6.png" alt="reward__brand">
+                </div>
+            </div>
+        </div>
+    </section><section class="cases section--inner">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <div class="section__title">Наши кейсы</div>
+                <a class="section__link" href="#">Все кейсы</a>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <a class="cases__item" style="background-image: url('assets/img/cases__item-bg--1.jpg')" href="#">
+                        <span class="cases__item-logo">logo</span>
+                        <div class="cases__item-link">
+                            <span>Как автоматизировать работу агентов недвижимости?</span>
+                            <span class="cases__item-arrow">
+                                <svg width="41" height="10">
+                                    <use xlink:href="#long-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6">
+                    <a class="cases__item" style="background-image: url('assets/img/cases__item-bg--2.jpg')" href="#">
+                        <span class="cases__item-logo">logo</span>
+                        <div class="cases__item-link">
+                            <span>Как внедрить CRM за неделю и не упустить звонок на сто пятьдесят миллионов рублей</span>
+                            <span class="cases__item-arrow">
+                                <svg width="41" height="10">
+                                    <use xlink:href="#long-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tech section--inner">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="section__title">Уже используют <br>
+                    технологии <span class="orange">Creatio</span></div>
+                <a class="section__link" href="#">Все клиенты</a>
+            </div>
+            <div class="ulight mb-5">для автоматизации IT <br> и сервисного обслуживания</div>
+            <div class="row">
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--1.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--2.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--3.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--4.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--5.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--6.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--7.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--8.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--9.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--10.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--11.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--12.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--13.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--14.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 mb-3">
+                    <a class="tech__brand" href="#">
+                        <img class="tech__brand-image" src="assets/img/tech__brand--15.png" alt="tech__brand">
+                        <svg class="tech__brand-arrow" width="41" height="10">
+                            <use xlink:href="#long-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section><form class="feed section--inner">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="section__title mb-4">Оставьте заявку на проведение<br> предпроектного обследования</div>
+                <div class="ulight">Оставьте заявку на подготовительные работы по вашему проекту.<br>
+                    Мы обработаем запрос и свяжемся с вами в течение дня</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 mb-5">
+                    <input class="w-100 mb-3" type="text" placeholder="Имя*">
+                    <input class="w-100 mb-3" type="email" placeholder="E-mail*">
+                    <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
+                </div>
+                <div class="col-xl-6 mb-5">
+                    <textarea class="feed__textarea w-100" placeholder="Ваше сообщение*"></textarea>
+                </div>
+                <div class="col-xl-6 mb-4">
+                    <div class="d-flex">
+                        <button class="button button--white w-50 mr-3" type="submit">Отправить заявку</button>
+                        <label class="button button--tr button--tr-white button--file w-50">
+                            <input class="button--file__input js-file-input" type="file" multiple>
+                            <span>Прикрепить файл</span>
+                            <svg class="ml-2" width="45" height="45">
+                                <use xlink:href="#brace"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-6 mb-4">
+                    <div class="file-list"></div>
+                </div>
+                <div class="text-center w-100">
+                    <span class="p2">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink feed__policy" href="#">обработку персональных данных</a></span>
+                </div>
+            </div>
+        </div>
+    </form><section class="news section--inner">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <div class="section__title">Новости</div>
+                <a class="section__link" href="#">Все новости</a>
+            </div>
+        </div>
+        <div class="news__in">
+            <div class="container">
+                <div class="news__slider owl-carousel">
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            05 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Всё для организации электронного документооборота — подборка готовых решений на Creatio Marketplace </span>
+                                <span class="news__item-arrow">
+                                <svg width="41" height="10">
+                                    <use xlink:href="#long-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="news__item-descr">
+                            Преимущества перехода на электронный документооборот сложно переоценить:
+                            процесс становится менее ресурсоемким,
+                            обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
+                            на печать...
+                        </div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            09 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
+                                <span class="news__item-arrow">
+                                <svg width="41" height="10">
+                                    <use xlink:href="#long-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="news__item-descr">Один из крупнейших агрохолдингов России, внедрил систему управления ИТ-процессами
+                            на базе решения ITSM Box Creatio. Она стала для компании мощным фундаментом для оптимизации процессов поддержки и предоставления ИТ-услуг и, как результат, повышения эффективности предприятия...</div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            04 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Проекты трансформации клиентского сервиса в «Службе добрых дел» — в числе лучших по версии СХ WORLD AWARDS ВСЕ НОВОСТИ</span>
+                                <span class="news__item-arrow">
+                                <svg width="41" height="10">
+                                    <use xlink:href="#long-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="news__item-descr">«Служба добрых дел», предоставляющая услуги по обслуживанию цифровой техники, получила признание сразу в нескольких номинациях международной премии CX WORLD AWARDS. Компания стала победителем в номинации «Клиентский опыт в контакт-центре», дошла до финала в категориях «Клиентоцентричная корпоративная культура» и «Проект изменения, СХ трансформация бизнеса», а также получила высокое одобрение жюри в номинации «Лучший клиентский опыт в B2C»...</div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            09 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
+                                <span class="news__item-arrow">
+                                <svg width="41" height="10">
+                                    <use xlink:href="#long-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="news__item-descr">
+                            Преимущества перехода на электронный документооборот сложно переоценить:
+                            процесс становится менее ресурсоемким,
+                            обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
+                            на печать...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about__left">
+            <div class="about__image"></div>
+        </div>
+        <div class="about__right">
+            <div class="section--inner">
+                <div class="section__title mb-3">О компании</div>
+                <div class="about__descr">
+                    <p>ByteCode — активно развивающийся интегратор, работающий на рынке России
+                        и других стран СНГ. Основное направление компании — реализация комплексных CRM
+                        и BPM проектовна платформе Creatio.</p>
+                    <p>Сотрудники ByteCode обладают экспертизой
+                        в области проектирования и
+                        оптимизации бизнес-процессов, а также интеграции
+                        с системами любого
+                        уровня — от биллинговых и учетных систем до мессенджеров и чат-ботов</p>
+                </div>
+                <div class="about__test">
+                    <div class="about__test-item about__test-item--1">
+                        <div class="about__test-num">4</div>
+                        <div class="about__test-title section__title">Года<br> на рынке</div>
+                    </div>
+                    <div class="about__test-item about__test-item--2">
+                        <div class="about__test-num">5</div>
+                        <div class="about__test-title section__title">Лет — средний опыт<br> работы сотрудников<br> на рынке BPM</div>
+                    </div>
+                    <div class="about__test-item about__test-item--3">
+                        <div class="about__test-num"><span>2</span><span>0</span></div>
+                        <div class="about__test-title section__title">Сертифицированных <br> экспертов</div>
+                    </div>
+                    <div class="about__test-item about__test-item--4">
+                        <div class="about__test-num"><span>3</span><span>0</span><span>+</span></div>
+                        <div class="about__test-title section__title">Запущенных<br> комплексных<br> проектов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts section--inner">
+        <div class="container">
+            <div class="text-center mb-4 mb-xl-5">
+                <div class="section__title">Контакты</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-xl-5">
+                    <div class="contacts__item d-flex flex-column align-items-center text-center">
+                        <div class="section__title mb-3">Офис в Самаре</div>
+                        <a class="contacts__link mb-2" href="tel:88462007762">8 846 200 77 62</a>
+                        <div class="mb-2">ул. Аэродромная, д. 45, к. БЦ «А-45», оф. 702/1</div>
+                        <a class="contacts__link" href="mailto:info@bytecodecrm.ru">info@bytecodecrm.ru</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-xl-5">
+                    <div class="contacts__item d-flex flex-column align-items-center text-center">
+                        <div class="section__title mb-3">Офис в Москве</div>
+                        <a class="contacts__link mb-2" href="tel:84954814696">8 495 481 46 96</a>
+                        <div class="mb-2">ул. Казакова, д. 8, стр. 2</div>
+                        <a class="contacts__link" href="mailto:info@bytecodecrm.ru">info@bytecodecrm.ru</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 mb-3 mb-xl-5">
+                    <div class="contacts__item d-flex flex-column align-items-center text-center">
+                        <div class="section__title mb-3">Режим работы</div>
+                        <div class="mb-2">пн-пт 9-18 по мск</div>
+                        <div>сб и вс — выходной</div>
+                    </div>
+                </div>
+                <div class="col-xl-6 mb-3 mb-xl-5">
+                    <div class="contacts__item d-flex flex-column align-items-center text-center">
+                        <div class="section__title mb-3">Реквизиты</div>
+                        <div class="mb-2">ООО «БАЙТ КОД», ИНН 6312171394</div>
+                        <div>ОГРН 1176313029573, КПП 631101001</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section id="map" class="map"></section><footer class="footer">
+        <div class="container">
+            <div class="row mb-3 mb-xl-5">
+                <div class="col-xl-4 col-sm-6">
+                    <div class="mb-1">
+                        <a class="bold white" href="tel:88462007762">8 846 200 77 62</a>
+                        <span class="footer__divider">|</span>
+                        <span>Самара</span>
+                    </div>
+                    <div class="mb-3">
+                        <a class="bold white" href="tel:84954814696">8 495 481-46-96</a>
+                        <span class="footer__divider">|</span>
+                        <span>Москва</span>
+                    </div>
+                    <div class="mb-3">пн-пт 9-18 по мск</div>
+    
+                    <div class="mb-1">
+                        <a class="bold white" href="mailto:info@bytecodecrm.ru">info@bytecodecrm.ru</a>
+                        <span class="footer__divider">|</span>
+                        <span>Для предложений</span>
+                    </div>
+                    <div class="mb-3">
+                        <a class="bold white" href="mailto:sales@bytecodecrm.ru">sales@bytecodecrm.ru</a>
+                        <span class="footer__divider">|</span>
+                        <span>Для заявок</span>
+                    </div>
+    
+                    <div class="mb-1">
+                        <span class="bold white">Самара:</span>
+                        <span>ул. Аэродромная, д. 45, к. БЦ «А-45», оф. 702/1</span>
+                    </div>
+                    <div>
+                        <span class="bold white">Москва:</span>
+                        <span>ул. Казакова, д. 8, стр. 2</span>
+                    </div>
+                </div>
+                <div class="offset-xl-1 col-xl-5 d-flex">
+                    <div class="d-flex flex-column justify-content-between align-items-start mr-5">
+                        <a class="footer__link" href="#">Продукты</a>
+                        <a class="footer__link" href="#">О компании</a>
+                        <a class="footer__link" href="#">Кейсы</a>
+                        <a class="footer__link" href="#">Клиенты</a>
+                        <a class="footer__link" href="#">Новости</a>
+                        <a class="footer__link" href="#">Контакты</a>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between align-items-start">
+                        <a class="footer__link" href="#">Услуги</a>
+                        <a class="footer__link" href="#">Еще ссылка на страницу</a>
+                        <a class="footer__link" href="#">Ссылка</a>
+                        <a class="footer__link" href="#">Согласие на обработку персональных данных</a>
+                        <a class="footer__link" href="#">Ссылка</a>
+                        <a class="footer__link" href="#">Ссылка</a>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="footer__socials">
+                        <div class="footer__socials-title">Мы в социальных сетях</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a class="footer__socials-link" href="#">
+                                <svg class="footer__socials-icon" width="9" height="20">
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                            </a>
+                            <a class="footer__socials-link" href="#">
+                                <svg class="footer__socials-icon" width="21" height="21">
+                                    <use xlink:href="#in"></use>
+                                </svg>
+                            </a>
+                            <a class="footer__socials-link" href="#">
+                                <svg class="footer__socials-icon" width="18" height="18">
+                                    <use xlink:href="#tg"></use>
+                                </svg>
+                            </a>
+                            <a class="footer__socials-link" href="#">
+                                <svg class="footer__socials-icon" width="22" height="16">
+                                    <use xlink:href="#yu"></use>
+                                </svg>
+                            </a>
+                            <a class="footer__socials-link" href="#">
+                                <svg class="footer__socials-icon" width="20" height="12">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="#" class="footer__logo">
+                    <svg class="footer__logo-icon" width="198" height="47">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <span class="footer__logo-text">автоматизация CRM-процессов</span>
+                </a>
+                <div class="footer__copy">
+                    <div class="mb-1">© 2020 «БК».</div>
+                    Все права защищены.
+                </div>
+            </div>
+            <button class="footer__button button--square button--square--orange js-scroll-top">
+                <svg width="22" height="13">
+                    <use xlink:href="#arrow-top"></use>
+                </svg>
+            </button>
+        </div>
+    </footer>
+    
+    <!-- --- -->
+    <!--layout: inner-->
+    <!-- --- -->
+
+    <svg width="0" height="0" class="svg-sprite">
+        <symbol viewBox="0 0 177 37" xmlns="http://www.w3.org/2000/svg" id="logo">
+            <g class="logo-group">
+                <path d="M72.8866 18.1386C72.8866 15.4148 72.8866 7.71582 72.8866 7.71582H90.5537V11.7661H76.4931C76.4931 11.7661 76.4931 12.5593 76.4931 14.2841C76.4931 16.1708 76.4931 16.3599 76.4931 16.3599H87.6998V20.319H76.4931V24.8453H90.5414V28.6694C86.0378 28.612 72.8743 28.6694 72.8743 28.6694C72.8743 28.7774 72.8743 20.8726 72.8743 18.1454L72.8866 18.1386Z" fill="white"/>
+                <path d="M158.875 18.1386C158.875 15.4148 158.875 7.71582 158.875 7.71582H176.542V11.7661H162.479C162.479 11.7661 162.479 12.5593 162.479 14.2841C162.479 16.1708 162.479 16.3599 162.479 16.3599H173.695V20.319H162.479V24.8554H176.527V28.6593C172.023 28.6019 158.86 28.6593 158.86 28.6593C158.86 28.7673 158.86 20.8625 158.86 18.1352L158.875 18.1386Z" fill="white"/>
+                <path d="M114.826 12.7077C114.826 9.38641 115.689 7.84392 118.626 7.72241H130.201C130.372 7.71911 130.544 7.72701 130.714 7.74604C132.653 8.00256 133.952 9.72393 133.974 12.1609C134.007 16.2112 134.029 20.2311 133.974 24.2646C133.924 27.1436 132.591 28.5748 129.961 28.6153C126.198 28.6726 123.378 28.6153 119.615 28.6456C117.369 28.6456 114.841 27.5959 114.841 24.5177C114.826 22.0031 114.829 14.321 114.826 12.7077ZM124.506 11.7828C118.451 11.7828 118.451 11.7828 118.451 18.2465C118.451 24.8789 118.451 24.8789 124.595 24.8721C130.432 24.8721 130.432 24.8721 130.432 18.3984C130.453 11.7693 130.453 11.7693 124.506 11.7828Z" fill="white"/>
+                <path d="M136.821 7.72241C136.821 7.72241 139.15 7.78316 140.597 7.72241H152.172C152.343 7.71911 152.515 7.72701 152.685 7.74604C154.624 8.00256 155.923 9.72393 155.945 12.1609C155.978 16.2112 156 20.2311 155.945 24.2646C155.895 27.1436 154.562 28.5748 151.933 28.6153C148.169 28.6726 145.349 28.6153 141.586 28.6456C140.207 28.6456 136.834 28.6456 136.834 28.6456L136.821 7.72241ZM146.477 11.7727H140.409C140.409 11.7727 140.409 14.9826 140.409 18.2262C140.409 21.3247 140.409 24.8485 140.409 24.8485C140.409 24.8485 143.3 24.8485 146.581 24.8485C152.418 24.8485 152.418 24.8485 152.418 18.3747C152.424 11.7693 152.424 11.7693 146.48 11.7828L146.477 11.7727Z" fill="white"/>
+                <path d="M96.9466 28.6698C94.4398 28.7137 93.2602 27.1982 93.1711 24.7005C93.0052 20.4679 93.0452 16.2219 93.1711 11.9859C93.254 9.36671 94.7378 7.77697 97.0848 7.73984C101.496 7.67233 105.908 7.81072 110.319 7.73984C111.655 7.71284 112.334 7.73984 112.334 7.73984L112.276 11.7024H99.1154C97.2108 11.8003 96.6578 12.1547 96.6425 14.4296C96.621 16.1409 96.6916 17.8589 96.6916 19.5769C96.6916 24.8693 96.6916 24.8693 101.641 24.876C104.307 24.876 112.34 24.876 112.34 24.876C112.371 27.4716 112.34 28.6799 112.34 28.6799C112.34 28.6799 99.0663 28.6327 96.9466 28.6698Z" fill="white"/>
+                <path d="M63.2772 20.4065C63.2772 22.327 63.2772 28.6692 63.2772 28.6692H59.6492C59.6492 28.6692 59.5386 18.0742 59.6307 14.034C59.6676 12.3464 59.6492 11.7827 59.6492 11.7827H52.0951L52.1135 7.73242H70.8528C70.8251 8.91714 70.8067 11.7827 70.8067 11.7827H63.2772C63.2772 11.7827 63.2803 18.3847 63.2772 20.4065Z" fill="white"/>
+                <path d="M51.5484 7.7231L42.8269 20.4478V28.67H39.3402V20.4445C38.5998 18.6252 30.4928 7.71973 30.4928 7.71973H34.6892L41.0882 16.8093C41.0882 16.8093 46.5686 9.07321 47.3336 7.71973L51.5484 7.7231Z" fill="white"/>
+            </g>
+            <path d="M21.074 18.007C21.7359 17.7237 22.3341 17.2861 22.8273 16.7244C23.3205 16.1627 23.697 15.4902 23.931 14.7533C24.9447 11.7729 23.5101 8.36726 20.8067 7.48295C20.128 7.26471 19.4249 7.15112 18.7178 7.14542C14.8777 7.11167 11.0377 7.11842 7.19772 7.14542C7.00148 7.15517 6.80572 7.11693 6.62456 7.03346C6.44341 6.94999 6.28138 6.82338 6.15016 6.66276C4.30696 4.61398 2.44532 2.5922 0.59597 0.553542L0.0798723 0H1.68346L2.57127 0.948452C2.96142 1.37036 3.15495 1.58637 3.44372 1.90365C3.59058 2.09521 3.77719 2.24518 3.98784 2.34093C4.19848 2.43667 4.42698 2.47539 4.6541 2.45381C9.36041 2.45381 14.0667 2.45381 18.7853 2.45381C21.5286 2.45381 23.9463 3.35163 25.8786 5.5388C27.2061 7.06043 28.0824 8.98865 28.3918 11.0689C28.7011 13.1491 28.4289 15.2835 27.6112 17.1902C27.4739 17.4574 27.4003 17.7583 27.3971 18.0652C27.3938 18.372 27.4612 18.6747 27.5928 18.9453C30.1733 25.1187 27.0306 32.1865 21.0556 33.4994C20.3658 33.6288 19.6661 33.683 18.9666 33.6614C14.2132 33.6795 9.45974 33.6795 4.70632 33.6614C4.46531 33.6455 4.22428 33.6922 4.00277 33.7978C3.78126 33.9033 3.58552 34.0648 3.43144 34.269C3.05972 34.7314 1.67117 36.1726 1.67117 36.1726H0L0.494594 35.6529C2.45249 33.5152 4.41243 31.3775 6.37442 29.2399C6.44857 29.1598 6.5372 29.0977 6.63456 29.0575C6.73193 29.0174 6.83587 29.0002 6.93967 29.007C11.1483 29.0306 15.357 29.007 19.5656 29.0644C21.16 29.0846 23.3381 27.3092 23.9217 25.3921C24.8034 22.5096 23.7159 19.2829 21.1569 18.1893C21.1354 18.1893 21.0617 18.1589 21.0371 18.1049C21.0125 18.0509 21.074 18.007 21.074 18.007Z" fill="white"/>
+            <path d="M7.21309 28.1324C7.79677 27.5451 8.38967 26.968 8.96106 26.3672C9.6369 25.655 10.3127 24.9462 10.9456 24.1901C11.0618 24.023 11.2154 23.8917 11.3914 23.809C11.5674 23.7262 11.7598 23.6947 11.9501 23.7176H18.8867C18.9912 23.7176 19.1509 23.7176 19.2554 23.7176C19.2836 23.7168 19.3105 23.704 19.3305 23.6821C19.3505 23.6601 19.3621 23.6305 19.3629 23.5995C19.3629 23.5252 19.3629 23.2113 19.3629 23.1371C19.3649 23.1231 19.3639 23.1088 19.36 23.0954C19.3562 23.0819 19.3495 23.0696 19.3406 23.0595C19.3316 23.0493 19.3207 23.0416 19.3085 23.0369C19.2964 23.0322 19.2835 23.0307 19.2707 23.0324H18.8867C17.0835 23.0324 15.2802 23.0324 13.4769 23.0324C11.8918 23.0324 10.5124 22.5025 9.60311 21.0073C9.12516 20.2548 8.84018 19.3749 8.77802 18.4598C8.71587 17.5447 8.87883 16.6281 9.24983 15.806C9.97482 14.0576 11.3173 12.9775 13.0345 13.0113C13.0345 13.0113 18.899 13.0113 19.3567 13.0113C19.3639 13.0114 19.3709 13.0088 19.3765 13.0039C19.3822 12.999 19.386 12.992 19.3875 12.9843C19.3875 12.9505 19.3875 12.6468 19.3875 12.478C19.3875 12.4565 19.3797 12.4359 19.3659 12.4207C19.352 12.4055 19.3333 12.397 19.3137 12.397H18.6348C16.4322 12.397 14.2326 12.3801 12.03 12.397C11.8227 12.4082 11.6158 12.3683 11.4244 12.2801C11.233 12.1919 11.062 12.0577 10.9241 11.8873C9.79358 10.6047 8.63236 9.3525 7.4865 8.08678C7.43455 8.02267 7.38633 7.95503 7.34211 7.88426C7.32765 7.86675 7.31752 7.84545 7.31268 7.8224C7.30783 7.79936 7.30845 7.77534 7.31446 7.75263C7.31446 7.702 7.58173 7.7155 7.67696 7.7155C11.4002 7.7155 15.1204 7.73575 18.8437 7.73238C20.8037 7.73238 22.3673 8.53232 23.206 10.5338C23.6093 11.4157 23.7661 12.4089 23.6568 13.3885C23.5475 14.3681 23.1768 15.2902 22.5916 16.0389C21.67 17.3316 20.3398 17.7265 18.9052 17.7265C17.2647 17.7265 15.6273 17.7265 13.9899 17.7265C13.8271 17.7265 13.6612 17.7265 13.4984 17.7265H13.1912C13.1766 17.7261 13.162 17.7289 13.1484 17.7348C13.1348 17.7408 13.1224 17.7497 13.1121 17.7611C13.1017 17.7724 13.0936 17.786 13.0882 17.801C13.0828 17.8159 13.0802 17.8319 13.0806 17.848C13.0806 17.9122 13.0806 17.983 13.0806 18.0202C13.0806 18.0573 13.0806 18.1923 13.0806 18.2699C13.0814 18.2989 13.0925 18.3264 13.1114 18.3465C13.1303 18.3667 13.1556 18.378 13.182 18.3779H13.4892H16.1711C17.3415 18.3779 18.5181 18.3206 19.6793 18.4353C22.1 18.6716 23.7067 20.7508 23.6576 23.4645C23.6084 26.1782 21.8481 28.2776 19.4643 28.3215C15.4399 28.3957 11.4125 28.3417 7.38512 28.3417H6.99805L7.21309 28.1324Z" fill="white"/>
+        </symbol>
+        <symbol id="logo-first" viewBox="0 0 29 37" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.074 18.007C21.7359 17.7237 22.3341 17.2861 22.8273 16.7244C23.3205 16.1627 23.697 15.4902 23.931 14.7533C24.9447 11.7729 23.5101 8.36726 20.8067 7.48295C20.128 7.26471 19.4249 7.15112 18.7178 7.14542C14.8777 7.11167 11.0377 7.11842 7.19772 7.14542C7.00148 7.15517 6.80572 7.11693 6.62456 7.03346C6.44341 6.94999 6.28138 6.82338 6.15016 6.66276C4.30696 4.61398 2.44532 2.5922 0.59597 0.553542L0.0798723 0H1.68346L2.57127 0.948452C2.96142 1.37036 3.15495 1.58637 3.44372 1.90365C3.59058 2.09521 3.77719 2.24518 3.98784 2.34093C4.19848 2.43667 4.42698 2.47539 4.6541 2.45381C9.36041 2.45381 14.0667 2.45381 18.7853 2.45381C21.5286 2.45381 23.9463 3.35163 25.8786 5.5388C27.2061 7.06043 28.0824 8.98865 28.3918 11.0689C28.7011 13.1491 28.4289 15.2835 27.6112 17.1902C27.4739 17.4574 27.4003 17.7583 27.3971 18.0652C27.3938 18.372 27.4612 18.6747 27.5928 18.9453C30.1733 25.1187 27.0306 32.1865 21.0556 33.4994C20.3658 33.6288 19.6661 33.683 18.9666 33.6614C14.2132 33.6795 9.45974 33.6795 4.70632 33.6614C4.46531 33.6455 4.22428 33.6922 4.00277 33.7978C3.78126 33.9033 3.58552 34.0648 3.43144 34.269C3.05972 34.7314 1.67117 36.1726 1.67117 36.1726H0L0.494594 35.6529C2.45249 33.5152 4.41243 31.3775 6.37442 29.2399C6.44857 29.1598 6.5372 29.0977 6.63456 29.0575C6.73193 29.0174 6.83587 29.0002 6.93967 29.007C11.1483 29.0306 15.357 29.007 19.5656 29.0644C21.16 29.0846 23.3381 27.3092 23.9217 25.3921C24.8034 22.5096 23.7159 19.2829 21.1569 18.1893C21.1354 18.1893 21.0617 18.1589 21.0371 18.1049C21.0125 18.0509 21.074 18.007 21.074 18.007Z" fill="white"/>
+            <path d="M7.21309 28.1329C7.79677 27.5456 8.38967 26.9685 8.96106 26.3677C9.6369 25.6555 10.3127 24.9467 10.9456 24.1906C11.0618 24.0235 11.2154 23.8922 11.3914 23.8094C11.5674 23.7267 11.7598 23.6952 11.9501 23.7181H18.8867C18.9912 23.7181 19.1509 23.7181 19.2554 23.7181C19.2836 23.7172 19.3105 23.7045 19.3305 23.6825C19.3505 23.6606 19.3621 23.631 19.3629 23.6C19.3629 23.5257 19.3629 23.2118 19.3629 23.1375C19.3649 23.1236 19.3639 23.1093 19.36 23.0959C19.3562 23.0824 19.3495 23.0701 19.3406 23.06C19.3316 23.0498 19.3207 23.0421 19.3085 23.0374C19.2964 23.0327 19.2835 23.0312 19.2707 23.0329H18.8867C17.0835 23.0329 15.2802 23.0329 13.4769 23.0329C11.8918 23.0329 10.5124 22.503 9.60311 21.0078C9.12516 20.2552 8.84018 19.3754 8.77802 18.4603C8.71587 17.5452 8.87883 16.6286 9.24983 15.8065C9.97482 14.0581 11.3173 12.978 13.0345 13.0118C13.0345 13.0118 18.899 13.0118 19.3567 13.0118C19.3639 13.0119 19.3709 13.0093 19.3765 13.0044C19.3822 12.9994 19.386 12.9925 19.3875 12.9848C19.3875 12.951 19.3875 12.6472 19.3875 12.4785C19.3875 12.457 19.3797 12.4364 19.3659 12.4212C19.352 12.406 19.3333 12.3975 19.3137 12.3975H18.6348C16.4322 12.3975 14.2326 12.3806 12.03 12.3975C11.8227 12.4087 11.6158 12.3688 11.4244 12.2806C11.233 12.1924 11.062 12.0582 10.9241 11.8878C9.79358 10.6052 8.63236 9.35299 7.4865 8.08727C7.43455 8.02316 7.38633 7.95552 7.34211 7.88475C7.32765 7.86723 7.31752 7.84594 7.31268 7.82289C7.30783 7.79985 7.30845 7.77583 7.31446 7.75312C7.31446 7.70249 7.58173 7.71599 7.67696 7.71599C11.4002 7.71599 15.1204 7.73624 18.8437 7.73287C20.8037 7.73287 22.3673 8.5328 23.206 10.5343C23.6093 11.4162 23.7661 12.4094 23.6568 13.389C23.5475 14.3686 23.1768 15.2907 22.5916 16.0394C21.67 17.3321 20.3398 17.727 18.9052 17.727C17.2647 17.727 15.6273 17.727 13.9899 17.727C13.8271 17.727 13.6612 17.727 13.4984 17.727H13.1912C13.1766 17.7265 13.162 17.7294 13.1484 17.7353C13.1348 17.7412 13.1224 17.7502 13.1121 17.7616C13.1017 17.7729 13.0936 17.7865 13.0882 17.8015C13.0828 17.8164 13.0802 17.8324 13.0806 17.8485C13.0806 17.9126 13.0806 17.9835 13.0806 18.0207C13.0806 18.0578 13.0806 18.1928 13.0806 18.2704C13.0814 18.2994 13.0925 18.3268 13.1114 18.347C13.1303 18.3672 13.1556 18.3784 13.182 18.3784H13.4892H16.1711C17.3415 18.3784 18.5181 18.3211 19.6793 18.4358C22.1 18.6721 23.7067 20.7512 23.6576 23.4649C23.6084 26.1787 21.8481 28.2781 19.4643 28.3219C15.4399 28.3962 11.4125 28.3422 7.38512 28.3422H6.99805L7.21309 28.1329Z" fill="white"/>
+        </symbol>
+        <symbol id="hamburger" viewBox="0 0 47 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H47V4H0V0Z" />
+            <path d="M0 12H47V16H0V12Z" />
+        </symbol>
+        <symbol id="geo" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.91261 1C6.81499 1.00306 4.80418 1.83769 3.32094 3.32093C1.8377 4.80417 1.00306 6.815 1 8.91262C1 12.4493 5.97214 18.7122 8.10802 21.2417C8.20692 21.3587 8.33013 21.4527 8.46909 21.5172C8.60804 21.5817 8.75941 21.6151 8.91261 21.6151C9.0658 21.6151 9.21717 21.5817 9.35613 21.5172C9.49509 21.4527 9.6183 21.3587 9.71719 21.2417C11.8531 18.7122 16.8252 12.4435 16.8252 8.91262C16.8222 6.815 15.9875 4.80417 14.5043 3.32093C13.021 1.83769 11.0102 1.00306 8.91261 1ZM9.11518 20.7323C9.09077 20.7626 9.0599 20.7869 9.02485 20.8037C8.98979 20.8204 8.95145 20.8291 8.91261 20.8291C8.87376 20.8291 8.83542 20.8204 8.80037 20.8037C8.76531 20.7869 8.73445 20.7626 8.71003 20.7323C7.24051 18.9981 5.86847 17.1836 4.60031 15.2971C2.75963 12.5187 1.793 10.3134 1.793 8.92998C1.793 7.04097 2.54341 5.22934 3.87914 3.89361C5.21487 2.55788 7.0265 1.80747 8.9155 1.80747C10.8045 1.80747 12.6161 2.55788 13.9519 3.89361C15.2876 5.22934 16.038 7.04097 16.038 8.92998C16.038 10.325 15.0656 12.5361 13.2249 15.2971C11.9549 17.1837 10.5809 18.9983 9.10942 20.7323H9.11518Z" fill="white" stroke="#D9DFEC"/>
+            <path d="M8.91261 5.15039C8.26121 5.15039 7.62443 5.34355 7.08281 5.70545C6.54119 6.06735 6.11904 6.58173 5.86976 7.18355C5.62048 7.78537 5.55525 8.44759 5.68234 9.08648C5.80942 9.72536 6.12311 10.3122 6.58372 10.7728C7.04433 11.2334 7.6312 11.5471 8.27008 11.6742C8.90897 11.8013 9.57119 11.7361 10.173 11.4868C10.7748 11.2375 11.2892 10.8154 11.6511 10.2737C12.013 9.73211 12.2062 9.09534 12.2062 8.44394C12.2046 7.57091 11.8571 6.73407 11.2398 6.11674C10.6225 5.49941 9.78564 5.15192 8.91261 5.15039ZM8.91261 10.9387C8.41805 10.9387 7.93458 10.792 7.52337 10.5173C7.11215 10.2425 6.79167 9.85198 6.60241 9.39507C6.41315 8.93815 6.36362 8.43538 6.4601 7.95032C6.55659 7.46526 6.79475 7.01971 7.14446 6.67C7.49417 6.32029 7.93973 6.08213 8.42479 5.98565C8.90985 5.88916 9.41262 5.93868 9.86953 6.12794C10.3264 6.31721 10.717 6.63771 10.9917 7.04892C11.2665 7.46013 11.4132 7.94359 11.4132 8.43815C11.4139 8.76729 11.3498 9.09335 11.2246 9.39773C11.0993 9.7021 10.9154 9.97882 10.6832 10.2121C10.451 10.4454 10.1751 10.6306 9.8713 10.7573C9.56751 10.8839 9.24175 10.9495 8.91261 10.9503V10.9387Z" fill="white" stroke="#D9DFEC"/>
+        </symbol>
+        <symbol id="clocks" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.36 1C9.311 1 7.30799 1.6076 5.60429 2.74598C3.9006 3.88435 2.57272 5.50236 1.7886 7.3954C1.00448 9.28844 0.799331 11.3715 1.19907 13.3811C1.59882 15.3908 2.5855 17.2368 4.03437 18.6856C5.48324 20.1345 7.32922 21.1212 9.33887 21.521C11.3485 21.9207 13.4316 21.7155 15.3246 20.9314C17.2176 20.1473 18.8357 18.8194 19.974 17.1157C21.1124 15.412 21.72 13.409 21.72 11.36C21.7168 8.61334 20.6243 5.98006 18.6822 4.03787C16.74 2.09568 14.1067 1.00316 11.36 1ZM11.36 20.8965C9.47152 20.8965 7.62545 20.3365 6.05522 19.2873C4.485 18.2381 3.26116 16.7468 2.53847 15.0021C1.81577 13.2573 1.62666 11.3375 1.99509 9.48528C2.36352 7.63307 3.27291 5.93171 4.60827 4.59635C5.94364 3.26098 7.645 2.35157 9.4972 1.98314C11.3494 1.61472 13.2693 1.80381 15.014 2.5265C16.7588 3.2492 18.25 4.47305 19.2992 6.04328C20.3484 7.6135 20.9084 9.45957 20.9084 11.3481C20.9092 12.6025 20.6628 13.8448 20.1833 15.0039C19.7038 16.1631 19.0006 17.2164 18.1139 18.1037C17.2271 18.9909 16.1743 19.6948 15.0154 20.175C13.8565 20.6553 12.6144 20.9024 11.36 20.9024V20.8965Z" fill="white" stroke="#D9DFEC"/>
+            <path d="M11.6524 11.1095V5.64902C11.6524 5.54061 11.6093 5.43662 11.5327 5.35996C11.456 5.2833 11.352 5.24023 11.2436 5.24023C11.1352 5.24023 11.0312 5.2833 10.9546 5.35996C10.8779 5.43662 10.8348 5.54061 10.8348 5.64902V11.2766C10.8357 11.384 10.8786 11.4868 10.9542 11.5631L15.8477 16.4566C15.8869 16.4958 15.9334 16.5269 15.9846 16.5481C16.0358 16.5693 16.0907 16.5802 16.1461 16.5802C16.2015 16.5802 16.2564 16.5693 16.3076 16.5481C16.3588 16.5269 16.4053 16.4958 16.4445 16.4566C16.4837 16.4174 16.5148 16.3709 16.536 16.3197C16.5572 16.2685 16.5681 16.2136 16.5681 16.1582C16.5681 16.1028 16.5572 16.0479 16.536 15.9967C16.5148 15.9455 16.4837 15.899 16.4445 15.8598L11.6524 11.1095Z" fill="white" stroke="#D9DFEC"/>
+        </symbol>
+        <symbol id="mail" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.6132 0.850009V0.85H22.6116H2.39635V0.849998L2.39554 0.850002C1.98673 0.852216 1.59508 1.01453 1.30571 1.30203C1.0163 1.58956 0.852572 1.9791 0.850339 2.38613H0.850337V2.38695V17.5809C0.846046 17.7852 0.882751 17.9882 0.958285 18.1781C1.03402 18.3686 1.14724 18.542 1.29131 18.6883C1.43537 18.8346 1.60735 18.9507 1.7971 19.03C1.98684 19.1093 2.19059 19.15 2.39635 19.15C2.39636 19.15 2.39637 19.15 2.39638 19.15H22.604C23.0137 19.15 23.4068 18.9883 23.6968 18.7002C23.9869 18.412 24.15 18.021 24.15 17.613L24.15 2.38695L24.15 2.38614C24.1478 1.98055 23.9852 1.59227 23.6976 1.30497C23.4101 1.01771 23.0206 0.854426 22.6132 0.850009ZM2.34826 2.19403H2.40398H22.6116C22.6657 2.19403 22.7175 2.2154 22.7554 2.25311C22.7933 2.29079 22.8145 2.34169 22.8145 2.39458V2.41951L12.5078 11.7561L2.20117 2.41951V2.39458H2.20121L2.20114 2.39127C2.20055 2.36501 2.20517 2.33893 2.21473 2.3145C2.2243 2.29007 2.23867 2.26764 2.25707 2.24854C2.27545 2.22946 2.29749 2.21412 2.32195 2.20343C2.3305 2.1997 2.33929 2.19656 2.34826 2.19403ZM2.19349 17.5826V4.09814L12.077 13.0982L12.1199 13.1373H12.178H12.2394H12.263C12.3348 13.1652 12.4109 13.1807 12.4881 13.183L12.4881 13.1832L12.4968 13.183C12.574 13.1807 12.6501 13.1652 12.7219 13.1373H12.7456H12.807H12.865L12.9079 13.0983L22.8068 4.0978V17.5521H22.8062L22.8074 17.5652C22.8098 17.5925 22.8065 17.62 22.7978 17.646C22.789 17.6719 22.775 17.6959 22.7564 17.7164C22.7378 17.7369 22.7152 17.7534 22.6898 17.7649C22.6648 17.7763 22.6376 17.7825 22.6101 17.7831H2.39635C2.36956 17.7831 2.34304 17.7779 2.31837 17.7677C2.29369 17.7576 2.27133 17.7427 2.25254 17.724C2.23379 17.7054 2.21895 17.6833 2.20882 17.659C2.19869 17.6347 2.19349 17.6087 2.19349 17.5826Z" fill="#D9DFEC" stroke="#D9DFEC" stroke-width="0.3"/>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L11 11L1 21" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="arrow-left" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1L2 11L12 21" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="arrow-top" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12L11 2L21 12" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <svg id="long-arrow-right" viewBox="0 0 41 10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 5H40M40 5L36.0976 1M40 5L36.0976 9"/>
+        </svg>
+        <symbol id="long-arrow-bottom" viewBox="0 0 9 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 39.5002L4.5 43.3184M4.5 43.3184L8 39.5002M4.5 43.3184L4.5 1" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="brace" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="brace-path" fill="white">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8266 8.68493C16.028 9.48346 15.5794 10.5665 15.5794 11.6958L15.5794 30.1287C15.5794 32.0107 16.3271 33.8156 17.6579 35.1464C18.9887 36.4772 20.7936 37.2248 22.6756 37.2248C24.5576 37.2248 26.3626 36.4772 27.6933 35.1464C29.0241 33.8156 29.7718 32.0107 29.7718 30.1287L29.7718 11.6958C29.7718 10.9125 30.4067 10.2775 31.19 10.2775C31.9733 10.2775 32.6083 10.9125 32.6083 11.6958V30.1286C32.6083 32.7629 31.5618 35.2894 29.6991 37.1522C27.8364 39.0149 25.3099 40.0614 22.6756 40.0614C20.0413 40.0614 17.5149 39.0149 15.6521 37.1521C13.7894 35.2894 12.7429 32.763 12.7429 30.1287L12.7429 11.6958C12.7429 9.81423 13.4903 8.00966 14.8208 6.67917C16.1513 5.34869 17.9559 4.60126 19.8375 4.60126C21.7191 4.60126 23.5236 5.34872 24.8541 6.67921C26.1846 8.00969 26.932 9.81423 26.932 11.6958L26.922 30.1387C26.922 31.2676 26.4735 32.3502 25.6753 33.1484C24.8771 33.9467 23.7945 34.3951 22.6656 34.3951C21.5367 34.3951 20.4541 33.9467 19.6558 33.1484C18.8576 32.3502 18.4091 31.2675 18.4091 30.1387L18.4192 13.119C18.4196 12.3357 19.055 11.7011 19.8383 11.7016C20.6216 11.7021 21.2562 12.3374 21.2557 13.1207L21.2457 30.1387C21.2459 30.515 21.3955 30.8766 21.6616 31.1427C21.9279 31.409 22.289 31.5585 22.6656 31.5585C23.0421 31.5585 23.4033 31.409 23.6695 31.1427C23.9358 30.8764 24.0854 30.5152 24.0854 30.1387L24.0954 11.6958C24.0952 10.5668 23.6467 9.48331 22.8483 8.68496C22.0498 7.88643 20.9667 7.43779 19.8374 7.43779C18.7081 7.43779 17.6251 7.8864 16.8266 8.68493Z"/>
+            </mask>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8266 8.68493C16.028 9.48346 15.5794 10.5665 15.5794 11.6958L15.5794 30.1287C15.5794 32.0107 16.3271 33.8156 17.6579 35.1464C18.9887 36.4772 20.7936 37.2248 22.6756 37.2248C24.5576 37.2248 26.3626 36.4772 27.6933 35.1464C29.0241 33.8156 29.7718 32.0107 29.7718 30.1287L29.7718 11.6958C29.7718 10.9125 30.4067 10.2775 31.19 10.2775C31.9733 10.2775 32.6083 10.9125 32.6083 11.6958V30.1286C32.6083 32.7629 31.5618 35.2894 29.6991 37.1522C27.8364 39.0149 25.3099 40.0614 22.6756 40.0614C20.0413 40.0614 17.5149 39.0149 15.6521 37.1521C13.7894 35.2894 12.7429 32.763 12.7429 30.1287L12.7429 11.6958C12.7429 9.81423 13.4903 8.00966 14.8208 6.67917C16.1513 5.34869 17.9559 4.60126 19.8375 4.60126C21.7191 4.60126 23.5236 5.34872 24.8541 6.67921C26.1846 8.00969 26.932 9.81423 26.932 11.6958L26.922 30.1387C26.922 31.2676 26.4735 32.3502 25.6753 33.1484C24.8771 33.9467 23.7945 34.3951 22.6656 34.3951C21.5367 34.3951 20.4541 33.9467 19.6558 33.1484C18.8576 32.3502 18.4091 31.2675 18.4091 30.1387L18.4192 13.119C18.4196 12.3357 19.055 11.7011 19.8383 11.7016C20.6216 11.7021 21.2562 12.3374 21.2557 13.1207L21.2457 30.1387C21.2459 30.515 21.3955 30.8766 21.6616 31.1427C21.9279 31.409 22.289 31.5585 22.6656 31.5585C23.0421 31.5585 23.4033 31.409 23.6695 31.1427C23.9358 30.8764 24.0854 30.5152 24.0854 30.1387L24.0954 11.6958C24.0952 10.5668 23.6467 9.48331 22.8483 8.68496C22.0498 7.88643 20.9667 7.43779 19.8374 7.43779C18.7081 7.43779 17.6251 7.8864 16.8266 8.68493Z" fill="white"/>
+            <path d="M15.5794 11.6958L16.2794 11.6958L15.5794 11.6958ZM15.5794 30.1287L14.8794 30.1287L15.5794 30.1287ZM22.6756 37.2248L22.6756 36.5248L22.6756 36.5248L22.6756 37.2248ZM29.7718 30.1287L29.0718 30.1287L29.7718 30.1287ZM29.7718 11.6958L29.0718 11.6958L29.7718 11.6958ZM31.19 10.2775L31.19 9.57751L31.19 10.2775ZM32.6083 11.6958H33.3083H32.6083ZM32.6083 30.1286H33.3083H32.6083ZM22.6756 40.0614L22.6756 40.7614L22.6756 40.7614L22.6756 40.0614ZM12.7429 30.1287L13.4429 30.1287L12.7429 30.1287ZM12.7429 11.6958L13.4429 11.6958L12.7429 11.6958ZM19.8375 4.60126L19.8375 3.90126L19.8375 3.90126L19.8375 4.60126ZM26.932 11.6958L27.632 11.6962L27.632 11.6958H26.932ZM26.922 30.1387L26.222 30.1383L26.222 30.1387L26.922 30.1387ZM22.6656 34.3951L22.6656 35.0951L22.6656 35.0951L22.6656 34.3951ZM18.4091 30.1387L17.7091 30.1383V30.1387L18.4091 30.1387ZM18.4192 13.119L19.1192 13.1194L19.1192 13.1194L18.4192 13.119ZM19.8383 11.7016L19.8379 12.4016L19.8379 12.4016L19.8383 11.7016ZM21.2557 13.1207L20.5557 13.1203L20.5557 13.1203L21.2557 13.1207ZM21.2457 30.1387L20.5457 30.1383L20.5457 30.1391L21.2457 30.1387ZM22.6656 31.5585L22.6656 32.2585H22.6656L22.6656 31.5585ZM24.0854 30.1387L23.3854 30.1383L23.3854 30.1387L24.0854 30.1387ZM24.0954 11.6958L24.7954 11.6962V11.6957L24.0954 11.6958ZM19.8374 7.43779L19.8374 6.73779L19.8374 7.43779ZM16.3316 8.18995C15.4018 9.11976 14.8794 10.3808 14.8794 11.6958L16.2794 11.6958C16.2794 10.7521 16.6543 9.84716 17.3216 9.1799L16.3316 8.18995ZM14.8794 11.6958L14.8794 30.1287L16.2794 30.1287L16.2794 11.6958L14.8794 11.6958ZM14.8794 30.1287C14.8794 32.1963 15.7009 34.1793 17.1629 35.6414L18.1529 34.6514C16.9533 33.4519 16.2794 31.825 16.2794 30.1287L14.8794 30.1287ZM17.1629 35.6414C18.625 37.1034 20.6079 37.9248 22.6756 37.9248L22.6756 36.5248C20.9792 36.5248 19.3524 35.8509 18.1529 34.6514L17.1629 35.6414ZM22.6756 37.9248C24.7433 37.9248 26.7263 37.1034 28.1883 35.6414L27.1984 34.6514C25.9989 35.8509 24.372 36.5248 22.6756 36.5248L22.6756 37.9248ZM28.1883 35.6414C29.6504 34.1793 30.4718 32.1963 30.4718 30.1287L29.0718 30.1287C29.0718 31.825 28.3979 33.4519 27.1984 34.6514L28.1883 35.6414ZM30.4718 30.1287L30.4718 11.6958L29.0718 11.6958L29.0718 30.1287L30.4718 30.1287ZM30.4718 11.6958C30.4718 11.2991 30.7933 10.9775 31.19 10.9775L31.19 9.57751C30.0201 9.57751 29.0718 10.5259 29.0718 11.6958L30.4718 11.6958ZM31.19 10.9775C31.5867 10.9775 31.9083 11.2991 31.9083 11.6958L33.3083 11.6958C33.3083 10.5259 32.3599 9.57751 31.19 9.57751L31.19 10.9775ZM31.9083 11.6958L31.9083 30.1286H33.3083V11.6958L31.9083 11.6958ZM31.9083 30.1286C31.9083 32.5773 30.9356 34.9257 29.2041 36.6572L30.1941 37.6471C32.1881 35.6531 33.3083 32.9486 33.3083 30.1286H31.9083ZM29.2041 36.6572C27.4727 38.3886 25.1242 39.3614 22.6756 39.3614L22.6756 40.7614C25.4955 40.7614 28.2 39.6412 30.1941 37.6471L29.2041 36.6572ZM22.6756 39.3614C20.2269 39.3614 17.8786 38.3886 16.1471 36.6572L15.1572 37.6471C17.1512 39.6411 19.8556 40.7614 22.6756 40.7614L22.6756 39.3614ZM16.1471 36.6572C14.4156 34.9257 13.4429 32.5774 13.4429 30.1287L12.0429 30.1287C12.0429 32.9487 13.1631 35.6531 15.1572 37.6471L16.1471 36.6572ZM13.4429 30.1287L13.4429 11.6958L12.0429 11.6958L12.0429 30.1287L13.4429 30.1287ZM13.4429 11.6958C13.4429 9.99987 14.1166 8.37335 15.3158 7.17415L14.3259 6.1842C12.8641 7.64597 12.0429 9.62859 12.0429 11.6958L13.4429 11.6958ZM15.3158 7.17415C16.515 5.97495 18.1415 5.30126 19.8375 5.30126L19.8375 3.90126C17.7702 3.90126 15.7876 4.72243 14.3259 6.1842L15.3158 7.17415ZM19.8375 5.30126C21.5334 5.30126 23.1599 5.97497 24.3591 7.17418L25.3491 6.18423C23.8873 4.72247 21.9047 3.90126 19.8375 3.90126L19.8375 5.30126ZM24.3591 7.17418C25.5583 8.37339 26.232 9.99988 26.232 11.6958H27.632C27.632 9.62858 26.8108 7.64599 25.3491 6.18423L24.3591 7.17418ZM26.232 11.6954L26.222 30.1383L27.622 30.1391L27.632 11.6962L26.232 11.6954ZM26.222 30.1387C26.222 31.0819 25.8473 31.9865 25.1803 32.6535L26.1703 33.6434C27.0998 32.7139 27.622 31.4533 27.622 30.1387L26.222 30.1387ZM25.1803 32.6535C24.5133 33.3204 23.6088 33.6951 22.6656 33.6951L22.6656 35.0951C23.9801 35.0951 25.2408 34.5729 26.1703 33.6434L25.1803 32.6535ZM22.6656 33.6951C21.7224 33.6951 20.8178 33.3204 20.1508 32.6535L19.1609 33.6434C20.0904 34.5729 21.3511 35.0951 22.6656 35.0951L22.6656 33.6951ZM20.1508 32.6535C19.4838 31.9865 19.1091 31.0819 19.1091 30.1387L17.7091 30.1387C17.7091 31.4532 18.2314 32.7139 19.1609 33.6434L20.1508 32.6535ZM19.1091 30.1391L19.1192 13.1194L17.7192 13.1186L17.7091 30.1383L19.1091 30.1391ZM19.1192 13.1194C19.1194 12.7228 19.4412 12.4014 19.8379 12.4016L19.8387 11.0016C18.6688 11.0009 17.7198 11.9487 17.7192 13.1186L19.1192 13.1194ZM19.8379 12.4016C20.2346 12.4018 20.556 12.7236 20.5557 13.1203L21.9557 13.1211C21.9564 11.9512 21.0086 11.0023 19.8387 11.0016L19.8379 12.4016ZM20.5557 13.1203L20.5457 30.1383L21.9457 30.1391L21.9557 13.1211L20.5557 13.1203ZM20.5457 30.1391C20.546 30.7004 20.769 31.2401 21.1666 31.6377L22.1566 30.6477C22.022 30.5131 21.9458 30.3295 21.9457 30.1383L20.5457 30.1391ZM21.1666 31.6377C21.5642 32.0352 22.1033 32.2585 22.6656 32.2585L22.6656 30.8585C22.4746 30.8585 22.2916 30.7827 22.1566 30.6477L21.1666 31.6377ZM22.6656 32.2585C23.2278 32.2585 23.767 32.0352 24.1645 31.6377L23.1746 30.6477C23.0396 30.7827 22.8565 30.8585 22.6656 30.8585L22.6656 32.2585ZM24.1645 31.6377C24.562 31.2401 24.7854 30.7009 24.7854 30.1387L23.3854 30.1387C23.3854 30.3296 23.3096 30.5127 23.1746 30.6477L24.1645 31.6377ZM24.7854 30.139L24.7954 11.6962L23.3954 11.6954L23.3854 30.1383L24.7854 30.139ZM24.7954 11.6957C24.7952 10.3812 24.273 9.11968 23.3433 8.18998L22.3534 9.17993C23.0204 9.84693 23.3953 10.7524 23.3954 11.6959L24.7954 11.6957ZM23.3433 8.18998C22.4135 7.26018 21.1524 6.73779 19.8374 6.73779L19.8374 8.13779C20.7811 8.13779 21.6861 8.51267 22.3534 9.17993L23.3433 8.18998ZM19.8374 6.73779C18.5225 6.73779 17.2614 7.26015 16.3316 8.18995L17.3216 9.1799C17.9888 8.51265 18.8938 8.13779 19.8374 8.13779L19.8374 6.73779Z" fill="#E10000" mask="url(#brace-path)"/>
+        </symbol>
+        <svg id="brace--2" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="brace--2-path" fill="white">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8266 8.68493C16.028 9.48346 15.5794 10.5665 15.5794 11.6958L15.5794 30.1287C15.5794 32.0107 16.3271 33.8156 17.6579 35.1464C18.9887 36.4772 20.7936 37.2248 22.6756 37.2248C24.5576 37.2248 26.3626 36.4772 27.6933 35.1464C29.0241 33.8156 29.7718 32.0107 29.7718 30.1287L29.7718 11.6958C29.7718 10.9125 30.4067 10.2775 31.19 10.2775C31.9733 10.2775 32.6083 10.9125 32.6083 11.6958V30.1286C32.6083 32.7629 31.5618 35.2894 29.6991 37.1522C27.8364 39.0149 25.3099 40.0614 22.6756 40.0614C20.0413 40.0614 17.5149 39.0149 15.6521 37.1521C13.7894 35.2894 12.7429 32.763 12.7429 30.1287L12.7429 11.6958C12.7429 9.81423 13.4903 8.00966 14.8208 6.67917C16.1513 5.34869 17.9559 4.60126 19.8375 4.60126C21.7191 4.60126 23.5236 5.34872 24.8541 6.67921C26.1846 8.00969 26.932 9.81423 26.932 11.6958L26.922 30.1387C26.922 31.2676 26.4735 32.3502 25.6753 33.1484C24.8771 33.9467 23.7945 34.3951 22.6656 34.3951C21.5367 34.3951 20.4541 33.9467 19.6558 33.1484C18.8576 32.3502 18.4091 31.2675 18.4091 30.1387L18.4192 13.119C18.4196 12.3357 19.055 11.7011 19.8383 11.7016C20.6216 11.7021 21.2562 12.3374 21.2557 13.1207L21.2457 30.1387C21.2459 30.515 21.3955 30.8766 21.6616 31.1427C21.9279 31.409 22.289 31.5585 22.6656 31.5585C23.0421 31.5585 23.4033 31.409 23.6695 31.1427C23.9358 30.8764 24.0854 30.5152 24.0854 30.1387L24.0954 11.6958C24.0952 10.5668 23.6467 9.48331 22.8483 8.68496C22.0498 7.88643 20.9667 7.43779 19.8374 7.43779C18.7081 7.43779 17.6251 7.8864 16.8266 8.68493Z"/>
+            </mask>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8266 8.68493C16.028 9.48346 15.5794 10.5665 15.5794 11.6958L15.5794 30.1287C15.5794 32.0107 16.3271 33.8156 17.6579 35.1464C18.9887 36.4772 20.7936 37.2248 22.6756 37.2248C24.5576 37.2248 26.3626 36.4772 27.6933 35.1464C29.0241 33.8156 29.7718 32.0107 29.7718 30.1287L29.7718 11.6958C29.7718 10.9125 30.4067 10.2775 31.19 10.2775C31.9733 10.2775 32.6083 10.9125 32.6083 11.6958V30.1286C32.6083 32.7629 31.5618 35.2894 29.6991 37.1522C27.8364 39.0149 25.3099 40.0614 22.6756 40.0614C20.0413 40.0614 17.5149 39.0149 15.6521 37.1521C13.7894 35.2894 12.7429 32.763 12.7429 30.1287L12.7429 11.6958C12.7429 9.81423 13.4903 8.00966 14.8208 6.67917C16.1513 5.34869 17.9559 4.60126 19.8375 4.60126C21.7191 4.60126 23.5236 5.34872 24.8541 6.67921C26.1846 8.00969 26.932 9.81423 26.932 11.6958L26.922 30.1387C26.922 31.2676 26.4735 32.3502 25.6753 33.1484C24.8771 33.9467 23.7945 34.3951 22.6656 34.3951C21.5367 34.3951 20.4541 33.9467 19.6558 33.1484C18.8576 32.3502 18.4091 31.2675 18.4091 30.1387L18.4192 13.119C18.4196 12.3357 19.055 11.7011 19.8383 11.7016C20.6216 11.7021 21.2562 12.3374 21.2557 13.1207L21.2457 30.1387C21.2459 30.515 21.3955 30.8766 21.6616 31.1427C21.9279 31.409 22.289 31.5585 22.6656 31.5585C23.0421 31.5585 23.4033 31.409 23.6695 31.1427C23.9358 30.8764 24.0854 30.5152 24.0854 30.1387L24.0954 11.6958C24.0952 10.5668 23.6467 9.48331 22.8483 8.68496C22.0498 7.88643 20.9667 7.43779 19.8374 7.43779C18.7081 7.43779 17.6251 7.8864 16.8266 8.68493Z" fill="white"/>
+            <path d="M15.5794 11.6958L16.2794 11.6958L15.5794 11.6958ZM15.5794 30.1287L14.8794 30.1287L14.8794 30.1287L15.5794 30.1287ZM22.6756 37.2248L22.6756 36.5248L22.6756 36.5248L22.6756 37.2248ZM29.7718 30.1287L29.0718 30.1287L29.0718 30.1287L29.7718 30.1287ZM29.7718 11.6958L29.0718 11.6958L29.0718 11.6958L29.7718 11.6958ZM31.19 10.2775L31.19 9.57751L31.19 9.57751L31.19 10.2775ZM32.6083 11.6958L33.3083 11.6958V11.6958L32.6083 11.6958ZM32.6083 30.1286L33.3083 30.1286L33.3083 30.1286H32.6083ZM22.6756 40.0614L22.6756 40.7614L22.6756 40.7614L22.6756 40.0614ZM12.7429 30.1287L13.4429 30.1287L13.4429 30.1287L12.7429 30.1287ZM12.7429 11.6958L13.4429 11.6958L13.4429 11.6958L12.7429 11.6958ZM19.8375 4.60126L19.8375 3.90126L19.8375 3.90126L19.8375 4.60126ZM26.932 11.6958L27.632 11.6962L27.632 11.6958L26.932 11.6958ZM26.922 30.1387L26.222 30.1383L26.222 30.1387L26.922 30.1387ZM22.6656 34.3951L22.6656 35.0951L22.6656 35.0951L22.6656 34.3951ZM18.4091 30.1387L17.7091 30.1383L17.7091 30.1387L18.4091 30.1387ZM18.4192 13.119L19.1192 13.1194L19.1192 13.1194L18.4192 13.119ZM19.8383 11.7016L19.8379 12.4016L19.8379 12.4016L19.8383 11.7016ZM21.2557 13.1207L20.5557 13.1203L20.5557 13.1203L21.2557 13.1207ZM21.2457 30.1387L20.5457 30.1383L20.5457 30.1391L21.2457 30.1387ZM22.6656 31.5585L22.6656 32.2585L22.6656 32.2585L22.6656 31.5585ZM24.0854 30.1387L23.3854 30.1383L23.3854 30.1387L24.0854 30.1387ZM24.0954 11.6958L24.7954 11.6962L24.7954 11.6957L24.0954 11.6958ZM19.8374 7.43779L19.8374 6.73779L19.8374 6.73779L19.8374 7.43779ZM16.3316 8.18995C15.4018 9.11976 14.8794 10.3808 14.8794 11.6958L16.2794 11.6958C16.2794 10.7521 16.6543 9.84716 17.3216 9.1799L16.3316 8.18995ZM14.8794 11.6958L14.8794 30.1287L16.2794 30.1287L16.2794 11.6958L14.8794 11.6958ZM14.8794 30.1287C14.8794 32.1963 15.7009 34.1793 17.1629 35.6414L18.1529 34.6514C16.9533 33.4519 16.2794 31.825 16.2794 30.1287L14.8794 30.1287ZM17.1629 35.6414C18.625 37.1034 20.6079 37.9248 22.6756 37.9248L22.6756 36.5248C20.9792 36.5248 19.3524 35.8509 18.1529 34.6514L17.1629 35.6414ZM22.6756 37.9248C24.7433 37.9248 26.7263 37.1034 28.1883 35.6414L27.1984 34.6514C25.9989 35.8509 24.372 36.5248 22.6756 36.5248L22.6756 37.9248ZM28.1883 35.6414C29.6504 34.1793 30.4718 32.1963 30.4718 30.1287L29.0718 30.1287C29.0718 31.825 28.3979 33.4519 27.1984 34.6514L28.1883 35.6414ZM30.4718 30.1287L30.4718 11.6958L29.0718 11.6958L29.0718 30.1287L30.4718 30.1287ZM30.4718 11.6958C30.4718 11.2991 30.7933 10.9775 31.19 10.9775L31.19 9.57751C30.0201 9.57751 29.0718 10.5259 29.0718 11.6958L30.4718 11.6958ZM31.19 10.9775C31.5867 10.9775 31.9083 11.2991 31.9083 11.6958L33.3083 11.6958C33.3083 10.5259 32.3599 9.57751 31.19 9.57751L31.19 10.9775ZM31.9083 11.6958V30.1286H33.3083V11.6958L31.9083 11.6958ZM31.9083 30.1286C31.9083 32.5773 30.9356 34.9257 29.2041 36.6572L30.1941 37.6471C32.1881 35.6531 33.3083 32.9486 33.3083 30.1286L31.9083 30.1286ZM29.2041 36.6572C27.4727 38.3886 25.1242 39.3614 22.6756 39.3614L22.6756 40.7614C25.4955 40.7614 28.2 39.6412 30.1941 37.6471L29.2041 36.6572ZM22.6756 39.3614C20.2269 39.3614 17.8786 38.3886 16.1471 36.6572L15.1572 37.6471C17.1512 39.6411 19.8556 40.7614 22.6756 40.7614L22.6756 39.3614ZM16.1471 36.6572C14.4156 34.9257 13.4429 32.5774 13.4429 30.1287H12.0429C12.0429 32.9487 13.1631 35.6531 15.1572 37.6471L16.1471 36.6572ZM13.4429 30.1287L13.4429 11.6958L12.0429 11.6958L12.0429 30.1287L13.4429 30.1287ZM13.4429 11.6958C13.4429 9.99987 14.1166 8.37335 15.3158 7.17415L14.3259 6.1842C12.8641 7.64597 12.0429 9.62859 12.0429 11.6958L13.4429 11.6958ZM15.3158 7.17415C16.515 5.97495 18.1415 5.30126 19.8375 5.30126L19.8375 3.90126C17.7702 3.90126 15.7876 4.72243 14.3259 6.1842L15.3158 7.17415ZM19.8375 5.30126C21.5334 5.30126 23.1599 5.97497 24.3591 7.17418L25.3491 6.18423C23.8873 4.72247 21.9047 3.90126 19.8375 3.90126L19.8375 5.30126ZM24.3591 7.17418C25.5583 8.37339 26.232 9.99988 26.232 11.6958L27.632 11.6958C27.632 9.62857 26.8108 7.64599 25.3491 6.18423L24.3591 7.17418ZM26.232 11.6954L26.222 30.1383L27.622 30.1391L27.632 11.6962L26.232 11.6954ZM26.222 30.1387C26.222 31.0819 25.8473 31.9865 25.1803 32.6535L26.1703 33.6434C27.0998 32.7139 27.622 31.4533 27.622 30.1387L26.222 30.1387ZM25.1803 32.6535C24.5133 33.3204 23.6088 33.6951 22.6656 33.6951L22.6656 35.0951C23.9801 35.0951 25.2408 34.5729 26.1703 33.6434L25.1803 32.6535ZM22.6656 33.6951C21.7224 33.6951 20.8178 33.3204 20.1508 32.6535L19.1609 33.6434C20.0904 34.5729 21.3511 35.0951 22.6656 35.0951L22.6656 33.6951ZM20.1508 32.6535C19.4838 31.9865 19.1091 31.0819 19.1091 30.1387L17.7091 30.1387C17.7091 31.4532 18.2314 32.7139 19.1609 33.6434L20.1508 32.6535ZM19.1091 30.1391L19.1192 13.1194L17.7192 13.1186L17.7091 30.1383L19.1091 30.1391ZM19.1192 13.1194C19.1194 12.7228 19.4412 12.4014 19.8379 12.4016L19.8387 11.0016C18.6688 11.0009 17.7198 11.9487 17.7192 13.1186L19.1192 13.1194ZM19.8379 12.4016C20.2346 12.4018 20.556 12.7236 20.5557 13.1203L21.9557 13.1211C21.9564 11.9512 21.0086 11.0023 19.8387 11.0016L19.8379 12.4016ZM20.5557 13.1203L20.5457 30.1383L21.9457 30.1391L21.9557 13.1211L20.5557 13.1203ZM20.5457 30.1391C20.546 30.7004 20.769 31.2401 21.1666 31.6377L22.1566 30.6477C22.022 30.5131 21.9458 30.3295 21.9457 30.1383L20.5457 30.1391ZM21.1666 31.6377C21.5642 32.0352 22.1033 32.2585 22.6656 32.2585L22.6656 30.8585C22.4746 30.8585 22.2916 30.7827 22.1566 30.6477L21.1666 31.6377ZM22.6656 32.2585C23.2278 32.2585 23.767 32.0352 24.1645 31.6377L23.1746 30.6477C23.0396 30.7827 22.8565 30.8585 22.6656 30.8585L22.6656 32.2585ZM24.1645 31.6377C24.562 31.2401 24.7854 30.7009 24.7854 30.1387L23.3854 30.1387C23.3854 30.3296 23.3096 30.5127 23.1746 30.6477L24.1645 31.6377ZM24.7854 30.139L24.7954 11.6962L23.3954 11.6954L23.3854 30.1383L24.7854 30.139ZM24.7954 11.6957C24.7952 10.3812 24.273 9.11968 23.3433 8.18998L22.3534 9.17993C23.0204 9.84693 23.3953 10.7524 23.3954 11.6959L24.7954 11.6957ZM23.3433 8.18998C22.4135 7.26018 21.1524 6.73779 19.8374 6.73779L19.8374 8.13779C20.7811 8.13779 21.6861 8.51267 22.3534 9.17993L23.3433 8.18998ZM19.8374 6.73779C18.5225 6.73779 17.2614 7.26015 16.3316 8.18995L17.3216 9.1799C17.9888 8.51265 18.8938 8.13779 19.8374 8.13779L19.8374 6.73779Z" fill="#3D525D" mask="url(#brace--2-path)"/>
+        </svg>
+        <symbol id="cross" viewBox="0 0 23 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.4771 11.5071L22.5771 1.4071C22.7097 1.2745 22.7842 1.09464 22.7842 0.907104C22.7842 0.719568 22.7097 0.539713 22.5771 0.407104C22.4445 0.274496 22.2646 0.199951 22.0771 0.199951C21.8896 0.199951 21.7097 0.274496 21.5771 0.407104L11.4771 10.5071L1.20709 0.207092C1.07448 0.074484 0.894629 0 0.707092 0C0.519556 0 0.339701 0.074484 0.207092 0.207092C0.074484 0.339701 0 0.519556 0 0.707092C0 0.894629 0.074484 1.07448 0.207092 1.20709L10.5471 11.5071L0.237122 21.8171C0.104513 21.9497 0.0300293 22.1295 0.0300293 22.3171C0.0300293 22.5046 0.104513 22.6845 0.237122 22.8171C0.36973 22.9497 0.549585 23.0242 0.737122 23.0242C0.924658 23.0242 1.10451 22.9497 1.23712 22.8171L11.4771 12.4471L21.5771 22.5471C21.7097 22.6797 21.8896 22.7542 22.0771 22.7542C22.2646 22.7542 22.4445 22.6797 22.5771 22.5471C22.7097 22.4144 22.7842 22.2346 22.7842 22.0471C22.7842 21.8595 22.7097 21.6797 22.5771 21.5471L12.4771 11.5071Z"/>
+        </symbol>
+        <symbol id="fb" viewBox="0 0 9 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.9 0C2.5 0 2 0.6 2 6.3H0V9.6H2V19.2H5.9V9.6H8.5L8.9 6.3H6C6 6.3 6 5.5 6 4.6C6 3.7 6.3 3.3 7.5 3.3C8.7 3.3 9 3.3 9 3.3L8.9 0Z"/>
+        </symbol>
+        <symbol id="in" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.7 14.8C18.7 17 16.9 18.8 14.8 18.8H5.9C3.7 18.8 2 17 2 14.8V5.9C2 3.7 3.8 1.9 5.9 1.9H14.8C17 1.9 18.7 3.7 18.7 5.9V14.8ZM14.6 0H5.9C2.6 0 0 2.7 0 6V14.7C0 18 2.7 20.7 5.9 20.7H12.7H14.6C17.9 20.7 20.5 18 20.5 14.7V6C20.6 2.7 17.9 0 14.6 0ZM10.3 13.8C8.4 13.8 6.8 12.2 6.8 10.3C6.8 8.4 8.3 6.8 10.3 6.8C12.3 6.8 13.8 8.4 13.8 10.3C13.8 12.3 12.2 13.8 10.3 13.8ZM10.3 5C7.4 5 5 7.4 5 10.4C5 13.4 7.4 15.8 10.3 15.8C13.2 15.8 15.6 13.4 15.6 10.4C15.6 7.4 13.2 5 10.3 5ZM15.8 3.5C15.1 3.5 14.6 4.1 14.6 4.7C14.6 5.3 15.2 5.9 15.8 5.9C16.5 5.9 17 5.3 17 4.7C17 4.1 16.5 3.5 15.8 3.5Z"/>
+        </symbol>
+        <symbol id="tg" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.600056 5.73899L16.0001 0.0389933C16.6001 -0.161007 17.2001 0.438996 17.1001 1.139L11.5001 16.639C11.3001 17.239 10.4001 17.339 10.2001 16.739L6.60006 10.639C6.50006 10.539 6.40005 10.439 6.30005 10.339L0.600056 7.139C-0.0999444 6.739 0.100056 5.83899 0.600056 5.73899Z"/>
+        </symbol>
+        <symbol id="yu" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.2 2.4C21 1.5 20.1999 0.8 19.2999 0.5C17.5999 0 10.9 0 10.9 0C10.9 0 4.19995 0 2.49995 0.5C1.59995 0.7 0.899952 1.5 0.599952 2.4C0.199952 4.1 0.199951 7.5 0.199951 7.5C0.199951 7.5 0.199951 11 0.699951 12.7C0.899951 13.6 1.69995 14.3 2.59995 14.6C4.29995 15.1 11 15.1 11 15.1C11 15.1 17.7 15.1 19.4 14.6C20.3 14.4 21 13.6 21.2999 12.7C21.7999 11 21.7999 7.5 21.7999 7.5C21.7999 7.5 21.7 4.1 21.2 2.4ZM8.89995 10.8V4.4L14.4 7.6L8.89995 10.8Z"/>
+        </symbol>
+        <symbol id="vk" viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.3001 0.899998C19.5001 0.399998 19.3001 0.0999985 18.7001 0.0999985H16.6001C16.1001 0.0999985 15.8001 0.400001 15.7001 0.700001C15.7001 0.700001 14.6001 3.3 13.1001 5C12.6001 5.5 12.4001 5.6 12.1001 5.6C11.9001 5.6 11.8001 5.4 11.8001 5V0.799999C11.8001 0.299999 11.6001 0 11.2001 0H7.9001C7.6001 0 7.4001 0.2 7.4001 0.5C7.4001 1 8.2001 1.1 8.2001 2.6V5.8C8.2001 6.5 8.0001 6.6 7.8001 6.6C7.1001 6.6 5.3001 4 4.3001 1C4.1001 0.4 3.9001 0.200001 3.4001 0.200001H1.3001C0.700102 0.200001 0.600098 0.499999 0.600098 0.799999C0.600098 1.3 1.3001 4.1 3.9001 7.8C5.7001 10.3 8.1001 11.7 10.3001 11.7C11.6001 11.7 11.8001 11.4 11.8001 10.9V8.8C11.8001 8.2 12.0001 8.1 12.3001 8.1C12.6001 8.1 13.1001 8.3 14.4001 9.5C15.9001 11 16.1001 11.6 16.9001 11.6H19.0001C19.6001 11.6 19.9001 11.3 19.7001 10.7C19.5001 10.1 18.9001 9.2 17.9001 8.2C17.4001 7.6 16.7001 7 16.4001 6.7C16.1001 6.3 16.2001 6.1 16.4001 5.8C16.4001 5.8 19.1001 2.1 19.3001 0.899998Z"/>
+        </symbol>
+        <symbol id="slider-blur" viewBox="0 0 1126 1126" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.1" filter="url(#filter0_f)">
+                <circle cx="563" cy="563" r="313" fill="white"/>
+            </g>
+            <defs>
+                <filter id="filter0_f" x="0" y="0" width="1126" height="1126" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur"/>
+                </filter>
+            </defs>
+        </symbol>
+        <symbol id="gal" viewBox="0 0 148 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 69C18.3333 80.6667 43 104 43 104C43 104 109 39.3333 140 7" stroke="#20C964" stroke-width="20"/>
+        </symbol>
+    </svg>
+
+    <div id="popup--call" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="container">
+                <div class="text-center mb-3 mb-xl-4 d-flex flex-column align-items-center">
+                    <button class="popup__close mb-2 mb-xl-3 js-popup__close">
+                        <svg width="36" height="36">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="section__title mb-2 mb-xl-3">Задайте вопрос</div>
+                    <div class="ulight">Задайте вопрос нашим специалистам <br>
+                        Мы отвечаем на все запросы в течение дня</div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 mb-5">
+                        <input class="w-100 mb-3" type="text" placeholder="Имя*">
+                        <input class="w-100 mb-3" type="email" placeholder="E-mail*">
+                        <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
+                    </div>
+                    <div class="col-xl-6 mb-5">
+                        <textarea class="popup__textarea w-100" placeholder="Ваше сообщение*"></textarea>
+                    </div>
+                    <div class="col-xl-6 mb-4">
+                        <div class="d-flex">
+                            <button class="button button--orange w-50 mr-3" type="submit">Отправить сообщение</button>
+                            <label class="button button--tr button--tr-white button--file w-50">
+                                <input class="button--file__input js-file-input" type="file" multiple>
+                                <span>Прикрепить файл</span>
+                                <svg class="ml-2" width="45" height="45">
+                                    <use xlink:href="#brace--2"></use>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 mb-4">
+                        <div class="file-list white"></div>
+                    </div>
+                    <div class="text-center w-100 pink">
+                        <span class="p2">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink popup__policy" href="#popup--success" data-fancybox>обработку персональных данных</a></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="popup--success" class="popup__wrp" style="display: none;">
+        <form class="popup">
+            <div class="container h-100">
+                <div class="text-center mb-3 mb-xl-4 d-flex flex-column justify-content-between align-items-center popup--success__in">
+                    <button class="popup__close mb-2 mb-xl-3 js-popup__close">
+                        <svg width="36" height="36">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="d-flex flex-column justify-content-center align-items-center flex-grow-1">
+                        <div class="section__title mb-2 mb-xl-3">Ваше сообщение отправлено</div>
+                        <svg class="popup__gal" width="148" height="118">
+                            <use xlink:href="#gal"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>    <script src="https://api-maps.yandex.ru/2.1/?apikey=cc66349a-1e12-4c36-81a2-66e6897a2f32&lang=ru_RU"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
