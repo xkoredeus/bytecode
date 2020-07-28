@@ -38,6 +38,10 @@
     display: flex;
     align-items: center;
     z-index: 1;
+    &-icon {
+      fill: #fff;
+      @include ease;
+    }
     &-text {
       position: relative;
       margin-left: 40px;
@@ -112,6 +116,11 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+    svg {
+      fill: $gray2;
+      stroke: $gray2;
+      @include ease;
+    }
     &-link {
       color: $gray2;
       svg {
@@ -119,12 +128,6 @@
       }
       &:hover {
         color: #fff !important;
-        svg {
-          path {
-            fill: #fff;
-            stroke: #fff !important;
-          }
-        }
       }
     }
   }
@@ -178,11 +181,12 @@
     max-width: 1090px;
     &-link {
       position: relative;
-      font-family: $mmed;
+      //font-family: $mmed;
       font-size: 17px;
       color: $dark;
       text-transform: uppercase;
       display: inline-block;
+      padding: 8px 20px 8px 0;
       &:hover {
         color: #fff;
         text-shadow: 0 1px 1px #fff;
@@ -190,8 +194,8 @@
       &-arrow {
         position: absolute;
         width: 8px;
-        right: -19px;
-        top: 6px;
+        right: 0;
+        top: 13px;
         height: 44px;
         overflow: hidden;
         @include ease;
@@ -203,7 +207,6 @@
         }
       }
       &-wrp {
-        padding: 8px 20px 8px 0;
         &:hover {
           .header__nav-link {
             color: #fff;
@@ -316,16 +319,167 @@
     visibility: hidden;
     @include ease;
   }
+  &__wrp {
+    min-height: 168px;
+    &--light {
+      .header {
+        &__logo {
+          &-icon {
+            fill: $dark;
+          }
+          &-text {
+            color: $dark;
+          }
+          &:hover {
+            .header__logo-text {
+              color: $dark;
+              text-shadow: 0 .5px .5px $dark;
+            }
+          }
+        }
+        &__top {
+          color: $dark;
+          a {
+            color: $dark;
+          }
+          &__item {
+            color: $dark;
+          }
+        }
+        &__item {
+          svg {
+            fill: $dark;
+            stroke: $dark;
+          }
+          &-link {
+            color: $dark;
+            &:hover {
+              color: $dark !important;
+              text-shadow: 0 .5px .5px $dark;
+            }
+          }
+        }
+        &__tel:hover {
+          color: $dark !important;
+          text-shadow: 0 .5px .5px $dark;
+        }
+
+        &__nav {
+          &-link {
+            color: $dark !important;
+            &-arrow {
+              svg {
+                stroke: $dark;
+              }
+            }
+            &-wrp {
+              &:hover {
+                .header__nav-link {
+                  text-shadow: 0 .2px .2px $dark;
+                }
+              }
+            }
+          }
+        }
+        &__button {
+          color: $dark;
+          &:hover {
+            color: $dark;
+            text-shadow: 0 .2px .2px $dark;
+            &::after {
+              background-color: $dark;
+            }
+          }
+        }
+      }
+    }
+    &--gray {
+      background-color: #E7E7E7;
+    }
+  }
 }
 
 .sticky {
   .header {
+    &__wrp {
+      &--light {
+        .header {
+          &__logo {
+            &-icon {
+              fill: #fff;
+            }
+            &-text {
+              color: $gray;
+            }
+            &:hover {
+              .header__logo-text {
+                color: #fff;
+              }
+            }
+          }
+          &__item {
+            span {
+              color: $gray2;
+              @include ease;
+            }
+            svg {
+              fill: $gray2;
+              stroke: $gray2;
+            }
+            &-link {
+              &:hover {
+                span {
+                  color: #fff;
+                }
+                color: #fff !important;
+              }
+            }
+          }
+          &__tel {
+            color: $gray2;
+            &:hover {
+              color: #fff !important;
+            }
+          }
+          &__nav {
+            &-link {
+              color: #fff !important;
+              &-arrow {
+                svg {
+                  stroke: #fff;
+                }
+              }
+              &-wrp {
+                &:hover {
+                  .header__nav-link {
+                    text-shadow: 0 1px 1px #fff;
+                  }
+                }
+              }
+            }
+          }
+          &__button {
+            color: #fff;
+            &:hover {
+              color: #fff;
+              text-shadow: 0 1px 1px #fff;
+              &::after {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
     &__top-in {
       .container {
         left: 16px;
         transform: translate(0, -50%);
         opacity: 0;
         visibility: visible;
+      }
+      .header__row {
+        padding-right: 80px;
       }
       &:hover {
         background-color: $black;
@@ -343,6 +497,11 @@
         & + .header__hmb {
           background-color: $black;
         }
+      }
+    }
+    &__item:nth-child(2) {
+      @include r(1531) {
+        display: none;
       }
     }
     &__logo--fixed {
