@@ -6809,6 +6809,7 @@ a:hover {
 .slider .owl-item.active:hover .slider__item-promo {
   -webkit-transform: translateX(-150px);
           transform: translateX(-150px);
+  min-height: unset;
 }
 
 .slider .owl-item.active:hover .slider__item-overlay {
