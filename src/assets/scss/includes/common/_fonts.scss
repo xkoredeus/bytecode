@@ -25,6 +25,7 @@ $h1-small: 30px;
 
 $h2: 40px;
 $h2-medium: 30px;
+$h2-small: 20px;
 
 $h3: 30px;
 $h3-medium: 22px;
@@ -39,6 +40,16 @@ $p1-small: 16px;
 
 $p2: 16px;
 $p2-medium: 14px;
+
+.h3 {
+  font-size: $h3;
+  @include r(1531) {
+    font-size: $h3-medium;
+  }
+  @include r(1200) {
+    font-size: $h3-small;
+  }
+}
 
 .p1 {
   font-size: $p1;

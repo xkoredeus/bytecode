@@ -45,6 +45,9 @@
       overflow: hidden;
       display: inline-block;
       @include ease;
+      @include r(1531) {
+        height: 20px;
+      }
       svg {
         stroke: $dark;
         transform: translateX(-31px);

@@ -5083,6 +5083,22 @@ main {
   font-family: "MullerUltraLight";
 }
 
+.h3 {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 1531px) {
+  .h3 {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .h3 {
+    font-size: 18px;
+  }
+}
+
 .p1 {
   font-size: 25px;
 }
@@ -5679,6 +5695,24 @@ input[type="radio"]:checked + .checkbox__text::before {
 @media only screen and (max-width: 1200px) {
   .section__title {
     font-size: 30px;
+  }
+}
+
+.section__subtitle {
+  font-size: 40px;
+  font-family: "MullerBold";
+  line-height: 1.1;
+}
+
+@media only screen and (max-width: 1531px) {
+  .section__subtitle {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section__subtitle {
+    font-size: 20px;
   }
 }
 
@@ -7272,6 +7306,12 @@ a:hover {
   transition: all .43s ease-in-out;
 }
 
+@media only screen and (max-width: 1531px) {
+  .cases__item-arrow {
+    height: 20px;
+  }
+}
+
 .cases__item-arrow svg {
   stroke: #34363C;
   -webkit-transform: translateX(-31px);
@@ -7723,6 +7763,10 @@ a:hover {
           transform: translateY(-50%);
 }
 
+.footer__logo-icon {
+  fill: #fff;
+}
+
 .footer__logo-text {
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
@@ -7730,4 +7774,165 @@ a:hover {
 
 .footer__logo:hover {
   color: #fff;
+}
+
+.clients {
+  position: relative;
+  background-color: #E7E7E7;
+}
+
+.clients__decor {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 420px;
+  opacity: .2;
+}
+
+.clients__decor-text {
+  font-family: "MullerBold";
+  line-height: 1;
+  font-size: 500px;
+  color: #fff;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.clients__decor-text span:last-child {
+  margin-top: -165px;
+  display: block;
+}
+
+.clients__info {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+}
+
+.clients__descr {
+  margin-bottom: 250px;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.clients__item {
+  position: relative;
+  -ms-flex-preferred-size: calc(50% - 50px);
+      flex-basis: calc(50% - 50px);
+  min-height: 415px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients__item:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.clients__item:nth-child(1) {
+  margin-top: 0 !important;
+}
+
+.clients__item:nth-child(2) {
+  margin-top: 207.5px;
+}
+
+.clients__item:nth-child(odd) {
+  margin-top: -207.5px;
+}
+
+.clients__item-image {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: .6;
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: all .43s ease-in-out;
+  transition: all .43s ease-in-out;
+}
+
+.clients__item-arrow {
+  position: absolute;
+  stroke: #E10000;
+  left: 50%;
+  bottom: 25px;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+  opacity: 0;
+  -webkit-transition: all .43s ease-in-out;
+  transition: all .43s ease-in-out;
+}
+
+.clients__item:hover .clients__item-image {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+
+.clients__item:hover .clients__item-arrow {
+  opacity: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.clients__certificate {
+  -webkit-transition: all .43s ease-in-out;
+  transition: all .43s ease-in-out;
+}
+
+.clients__certificate:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.clients__case {
+  color: #FFE0CE;
+  background-color: #E10000;
+}
+
+.clients__case-stage {
+  line-height: 1.2;
+}
+
+.clients__case-stage-num {
+  font-family: "MullerUltraLight";
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.clients__case-stage-num span:nth-child(1) {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 1531px) {
+  .clients__case-stage-num span:nth-child(1) {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .clients__case-stage-num span:nth-child(1) {
+    font-size: 16px;
+  }
 }

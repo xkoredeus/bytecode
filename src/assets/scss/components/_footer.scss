@@ -71,6 +71,9 @@
       top: 50%;
       transform: translateY(-50%);
     }
+    &-icon {
+      fill: #fff;
+    }
     &-text {
       @include ease;
     }

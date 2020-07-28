@@ -16,6 +16,17 @@
       font-size: $h1-small;
     }
   }
+  &__subtitle {
+    font-size: $h2;
+    font-family: $mbold;
+    line-height: 1.1;
+    @include r(1531) {
+      font-size: $h2-medium;
+    }
+    @include r(1200) {
+      font-size: $h2-small;
+    }
+  }
   &__link {
     position: relative;
     font-family: $mlig;
