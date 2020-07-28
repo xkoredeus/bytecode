@@ -123,6 +123,7 @@
     display: inline-block;
     @include r(1531) {
       font-size: $h1-medium;
+      padding: 0 18px;
     }
     @include r(1200) {
       font-size: $h1-small;
@@ -138,6 +139,9 @@
         padding: 7.2px 0;
         background-color: $tr;
         @include ease;
+        @include r(1531) {
+          padding: 6.2px 0;
+        }
       }
     }
   }
@@ -146,6 +150,9 @@
     top: calc(100% + 22.5px);
     opacity: 0;
     visibility: hidden;
+    @include r(1531) {
+      top: calc(100% + 17.5px);
+    }
   }
   &:hover {
     .link-arrow {

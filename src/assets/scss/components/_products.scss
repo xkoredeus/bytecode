@@ -4,6 +4,10 @@
   &__in {
     padding: 0 150px 0 64px;
     overflow: hidden;
+    @include r(1531) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
   .owl-stage-outer {
     overflow: visible;

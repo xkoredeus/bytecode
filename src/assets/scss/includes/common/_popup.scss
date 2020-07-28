@@ -10,6 +10,9 @@
   opacity: 0;
   &__textarea {
     min-height: 257px;
+    @include r(1531) {
+      min-height: 216px;
+    }
   }
   .button {
     padding: 26px 9px;
@@ -56,8 +59,10 @@
       }
     }
   }
-  &--success__in {
-    min-height: 80vh;
+  @include rmin(1200) {
+    &--success__in {
+      min-height: 80vh;
+    }
   }
 }
 .fancybox {
@@ -68,6 +73,9 @@
   &-slide--html {
     padding: 0;
   }
+}
+.fancybox-slide {
+  @include scroll;
 }
 .fancybox-slide--current {
   .popup {

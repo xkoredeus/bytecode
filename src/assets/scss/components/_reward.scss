@@ -28,6 +28,8 @@
       @include flex-center;
     }
     &-image {
+      max-width: 100%;
+      height: auto;
       @include ease;
       filter: grayscale(100%);
       &:hover {

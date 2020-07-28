@@ -4,6 +4,9 @@
   padding: 140px 0;
   &__textarea {
     min-height: 257px;
+    @include r(1531) {
+      min-height: 216px;
+    }
   }
   &__policy {
     position: relative;

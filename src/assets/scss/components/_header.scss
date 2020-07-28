@@ -238,9 +238,9 @@
     opacity: 0;
     transform: translateY(10px) translateX(-50%);
     @include cubic2;
-    @include r(1531) {
-      max-width: $container2;
-    }
+    //@include r(1531) {
+    //  max-width: $container2;
+    //}
     &-in {
       padding: 44px;
     }

@@ -72,10 +72,10 @@ $(() => {
     });
 
     $('.js-slider-prev').on('click', function sliderPrevSlide () {
-        $('.owl-carousel').trigger('prev.owl.carousel');
+        $('.slider__in').trigger('prev.owl.carousel');
     });
     $('.js-slider-next').on('click', function sliderNextSlide () {
-        $('.owl-carousel').trigger('next.owl.carousel');
+        $('.slider__in').trigger('next.owl.carousel');
     });
 
     const triggerElem = $('.slider .owl-item');
