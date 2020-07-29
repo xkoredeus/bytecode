@@ -1,0 +1,13 @@
+.pagination {
+  font-family: $mlig;
+  background-color: $dark;
+  &__link {
+    color: #fff;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    &--here {
+      color: $orange;
+    }
+  }
+}

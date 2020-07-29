@@ -393,8 +393,92 @@
         }
       }
     }
+    &--white {
+      .header {
+        &__logo {
+          &-icon {
+            fill: #fff;
+          }
+          &-text {
+            color: #fff;
+            &::before {
+              background-color: #fff;
+            }
+          }
+          &:hover {
+            .header__logo-text {
+              color: $gray2;
+              text-shadow: 0 .5px .5px $gray2;
+            }
+          }
+        }
+        &__top {
+          color: #fff;
+          a {
+            color: #fff;
+          }
+          &__item {
+            color: #fff;
+          }
+        }
+        &__item {
+          svg {
+            fill: #fff;
+            stroke: #fff;
+          }
+          &-link {
+            color: #fff;
+            &:hover {
+              color: $gray2 !important;
+              text-shadow: 0 .5px .5px $gray2;
+            }
+          }
+        }
+        &__tel {
+          color: #fff;
+          &:hover {
+            color: $gray2 !important;
+            text-shadow: 0 .5px .5px $gray2;
+          }
+        }
+
+        &__nav {
+          &-link {
+            color: #fff !important;
+            &-arrow {
+              svg {
+                stroke: #fff;
+              }
+            }
+            &-wrp {
+              &:hover {
+                .header__nav-link {
+                  text-shadow: 0 .2px .2px #fff;
+                }
+              }
+            }
+          }
+        }
+        &__button {
+          color: #fff;
+          &::after {
+            background-color: #fff;
+          }
+          &:hover {
+            color: $gray2;
+            text-shadow: 0 .2px .2px $gray2;
+            &::after {
+              background-color: $gray2;
+            }
+          }
+        }
+      }
+    }
     &--gray {
       background-color: #E7E7E7;
+    }
+    &--red {
+      background-color: $red;
     }
   }
 }

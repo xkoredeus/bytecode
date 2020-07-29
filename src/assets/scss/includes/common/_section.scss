@@ -17,14 +17,25 @@
     }
   }
   &__subtitle {
-    font-size: $h2;
     font-family: $mbold;
+    font-size: $h2;
     line-height: 1.1;
     @include r(1531) {
       font-size: $h2-medium;
     }
     @include r(1200) {
       font-size: $h2-small;
+    }
+  }
+  &__subsubtitle {
+    font-family: $mbold;
+    font-size: $h3;
+    line-height: 1.2;
+    @include r(1531) {
+      font-size: $h3-medium;
+    }
+    @include r(1200) {
+      font-size: $h3-small;
     }
   }
   &__link {

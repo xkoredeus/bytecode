@@ -5446,6 +5446,15 @@ input[type="number"] {
   background-color: #34363C;
 }
 
+.button--square--tr {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.button--square--tr:hover {
+  border-color: #FF4013;
+}
+
 .link-arrow {
   position: relative;
   display: -webkit-box;
@@ -5699,8 +5708,8 @@ input[type="radio"]:checked + .checkbox__text::before {
 }
 
 .section__subtitle {
-  font-size: 40px;
   font-family: "MullerBold";
+  font-size: 40px;
   line-height: 1.1;
 }
 
@@ -5713,6 +5722,24 @@ input[type="radio"]:checked + .checkbox__text::before {
 @media only screen and (max-width: 1200px) {
   .section__subtitle {
     font-size: 20px;
+  }
+}
+
+.section__subsubtitle {
+  font-family: "MullerBold";
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 1531px) {
+  .section__subsubtitle {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section__subsubtitle {
+    font-size: 18px;
   }
 }
 
@@ -6015,6 +6042,23 @@ input[type="radio"]:checked + .checkbox__text::before {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+
+.pagination {
+  font-family: "MullerLight";
+  background-color: #34363C;
+}
+
+.pagination__link {
+  color: #fff;
+}
+
+.pagination__link:not(:last-child) {
+  margin-right: 25px;
+}
+
+.pagination__link--here {
+  color: #FF4013;
 }
 
 html, body {
@@ -6658,8 +6702,93 @@ a:hover {
   background-color: #34363C;
 }
 
+.header__wrp--white .header__logo-icon {
+  fill: #fff;
+}
+
+.header__wrp--white .header__logo-text {
+  color: #fff;
+}
+
+.header__wrp--white .header__logo-text::before {
+  background-color: #fff;
+}
+
+.header__wrp--white .header__logo:hover .header__logo-text {
+  color: #D9DFEC;
+  text-shadow: 0 0.5px 0.5px #D9DFEC;
+}
+
+.header__wrp--white .header__top {
+  color: #fff;
+}
+
+.header__wrp--white .header__top a {
+  color: #fff;
+}
+
+.header__wrp--white .header__top__item {
+  color: #fff;
+}
+
+.header__wrp--white .header__item svg {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.header__wrp--white .header__item-link {
+  color: #fff;
+}
+
+.header__wrp--white .header__item-link:hover {
+  color: #D9DFEC !important;
+  text-shadow: 0 0.5px 0.5px #D9DFEC;
+}
+
+.header__wrp--white .header__tel {
+  color: #fff;
+}
+
+.header__wrp--white .header__tel:hover {
+  color: #D9DFEC !important;
+  text-shadow: 0 0.5px 0.5px #D9DFEC;
+}
+
+.header__wrp--white .header__nav-link {
+  color: #fff !important;
+}
+
+.header__wrp--white .header__nav-link-arrow svg {
+  stroke: #fff;
+}
+
+.header__wrp--white .header__nav-link-wrp:hover .header__nav-link {
+  text-shadow: 0 .2px .2px #fff;
+}
+
+.header__wrp--white .header__button {
+  color: #fff;
+}
+
+.header__wrp--white .header__button::after {
+  background-color: #fff;
+}
+
+.header__wrp--white .header__button:hover {
+  color: #D9DFEC;
+  text-shadow: 0 0.2px 0.2px #D9DFEC;
+}
+
+.header__wrp--white .header__button:hover::after {
+  background-color: #D9DFEC;
+}
+
 .header__wrp--gray {
   background-color: #E7E7E7;
+}
+
+.header__wrp--red {
+  background-color: #E10000;
 }
 
 .sticky .header__wrp--light .header__logo-icon {
@@ -7906,33 +8035,198 @@ a:hover {
   cursor: pointer;
 }
 
-.clients__case {
+.clients-case {
+  position: relative;
   color: #FFE0CE;
-  background-color: #E10000;
+  background: #E10000;
+  overflow: hidden;
 }
 
-.clients__case-stage {
-  line-height: 1.2;
+.clients-case::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: calc(50% + 50px);
+  left: calc(50% - 50px);
+  background-image: url("../img/clients-case__bg.jpg");
 }
 
-.clients__case-stage-num {
+.clients-case__info {
+  padding-right: 60px;
+}
+
+.clients-case__stage {
+  line-height: 1.5;
+}
+
+.clients-case__stage-title {
+  line-height: 1.3;
+}
+
+@media only screen and (max-width: 1531px) {
+  .clients-case__stage-title {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .clients-case__stage-title {
+    font-size: 18px;
+  }
+}
+
+.clients-case__stage-num {
   font-family: "MullerUltraLight";
   font-size: 18px;
   margin-bottom: 40px;
 }
 
-.clients__case-stage-num span:nth-child(1) {
+.clients-case__stage-num span:nth-child(1) {
   font-size: 25px;
 }
 
 @media only screen and (max-width: 1531px) {
-  .clients__case-stage-num span:nth-child(1) {
+  .clients-case__stage-num span:nth-child(1) {
     font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  .clients__case-stage-num span:nth-child(1) {
+  .clients-case__stage-num span:nth-child(1) {
     font-size: 16px;
   }
+}
+
+.clients-quote {
+  color: #D9DFEC;
+  background-color: #34363C;
+  overflow: hidden;
+}
+
+.clients-quote__info {
+  position: relative;
+}
+
+.clients-quote__content {
+  position: relative;
+}
+
+.clients-quote__content-wrp {
+  position: relative;
+}
+
+.clients-quote__decor {
+  position: absolute;
+  opacity: .02;
+  left: -150px;
+  top: -90px;
+  fill: #fff;
+}
+
+.clients-quote__decor--2 {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+  top: auto;
+  right: -150px;
+  bottom: -90px;
+  left: auto;
+}
+
+.case__item {
+  position: relative;
+  min-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 38px;
+}
+
+.case__item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  opacity: .8;
+  -webkit-transition: all .43s ease-in-out;
+  transition: all .43s ease-in-out;
+}
+
+.case__item > * {
+  position: relative;
+}
+
+.case__item-logo {
+  font-family: "MullerBold";
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 1531px) {
+  .case__item-logo {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .case__item-logo {
+    font-size: 30px;
+  }
+}
+
+.case__item-link {
+  font-family: "MullerUltraLight";
+}
+
+.case__item-arrow {
+  width: 10px;
+  height: 20px;
+  overflow: hidden;
+  display: inline-block;
+  -webkit-transition: all .43s ease-in-out;
+  transition: all .43s ease-in-out;
+}
+
+.case__item-arrow svg {
+  stroke: #34363C;
+  -webkit-transform: translateX(-31px);
+          transform: translateX(-31px);
+  -webkit-transition: all .43s ease-in-out;
+  transition: all .43s ease-in-out;
+}
+
+.case__item:hover {
+  color: #fff;
+}
+
+.case__item:hover::before {
+  background-color: #34363C;
+}
+
+.case__item:hover .case__item-arrow {
+  width: 41px;
+}
+
+.case__item:hover .case__item-link svg {
+  stroke: #fff;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }

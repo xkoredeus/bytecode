@@ -91,11 +91,31 @@
     }
   }
 
-  &__case {
+  &-case {
+    position: relative;
     color: $pink;
-    background-color: $red;
-    &-stage {
-      line-height: 1.2;
+    background: $red;
+    overflow: hidden;
+    &::before {
+      @include ovl;
+      width: calc(50% + 50px);
+      left: calc(50% - 50px);
+      background-image: url('../img/clients-case__bg.jpg');
+    }
+    &__info {
+      padding-right: 60px;
+    }
+    &__stage {
+      line-height: 1.5;
+      &-title {
+        line-height: 1.3;
+        @include r(1531) {
+          font-size: $h3-medium;
+        }
+        @include r(1200) {
+          font-size: $h3-small;
+        }
+      }
       &-num {
         font-family: $mulig;
         font-size: 18px;
@@ -109,6 +129,35 @@
             font-size: $p1-small;
           }
         }
+      }
+    }
+  }
+
+  &-quote {
+    color: $gray2;
+    background-color: $dark;
+    overflow: hidden;
+    &__info {
+      position: relative;
+    }
+    &__content {
+      position: relative;
+      &-wrp {
+        position: relative;
+      }
+    }
+    &__decor {
+      position: absolute;
+      opacity: .02;
+      left: -150px;
+      top: -90px;
+      fill: #fff;
+      &--2 {
+        transform: scale(-1, -1);
+        top: auto;
+        right: -150px;
+        bottom: -90px;
+        left: auto;
       }
     }
   }
