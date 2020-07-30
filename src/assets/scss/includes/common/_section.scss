@@ -5,6 +5,18 @@
       padding: 35px 0
     }
   }
+  &--black {
+    color: $gray2;
+    background-color: $black;
+  }
+  &--dark {
+    color: $gray2;
+    background-color: $dark;
+  }
+  &--white {
+    color: $black;
+    background-color: #fff;
+  }
   &__title {
     font-size: $h1;
     font-family: $mbold;
@@ -64,5 +76,28 @@
         width: 70%;
       }
     }
+  }
+  &--type {
+    overflow: hidden;
+  }
+}
+.type__image {
+  min-height: 450px;
+  background-color: $gray2;
+  @include cv;
+  &--fixed {
+    position: absolute;
+    top: 0;
+    min-width: 900px;
+    &--left {
+      right: 0;
+    }
+    &--right {
+      left: 0;
+    }
+  }
+  &-wrp {
+    position: relative;
+    min-height: 450px;
   }
 }

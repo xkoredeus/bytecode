@@ -5116,11 +5116,27 @@ main {
 }
 
 .p2 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 1531px) {
   .p2 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .p2 {
+    font-size: 14px;
+  }
+}
+
+.p3 {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1531px) {
+  .p3 {
     font-size: 14px;
   }
 }
@@ -5510,6 +5526,10 @@ input[type="number"] {
   }
 }
 
+.link-arrow--white .link-arrow__title-bg span {
+  color: #fff;
+}
+
 .link-arrow__button {
   position: absolute;
   top: calc(100% + 22.5px);
@@ -5689,6 +5709,21 @@ input[type="radio"]:checked + .checkbox__text::before {
   }
 }
 
+.section--black {
+  color: #D9DFEC;
+  background-color: #1E2127;
+}
+
+.section--dark {
+  color: #D9DFEC;
+  background-color: #34363C;
+}
+
+.section--white {
+  color: #1E2127;
+  background-color: #fff;
+}
+
 .section__title {
   font-size: 50px;
   font-family: "MullerBold";
@@ -5779,6 +5814,37 @@ input[type="radio"]:checked + .checkbox__text::before {
 
 .section__link:hover::after {
   width: 70%;
+}
+
+.section--type {
+  overflow: hidden;
+}
+
+.type__image {
+  min-height: 450px;
+  background-color: #D9DFEC;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.type__image--fixed {
+  position: absolute;
+  top: 0;
+  min-width: 900px;
+}
+
+.type__image--fixed--left {
+  right: 0;
+}
+
+.type__image--fixed--right {
+  left: 0;
+}
+
+.type__image-wrp {
+  position: relative;
+  min-height: 450px;
 }
 
 .owl-carousel .owl-item img {
@@ -6789,6 +6855,10 @@ a:hover {
 
 .header__wrp--red {
   background-color: #E10000;
+}
+
+.header__wrp--black {
+  background-color: #1E2127;
 }
 
 .sticky .header__wrp--light .header__logo-icon {
@@ -8229,4 +8299,28 @@ a:hover {
   stroke: #fff;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.case-begin {
+  color: #D9DFEC;
+  background-color: #1E2127;
+}
+
+.case-begin__img {
+  max-height: 800px;
+  font-size: 16px;
+}
+
+.case-header__logo {
+  position: relative;
+  max-width: 328px;
+  height: auto;
+}
+
+.case-header__divider {
+  width: 1px;
+  min-height: 133px;
+  height: 100%;
+  background-color: #D9DFEC;
+  margin: 0 35px 0 20px;
 }

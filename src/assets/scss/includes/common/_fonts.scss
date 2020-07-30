@@ -38,8 +38,12 @@ $p1: 25px;
 $p1-medium: 18px;
 $p1-small: 16px;
 
-$p2: 16px;
-$p2-medium: 14px;
+$p2: 20px;
+$p2-medium: 16px;
+$p2-small: 14px;
+
+$p3: 16px;
+$p3-medium: 14px;
 
 .h3 {
   font-size: $h3;
@@ -64,5 +68,14 @@ $p2-medium: 14px;
   font-size: $p2;
   @include r(1531) {
     font-size: $p2-medium;
+  }
+  @include r(1200) {
+    font-size: $p2-small;
+  }
+}
+.p3 {
+  font-size: $p3;
+  @include r(1531) {
+    font-size: $p3-medium;
   }
 }

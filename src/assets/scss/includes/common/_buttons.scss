@@ -152,6 +152,11 @@
       }
     }
   }
+  &--white {
+    .link-arrow__title-bg span {
+      color: #fff;
+    }
+  }
   &__button {
     position: absolute;
     top: calc(100% + 22.5px);
@@ -182,7 +187,7 @@
 
 .file {
   position: relative;
-  font-size: $p2;
+  font-size: $p3;
   padding: 4px 0;
   display: flex;
   justify-content: space-between;

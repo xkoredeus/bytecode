@@ -57,4 +57,29 @@
       }
     }
   }
+
+  &-begin {
+    color: $gray2;
+    background-color: $black;
+    &__img {
+      max-height: 800px;
+      font-size: $p3;
+    }
+  }
+
+  &-header {
+    &__logo {
+      position: relative;
+      max-width: 328px;
+      height: auto;
+    }
+    &__divider {
+      width: 1px;
+      min-height: 133px;
+      height: 100%;
+      background-color: $gray2;
+      margin: 0 35px 0 20px;
+    }
+  }
+
 }

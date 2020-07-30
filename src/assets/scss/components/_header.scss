@@ -112,7 +112,7 @@
   &__item {
     display: flex;
     align-items: center;
-    font-size: $p2;
+    font-size: $p3;
     &:not(:last-child) {
       margin-right: 20px;
     }
@@ -479,6 +479,9 @@
     }
     &--red {
       background-color: $red;
+    }
+    &--black {
+      background-color: $black;
     }
   }
 }
