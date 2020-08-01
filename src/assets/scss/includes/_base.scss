@@ -7,15 +7,15 @@
 @import "common/states";
 @import "common/inputs";
 @import "common/buttons";
-@import "common/checkbox";
 @import "common/section";
 @import "common/owl-custom";
+@import "common/list";
 @import "common/popup";
 @import "common/pagination";
 
 html, body {
   position: relative;
-  font-family: $mreg, Roboto, sans-serif;
+  font-family: $mreg,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial, Roboto, sans-serif;
   font-size: $p1;
   line-height: 1.3;
   color: $dark;

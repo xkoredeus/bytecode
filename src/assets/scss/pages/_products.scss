@@ -1,0 +1,63 @@
+.product-page {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+      @include r(1200) {
+        margin-bottom: 30px;
+      }
+    }
+    &-image {
+      max-height: 350px;
+    }
+    &-title {
+      min-height: 125px;
+      display: flex;
+      align-items: flex-end;
+    }
+    &-descr {
+      position: relative;
+      font-family: $mlig;
+      margin-top: 54px;
+      padding-left: 23px;
+      padding-right: 23px;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 70%;
+        height: 1px;
+        left: 23px;
+        top: -27px;
+        background-color: $dark;
+      }
+    }
+  }
+
+  &__profit {
+    &-image {
+      min-height: 238px;
+      @include cv;
+    }
+    &-descr {
+      max-width: 366px;
+    }
+  }
+
+  &__tariff {
+    &-descr {
+      max-width: 954px;
+    }
+    &-buttons {
+      .button {
+        padding-left: 40px;
+        padding-right: 40px;
+        &:nth-child(1) {
+          position: relative;
+          z-index: 1;
+        }
+        &:nth-child(2) {
+          margin-left: -1px;
+        }
+      }
+    }
+  }
+}

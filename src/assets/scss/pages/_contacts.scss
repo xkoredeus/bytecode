@@ -1,0 +1,25 @@
+.contacts-page {
+  overflow: hidden;
+
+  &__link {
+    color: $gray2;
+  }
+
+  &__map {
+    position: relative;
+    min-height: 500px;
+    @include r(1531) {
+      min-height: 400px;
+    }
+    .map {
+      position: absolute;
+      min-width: 1070px;
+      height: 500px;
+      left: 0;
+      @include r(1531) {
+        min-width: 900px;
+        height: 400px;
+      }
+    }
+  }
+}

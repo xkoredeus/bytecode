@@ -73,6 +73,7 @@
     box-shadow: none;
     svg {
       stroke: #fff;
+      @include ease;
     }
     &:hover {
       background-color: #F43F14;
@@ -112,6 +113,89 @@
       &:hover {
         border-color: $orange;
       }
+      &--white {
+        background-color: $tr;
+        border: 1px solid $black;
+        svg {
+          stroke: $black;
+        }
+        &:hover {
+          border-color: $orange;
+          svg {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &--video {
+    font-family: $mmed;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $black;
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    @include ease;
+    svg {
+      fill: $black;
+      @include ease;
+    }
+    &:hover {
+      color: #fff;
+      background-color: $black;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &--radio {
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    input {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      &:checked {
+        & + .button--radio__switch::before {
+          transform: translate(60px, -50%);
+        }
+      }
+    }
+
+    &__switch {
+      position: relative;
+      width: 74px;
+      height: 26px;
+      background-color: $black;
+      border-radius: 50px;
+      margin: 0 35px;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        left: -10px;
+        right: auto;
+        background-color: $red;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        @include cubic3;
+      }
+    }
+    
+    &__label {
+      cursor: pointer;
     }
   }
 }
@@ -143,7 +227,7 @@
       span {
         color: $dark;
         position: relative;
-        padding: 7.2px 0;
+        padding: 7.1px 0;
         background-color: $tr;
         @include ease;
         @include r(1531) {
@@ -165,6 +249,23 @@
     @include r(1531) {
       top: calc(100% + 17.5px);
     }
+    &-text {
+      position: absolute;
+      font-family: $mmed;
+      font-size: 20px;
+      color: $black !important;
+      left: 100px;
+      top: calc(100% + 22.5px);
+      height: 100px;
+      width: 270px;
+      padding-left: 25px;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-5px);
+      @include ease;
+    }
   }
   &:hover {
     .link-arrow {
@@ -180,6 +281,11 @@
       &__button {
         opacity: 1;
         visibility: visible;
+        &-text {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
       }
     }
   }

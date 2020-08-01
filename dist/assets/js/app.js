@@ -236,6 +236,37 @@ $(() => {
     }
 });
 $(() => {
+    $('.case-slider__in').owlCarousel({
+        loop: true,
+        dots: false,
+        items: 3,
+        smartSpeed: 1200,
+        margin: 30,
+        nav: false,
+        mouseDrag: false,
+        responsive : {
+            0   : {
+                items: 1,
+                autoHeight: true,
+            },
+            700 : {
+                items: 2,
+            },
+            1200 : {
+                autoHeight: false,
+                items: 3,
+            }
+        },
+    });
+
+    $('.js-case-slider__prev').on('click', function caseSliderPrevSlide () {
+        $('.case-slider__in').trigger('prev.owl.carousel');
+    });
+    $('.js-case-slider__next').on('click', function caseSliderNextSlide () {
+        $('.case-slider__in').trigger('next.owl.carousel');
+    });
+});
+$(() => {
     let state = {};
     // state management
     function updateState(newState) {

@@ -6,8 +6,33 @@
   &--red {
     background: linear-gradient(90deg, $dark, $dark 50%, $red 50%);
     line-height: 1.4;
-    //@include r(1800) {
-    //  background: linear-gradient(90deg, $dark, $dark 49.9%, $red 50.1%);
-    //}
+  }
+  &--white {
+    &__info {
+      position: relative;
+      @include rmin(1200) {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          background-color: $black;
+          right: -80px;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: .3;
+        }
+      }
+    }
+    &__descr {
+      line-height: 1.4;
+    }
+    &__video {
+      min-height: 434px;
+      background-image: url('../img/etalon__bg.jpg');
+      @include cv;
+      display: flex;
+      align-items: center;
+    }
   }
 }

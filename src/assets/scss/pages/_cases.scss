@@ -82,4 +82,33 @@
     }
   }
 
+  &-profit {
+    color: #fff;
+    background-color: $orange;
+
+    &__item {
+      text-align: center;
+      &-num {
+        font-family: $mbold;
+        font-size: 180px;
+        line-height: 1;
+        margin-bottom: 25px;
+        span:not(:first-child) {
+          margin-left: -25px;
+        }
+      }
+      &-title {
+        font-family: $mulig;
+      }
+    }
+  }
+
+  &-slider {
+    &__nav {
+      .button--square:last-child {
+        margin-left: -1px;
+      }
+    }
+  }
+
 }

@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  & > li {
+    margin: 0;
+    padding: 0;
+  }
+  & > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &--string {
+    & > li {
+      &::before {
+        content: '-';
+        margin-right: 5px;
+      }
+      & > .list > li {
+        padding-left: 13px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.about-page {
+  overflow: hidden;
+  &__title {
+    .section__title {
+      margin-top: 60px;
+    }
+  }
+  &__num {
+    font-family: $mbold;
+    font-size: 200px;
+    line-height: 1;
+    color: $red;
+    background: linear-gradient(180deg, #FF4013 40%, $red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    span:not(:first-child) {
+      margin-left: -25px;
+    }
+  }
+
+  &__image {
+    min-height: 450px;
+    background-color: $gray2;
+    @include cv;
+    position: absolute;
+    top: 0;
+    min-width: 900px;
+    &--left {
+      right: 0;
+    }
+    &--right {
+      left: 0;
+    }
+    &-wrp {
+      position: relative;
+      min-height: 450px;
+    }
+  }
+}
