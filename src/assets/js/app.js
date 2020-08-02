@@ -236,6 +236,118 @@ $(() => {
         $('.case-slider__in').trigger('next.owl.carousel');
     });
 });
+
+$(() => {
+
+    let galleries = $('.product-page__slider-list');
+
+    Array.prototype.forEach.call(galleries, function(el, i) {
+            const $this = $(el);
+            const $owl1 = $this.find('.product-page__slider-top');
+            const $owl2 = $this.find('.product-page__slider-bot');
+            let flag = false;
+            let duration = 300;
+
+            $owl1
+                .owlCarousel({
+                    startPosition: 0,
+                    items: 1,
+                    loop: true,
+                    margin: 0,
+                    nav: false,
+                    dots: false,
+                    smartSpeed: 1200,
+                    autoplay: false,
+                    responsiveClass: true
+                })
+                .on("changed.owl.carousel", function(e) {
+                    if (!flag) {
+                        flag = true;
+                        $owl2
+                            .find(".owl-item")
+                            .removeClass("current")
+                            .eq(e.item.index)
+                            .addClass("current");
+                        if (
+                            $owl2
+                                .find(".owl-item")
+                                .eq(e.item.index)
+                                .hasClass("active")
+                        ) {
+                        } else {
+                            $owl2.trigger("to.owl.carousel", [e.item.index, duration, true]);
+                        }
+                        flag = false;
+                    }
+                });
+
+            $owl2
+                .on("initialized.owl.carousel", function() {
+                    $owl2
+                        .find(".owl-item")
+                        .eq(0)
+                        .addClass("current");
+                })
+                .owlCarousel({
+                    startPosition: 0,
+                    loop: true,
+                    margin: 20,
+                    nav: false,
+                    smartSpeed: 1200,
+                    dots: false,
+                    responsive : {
+                        0   : {
+                            items: 1
+                        },
+                        600 : {
+                            items: 2
+                        },
+                        1200: {
+                            items: 3
+                        },
+                    },
+                    responsiveClass: true
+                })
+                .on("click", ".owl-item", function(e) {
+                    e.preventDefault();
+                    var number = $(this).index();
+                    $owl1.trigger("to.owl.carousel", [number, duration, true]);
+                });
+        });
+
+
+    $('.js-product-page__slider-prev').on('click', function productSliderPrevSlide () {
+        $('.product-page__slider-top').trigger('prev.owl.carousel');
+    });
+    $('.js-product-page__slider-next').on('click', function productSliderNextSlide () {
+        $('.product-page__slider-top').trigger('next.owl.carousel');
+    });
+
+    // accordion tabs
+    $('.product-page__accordion:first-child').addClass('active').find('.product-page__accordion-descr').show();
+    $('.product-page__slider-item:not(:first-child)').hide();
+    $('.product-page__slider-item:first-child').find('.product-page__slider-loader').hide();
+    $('.product-page__accordion-title').on('click', function accordionClick() {
+
+        const accordion = $(this).parent('.product-page__accordion');
+
+        if (!(accordion.hasClass('active'))) {
+            $('.product-page__accordion').removeClass('active').find('.product-page__accordion-descr').slideUp();
+            $('.product-page__slider-item').hide();
+
+            accordion.addClass('active');
+            accordion.find('.product-page__accordion-descr').slideDown();
+            $('.product-page__slider-item[data-accordion="' + accordion.attr('data-accordion') + '"]').find('.product-page__slider-loader').fadeIn('fast');
+            $('.product-page__slider-item[data-accordion="' + accordion.attr('data-accordion') + '"]').fadeIn('fast');
+            setTimeout(() => {
+                $('.product-page__slider-item[data-accordion="' + accordion.attr('data-accordion') + '"]').find('.product-page__slider-loader').fadeOut('slow');
+            }, 500);
+
+        };
+    });
+});
+
+
 $(() => {
     let state = {};
     // state management

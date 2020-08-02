@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{!— Required meta tags --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#6232ad">
+    <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+</head>
+
+<body>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> preloader}}
+    <div class="error">
+        <div class="header__wrp">
+            {{> header}}
+        </div>
+        <section class="error__content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="h-100 d-flex flex-column justify-content-center align-items-start">
+                            <div class="error__symbol error__symbol--1">4</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="h-100 d-flex flex-column justify-content-between align-items-center">
+                            <div class="error__symbol error__symbol--2 mb-5">0</div>
+                            <div class="error__descr white">
+                                <div class="section__subsubtitle mb-3">Похоже вы выбрали неправильный путь.</div>
+                                <div class="ulight white">Не волнуйтесь, время от времени это случается с каждым из нас.
+                                    Просто перейдите на <a class="white und" href="#">главную</a> или воспользуйтесь меню навигации.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="h-100 d-flex flex-column justify-content-end align-items-end">
+                            <div class="error__symbol error__symbol--3">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    {{> footer}}
+
+    {{> svg}}
+
+    {{> popups}}
+    {{> scripts}}
+
+</body>
+</html>

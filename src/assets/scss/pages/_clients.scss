@@ -102,6 +102,17 @@
       left: calc(50% - 50px);
       background-image: url('../img/clients-case__bg.jpg');
     }
+    &::after {
+      @include ovl;
+      width: calc(50% + 50px);
+      left: calc(50% - 50px);
+      background-color: $red;
+      opacity: .8;
+    }
+    .container{
+      position: relative;
+      z-index: 1;
+    }
     &__info {
       padding-right: 60px;
     }
@@ -129,6 +140,14 @@
             font-size: $p1-small;
           }
         }
+      }
+    }
+
+    &--white {
+      color: $black;
+      background-color: #f6f6f6;
+      &::after {
+        background-color: #fff;
       }
     }
   }

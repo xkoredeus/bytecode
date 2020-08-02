@@ -1,0 +1,54 @@
+.error {
+  position: relative;
+  overflow: hidden;
+  background-color: $black;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 50%;
+    right: 0;
+    top: 0;
+    background: #3D525D;
+    filter: blur(107.855px);
+    border-radius: 50%;
+    opacity: .3;
+  }
+  & > * {
+    position: relative;
+  }
+
+  &__content {
+    height: calc(100vh - 168px);
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__symbol {
+    font-size: 400px;
+    line-height: 1;
+    color: #fff;
+    @include cubic3;
+    animation: float 1.2s infinite ease-in-out alternate;
+
+    &--1 {
+      animation-delay: .2s;
+    }
+    &--2 {
+      animation-delay: .4s;
+    }
+    &--3 {
+      animation-delay: .6s;
+    }
+  }
+
+  &__descr {
+    max-width: 490px;
+  }
+}
+@keyframes float {
+  100% {
+    transform: translateY(20px);
+  }
+}
