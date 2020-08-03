@@ -57,7 +57,7 @@ $(() => {
         // navText: ["<svg width='28' height='9'> <use xlink:href='#steps__arrow--prev'></use></svg><span class='ml-3 d-none d-xl-block'>Предыдущий шаг</span>","<span class='mr-3 d-none d-xl-block'>Следующий шаг</span><svg width='28' height='9'> <use xlink:href='#steps__arrow--next'></use></svg>"],
         responsive : {
             0   : {
-                autoHeight: true
+                // autoHeight: true
             },
             1200 : {
                 autoHeight: false
@@ -172,7 +172,10 @@ $(() => {
 });
 $(() => {
     $('.js-toggle-menu').on('click', function toggleMenu() {
-        $('body').toggleClass('show-menu').removeClass('show-header');
+            $('body').toggleClass('show-menu');
+            // if ($('body').hasClass('show-header')) {
+            //     $('body').removeClass('show-header');
+            // }
     });
     $('.js-header__overlay').on('click', function hideMenu() {
         $('body').removeClass('show-menu show-header');

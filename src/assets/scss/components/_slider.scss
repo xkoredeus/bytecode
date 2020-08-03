@@ -1,15 +1,28 @@
 .slider {
   padding: 0 30px;
   overflow: hidden;
+  position: relative;
+  @include r(1200) {
+    padding: 0;
+  }
   .owl-stage-outer {
     overflow: visible;
   }
   &__item {
     position: relative;
     color: #fff;
-    min-height: 500px;
-    height: calc(100vh - 240px);
     background-color: $black;
+    @include rmin(1200) {
+      min-height: 500px;
+      height: calc(100vh - 240px);
+    }
+    @include r(1200) {
+      padding-top: 30px;
+      padding-bottom: 100px;
+      .slider__nav {
+        display: none !important;
+      }
+    }
     &-descr {
       @include ease;
       @include r(1531) {
@@ -21,12 +34,22 @@
       @include ovl;
       background-color: $dark;
       @include cubic3;
+      @include r(1200) {
+        transform: translateX(0) !important;
+      }
     }
     .container {
       height: 100%;
     }
     .button {
       @include cubic3;
+      @include r(600) {
+        position: absolute;
+        bottom: 0;
+        left: -15px;
+        width: 100%;
+        max-width: calc(100% - 100px);
+      }
     }
     &-in {
       position: relative;
@@ -57,9 +80,6 @@
       transform: translateX(-150px);
       z-index: 1;
       @include cubic3;
-      @include r(1531) {
-        max-width: 310px;
-      }
       &-title {
         font-family: $mbold;
         font-size: $h3;
@@ -68,19 +88,36 @@
           font-size: $h3-medium;
         }
         @include r(1200) {
-          font-size: $h3-small;
+          display: none;
         }
       }
       @include r(1690) {
         top: 50px;
+      }
+      @include r(1531) {
+        max-width: 310px;
+      }
+      @include r(1200) {
+        transform: translateX(0);
+        top: 0;
+        left: auto;
+        right: 10px;
+        min-height: auto;
       }
     }
     &-count {
       &-wrp {
         font-family: $mlig;
         margin-bottom: 40px;
+        @include r(1200) {
+          font-size: 16px;
+          color: $gray;
+        }
         span {
           font-size: 18px;
+          @include r(1200) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -91,11 +128,19 @@
       @include r(1531) {
         opacity: .5;
       }
+      @include r(1200) {
+        opacity: 1;
+        max-height: 400px;
+      }
       &-wrp {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        @include r(600) {
+          justify-content: flex-start;
+          margin-top: 30px;
+        }
       }
     }
     &-blur {
@@ -103,6 +148,9 @@
       left: 50%;
       bottom: 50px;
       transform: translateX(-50%);
+      @include r(1200) {
+        display: none;
+      }
     }
   }
   &__nav {
@@ -112,13 +160,21 @@
     display: flex;
     @include cubic3;
     z-index: 1;
+    &--mobile {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
   }
 
   .owl-item {
     &:hover {
       .slider__item {
-        &-promo {
-          transform: translateX(-280px);
+        @include rmin(1200) {
+          &-promo {
+            transform: translateX(-280px);
+          }
         }
         &-overlay {
           transform: translateX(-200px);
@@ -131,12 +187,14 @@
     &.active {
       &:hover {
         .slider__item {
-          &-promo {
-            transform: translateX(-150px);
-            min-height: unset;
-          }
-          &-overlay {
-            transform: translateX(0);
+          @include rmin(1200) {
+            &-promo {
+              transform: translateX(-150px);
+              min-height: unset;
+            }
+            &-overlay {
+              transform: translateX(0);
+            }
           }
         }
         .slider__nav {
@@ -164,11 +222,14 @@
               font-size: $h1-medium;
             }
             @include r(1200) {
-              font-size: $h1-small;
+              top: 0;
+              left: auto;
             }
-            span {
-              opacity: 0;
-              visibility: hidden;
+            @include rmin(1200) {
+              span {
+                opacity: 0;
+                visibility: hidden;
+              }
             }
             &-title {
               opacity: 0;

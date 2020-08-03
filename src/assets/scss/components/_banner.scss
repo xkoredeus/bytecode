@@ -1,6 +1,8 @@
 .banner {
   background-color: $black;
-  height: 100vh;
-  min-height: 700px;
+  @include rmin(1200) {
+    height: 100vh;
+    min-height: 700px;
+  }
   padding-top: 240px;
 }
