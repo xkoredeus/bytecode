@@ -9159,11 +9159,11 @@ a:hover {
   height: 50%;
   right: 0;
   top: 0;
-  background: #3D525D;
   -webkit-filter: blur(107.855px);
           filter: blur(107.855px);
   border-radius: 50%;
-  opacity: .3;
+  -webkit-animation: blur 4.2s infinite ease-in-out alternate;
+          animation: blur 4.2s infinite ease-in-out alternate;
 }
 
 .error > * {
@@ -9221,5 +9221,27 @@ a:hover {
   100% {
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
+  }
+}
+
+@-webkit-keyframes blur {
+  from {
+    opacity: .3;
+    background-color: #3D525D;
+  }
+  to {
+    opacity: .3;
+    background-color: #3096cb;
+  }
+}
+
+@keyframes blur {
+  from {
+    opacity: .3;
+    background-color: #3D525D;
+  }
+  to {
+    opacity: .3;
+    background-color: #3096cb;
   }
 }

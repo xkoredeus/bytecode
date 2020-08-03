@@ -9,10 +9,9 @@
     height: 50%;
     right: 0;
     top: 0;
-    background: #3D525D;
     filter: blur(107.855px);
     border-radius: 50%;
-    opacity: .3;
+    animation: blur 4.2s infinite ease-in-out alternate;
   }
   & > * {
     position: relative;
@@ -50,5 +49,15 @@
 @keyframes float {
   100% {
     transform: translateY(20px);
+  }
+}
+@keyframes blur {
+  from {
+    opacity: .3;
+    background-color: #3D525D;
+  }
+  to {
+    opacity: .3;
+    background-color: #3096cb;
   }
 }
