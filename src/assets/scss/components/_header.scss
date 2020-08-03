@@ -1,10 +1,17 @@
+@keyframes fronte {
+  from { z-index: 0; opacity: 0.5; }
+  to { z-index: 2; opacity: 1; }
+}
 .header {
   position: fixed;
   color: $gray2;
   width: 100%;
   max-height: 90px;
   top: 0;
-  z-index: 2;
+  &__in {
+    position: relative;
+    z-index: 2;
+  }
   a {
     color: $gray2;
     &:hover {
@@ -68,21 +75,21 @@
     }
   }
   &__ui {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 0;
     width: 90px;
     height: 90px;
     background-color: $dark;
-    transform: translateY(-50%);
     @include flex-center;
     @include cubic;
     opacity: 0;
     visibility: hidden;
-  }
-  &__hmb {
+    z-index: 3;
     border: none;
     box-shadow: none;
     outline: none;
+  }
+  &__hmb {
     right: 0;
     @include cubic;
     &-in {
@@ -115,6 +122,11 @@
     font-size: $p3;
     &:not(:last-child) {
       margin-right: 20px;
+    }
+    @include r(1300) {
+      &:nth-child(2) {
+        display: none;
+      }
     }
     svg {
       fill: $gray2;
@@ -491,6 +503,7 @@
 
 .sticky {
   .header {
+    animation: fronte 1s linear forwards;
     &__wrp {
       &--light {
         .header {
@@ -561,6 +574,10 @@
         }
       }
     }
+    &__top {
+      visibility: hidden;
+      opacity: 0;
+    }
     &__top-in {
       .container {
         left: 16px;
@@ -568,24 +585,9 @@
         opacity: 0;
         visibility: visible;
       }
-      .header__row {
-        padding-right: 80px;
-      }
-      &:hover {
-        background-color: $black;
-        .container {
-          top: 50%;
-          left: 50%;
-          transform: translateY(-50%) translateX(-50%);
-          opacity: 1;
-          visibility: visible;
-        }
-        .header__logo--fixed {
-          opacity: 0;
-          visibility: hidden;
-        }
-        & + .header__hmb {
-          background-color: $black;
+      @include r(1531) {
+        .header__row {
+          padding-right: 110px;
         }
       }
     }
@@ -611,9 +613,41 @@
   }
 }
 
+.show-header {
+  .header {
+    animation: fronte 1s linear forwards;
+    &__ui {
+      background-color: $black;
+    }
+    &__logo--fixed {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .header__top {
+    background-color: $black;
+    visibility: visible;
+    opacity: 1;
+
+    .container {
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .header__logo--fixed {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
 .show-menu {
   overflow: hidden;
   .header {
+    animation: fronte 1s linear forwards;
     &__overlay {
       opacity: 1;
       visibility: visible;

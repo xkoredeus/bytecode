@@ -18,6 +18,9 @@
     bottom: -100px;
     right: -100px;
     @include ease;
+    @include r(1531) {
+      right: 0;
+    }
   }
   &__divider {
     margin: 0 1px;

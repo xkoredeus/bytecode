@@ -172,10 +172,21 @@ $(() => {
 });
 $(() => {
     $('.js-toggle-menu').on('click', function toggleMenu() {
-        $('body').toggleClass('show-menu');
+        $('body').toggleClass('show-menu').removeClass('show-header');
     });
     $('.js-header__overlay').on('click', function hideMenu() {
-        $('body').removeClass('show-menu');
+        $('body').removeClass('show-menu show-header');
+    });
+});
+$(() => {
+    $('.js-toggle-header').on('click', function toggleHeader() {
+        $('body').toggleClass('show-header');
+    });
+    $(document).on('click', function (e) {
+        const container = $('.header__in');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('body').removeClass('show-header');
+        }
     });
 });
 $(() => {

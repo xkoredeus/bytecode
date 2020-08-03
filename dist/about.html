@@ -117,221 +117,222 @@
             <span></span>
         </div>
     </div>    <div class="header__wrp header__wrp--dark">
-        <header class="header">
-            <div class="header__overlay js-header__overlay"></div>
-            <div class="header__top">
-                <div class="header__top-in">
-                    <div class="header__ui header__logo--fixed">
-                        <svg width="29" height="39">
-                            <use xlink:href="#logo-first"></use>
+        <header class="header__in">
+            <button class="header__ui header__logo--fixed js-toggle-header">
+                <svg width="29" height="39">
+                    <use xlink:href="#logo-first"></use>
+                </svg>
+            </button>
+            <button class="header__ui header__hmb js-toggle-menu" type="button">
+                <div class="header__hmb-in">
+                    <div class="header__hmb-icon header__hmb-icon--1">
+                        <svg width="47" height="16">
+                            <use xlink:href="#hamburger"></use>
                         </svg>
                     </div>
+                    <div class="header__hmb-icon header__hmb-icon--2">
+                        <svg width="36" height="36">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
+                </div>
+            </button>
+            <div class="header">
+                <div class="header__overlay js-header__overlay"></div>
+                <div class="header__top">
+                    <div class="header__top-in">
+                        <div class="container">
+                            <div class="header__row">
+                                <a href="index.html" class="header__logo">
+                                    <svg class="header__logo-icon" width="177" height="37">
+                                        <use class="header__logo-icon-use" xlink:href="#logo"></use>
+                                    </svg>
+                                    <span class="header__logo-text">автоматизация<br> CRM-процессов</span>
+                                </a>
+                                <div class="header__contacts">
+                                    <div class="header__item">
+                                        <svg width="18" height="23">
+                                            <use xlink:href="#geo"></use>
+                                            <span class="ml-2">Москва, ул. Казакова, д. 8, стр. 2</span>
+                                        </svg>
+                                    </div>
+                                    <div class="header__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="#clocks"></use>
+                                            <span class="ml-2">пн-пт с 9 до 18 по мск</span>
+                                        </svg>
+                                    </div>
+                                    <a class="header__item header__item-link" href="mailto:sales@bytecodecrm.ru">
+                                        <svg width="25" height="20">
+                                            <use xlink:href="#mail"></use>
+                                            <span class="ml-2">sales@bytecodecrm.ru</span>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <a class="header__tel" href="tel:84954814696">8 495 481-46-96</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bot">
                     <div class="container">
                         <div class="header__row">
-                            <a href="#" class="header__logo">
-                                <svg class="header__logo-icon" width="177" height="37">
-                                    <use class="header__logo-icon-use" xlink:href="#logo"></use>
-                                </svg>
-                                <span class="header__logo-text">автоматизация<br> CRM-процессов</span>
-                            </a>
-                            <div class="header__contacts">
-                                <div class="header__item">
-                                    <svg width="18" height="23">
-                                        <use xlink:href="#geo"></use>
-                                        <span class="ml-2">Москва, ул. Казакова, д. 8, стр. 2</span>
-                                    </svg>
-                                </div>
-                                <div class="header__item">
-                                    <svg width="23" height="23">
-                                        <use xlink:href="#clocks"></use>
-                                        <span class="ml-2">пн-пт с 9 до 18 по мск</span>
-                                    </svg>
-                                </div>
-                                <a class="header__item header__item-link" href="mailto:sales@bytecodecrm.ru">
-                                    <svg width="25" height="20">
-                                        <use xlink:href="#mail"></use>
-                                        <span class="ml-2">sales@bytecodecrm.ru</span>
-                                    </svg>
-                                </a>
-                            </div>
-                            <a class="header__tel" href="tel:84954814696">8 495 481-46-96</a>
-                        </div>
-                    </div>
-                </div>
-                <button class="header__ui header__hmb js-toggle-menu" type="button">
-                    <div class="header__hmb-in">
-                        <div class="header__hmb-icon header__hmb-icon--1">
-                            <svg width="47" height="16">
-                                <use xlink:href="#hamburger"></use>
-                            </svg>
-                        </div>
-                        <div class="header__hmb-icon header__hmb-icon--2">
-                            <svg width="36" height="36">
-                                <use xlink:href="#cross"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div class="header__bot">
-                <div class="container">
-                    <div class="header__row">
-                        <nav class="header__nav">
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">
-                                    <span>Продукты</span>
-                                    <span class="header__nav-link-arrow">
+                            <nav class="header__nav">
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">
+                                        <span>Продукты</span>
+                                        <span class="header__nav-link-arrow">
                                         <svg width="9" height="45">
                                             <use xlink:href="#long-arrow-bottom"></use>
                                         </svg>
                                     </span>
-                                </a>
-                                <div class="header__dropdown">
-                                    <div class="header__dropdown-in">
-                                        <div class="light mb-4">CRM-решения</div>
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Distributors Creatio</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                    </a>
+                                    <div class="header__dropdown">
+                                        <div class="header__dropdown-in">
+                                            <div class="light mb-4">CRM-решения</div>
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Distributors Creatio</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                                <div class="col-xl-6">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Marketing Creatio</a>
-                                                    <div class="p3">Мультиканальная платформа для управления
-                                                        маркетинговыми кампаниями</div>
+                                                <div class="col-xl-6">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Marketing Creatio</a>
+                                                        <div class="p3">Мультиканальная платформа для управления
+                                                            маркетинговыми кампаниями</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                                <div class="col-xl-6">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                                <div class="col-xl-6">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="header__promo" style="background-image: url('assets/img/header__promo-bg.jpg');">
-                                        <div class="header__promo-in">
-                                            <div class="header__promo-title">25% на Marketing Creatio</div>
-                                            <div class="header__promo-descr light">Первые 2000 лицензий со скидкой 25%! Предложение ограничено. Внедрение не
-                                                входит в стоимость приобретения.</div>
+                                        <div class="header__promo" style="background-image: url('assets/img/header__promo-bg.jpg');">
+                                            <div class="header__promo-in">
+                                                <div class="header__promo-title">25% на Marketing Creatio</div>
+                                                <div class="header__promo-descr light">Первые 2000 лицензий со скидкой 25%! Предложение ограничено. Внедрение не
+                                                    входит в стоимость приобретения.</div>
+                                            </div>
+                                            <button class="button--square button--square--white">
+                                                <svg width="13" height="22">
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </button>
                                         </div>
-                                        <button class="button--square button--square--white">
-                                            <svg width="13" height="22">
-                                                <use xlink:href="#arrow-right"></use>
-                                            </svg>
-                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">
-                                    <span>Услуги</span>
-                                    <span class="header__nav-link-arrow">
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">
+                                        <span>Услуги</span>
+                                        <span class="header__nav-link-arrow">
                                         <svg width="9" height="45">
                                             <use xlink:href="#long-arrow-bottom"></use>
                                         </svg>
                                     </span>
-                                </a>
-                                <div class="header__dropdown">
-                                    <div class="header__dropdown-in">
-                                        <div class="light mb-4">CRM-решения</div>
-                                        <div class="row">
-                                            <div class="col-xl-4">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Название Услуги номер 1</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                    </a>
+                                    <div class="header__dropdown">
+                                        <div class="header__dropdown-in">
+                                            <div class="light mb-4">CRM-решения</div>
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Название Услуги номер 1</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Название Услуги для по
-                                                        ускоренному внедрению</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                                <div class="col-xl-4">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Название Услуги для по
+                                                            ускоренному внедрению</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Новая услуга</a>
-                                                    <div class="p3">Мультиканальная платформа для управления
-                                                        маркетинговыми кампаниями</div>
+                                                <div class="col-xl-4">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Новая услуга</a>
+                                                        <div class="p3">Мультиканальная платформа для управления
+                                                            маркетинговыми кампаниями</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                                <div class="col-xl-4">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <div class="header__dropdown-item">
-                                                    <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                    <div class="p3">Платформа Creatio — это полный набор
-                                                        инструментов для быстрого изменения бизнес-
-                                                        процессов, включая проектирование, исполнение и
-                                                        мониторинг.</div>
+                                                <div class="col-xl-4">
+                                                    <div class="header__dropdown-item">
+                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                        <div class="p3">Платформа Creatio — это полный набор
+                                                            инструментов для быстрого изменения бизнес-
+                                                            процессов, включая проектирование, исполнение и
+                                                            мониторинг.</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">Кейсы</a>
-                            </div>
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">Клиенты</a>
-                            </div>
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">Новости</a>
-                            </div>
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">О компании</a>
-                            </div>
-                            <div class="header__nav-link-wrp">
-                                <a class="header__nav-link" href="#">Контакты</a>
-                            </div>
-                        </nav>
-                        <button class="header__button" data-fancybox data-src="#popup--call">Задать вопрос</button>
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">Кейсы</a>
+                                </div>
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">Клиенты</a>
+                                </div>
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">Новости</a>
+                                </div>
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">О компании</a>
+                                </div>
+                                <div class="header__nav-link-wrp">
+                                    <a class="header__nav-link" href="#">Контакты</a>
+                                </div>
+                            </nav>
+                            <button class="header__button" data-fancybox data-src="#popup--call">Задать вопрос</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-    </div>
+        </header>    </div>
     <section class="about-page section--dark section--inner">
         <div class="container">
             <div>
