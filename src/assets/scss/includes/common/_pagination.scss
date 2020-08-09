@@ -5,9 +5,22 @@
     color: #fff;
     &:not(:last-child) {
       margin-right: 25px;
+      @include r(1200) {
+        margin-right: 15px;
+      }
     }
     &--here {
       color: $orange;
+    }
+  }
+  @include r(600) {
+    .button--square {
+      &:nth-child(1) {
+        transform: translateX(-15px);
+      }
+      &:nth-child(3) {
+        transform: translateX(15px);
+      }
     }
   }
 }

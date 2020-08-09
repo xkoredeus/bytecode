@@ -19,6 +19,9 @@ $mebold: 'MullerExtraBold';
 }
 .ulight {
   font-family: $mulig;
+  @include r(600) {
+    font-family: $mreg;
+  }
 }
 
 $h1: 50px;

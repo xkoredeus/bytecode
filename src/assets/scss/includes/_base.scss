@@ -49,16 +49,19 @@ a {
 }
 
 $container: 1440px;
-//$container2: 1300px;
+$container2: 1150px;
 
 
 .container {
   max-width: $container;
-  //@include r(1531) {
-  //  max-width: $container2;
-  //}
+  @include r(1531) {
+    max-width: $container2;
+  }
 }
 
+.layout {
+  overflow: hidden;
+}
 
 .svg-sprite {
   position: absolute;

@@ -16,10 +16,13 @@
 <body>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> preloader}}
+    <div class="layout">
+        {{> banner}}
+        {{> body}}
+        {{> footer}}
+    </div>
 
-    {{> banner}}
-    {{> body}}
-    {{> footer}}
+
 
     {{> svg}}
 

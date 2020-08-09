@@ -20,6 +20,11 @@
         min-width: 900px;
         height: 400px;
       }
+      @include r(1200) {
+        min-width: 100%;
+        position: relative;
+        left: auto;
+      }
     }
   }
 }

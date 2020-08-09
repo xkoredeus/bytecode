@@ -4,9 +4,20 @@
   background-color: $dark;
   display: grid;
   grid-template-columns: 5fr 1131px 1fr;
+  @include r(1531) {
+    grid-template-columns: 5fr 911px 1fr;
+  }
+  @include r(1200) {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
   &__left {
     width: 100%;
     max-width: 600px;
+    @include r(1200) {
+      display: none;
+    }
   }
   &__image {
     position: sticky;
@@ -17,19 +28,48 @@
     min-height: 700px;
     background-image: url('../img/about__image.jpg');
     @include cv;
+    @include r(1200) {
+      position: relative;
+      height: 400px;
+      min-height: auto;
+      width: calc(100% + 30px);
+      transform: translateX(-15px);
+      margin-bottom: 30px;
+    }
+    @include r(600) {
+      height: 300px;
+    }
   }
   &__right {
     margin-left: 107px;
     padding-left: 15px;
+    @include r(1200) {
+      margin-left: 0;
+      padding: 0 15px;
+    }
   }
   &__descr {
     font-family: $mulig;
     max-width: 570px;
+    @include r(600) {
+      font-family: $mreg;
+    }
   }
   &__test {
+    @include r(1200) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
     &-title {
       position: relative;
       line-height: 1;
+      @include r(1200) {
+        font-size: 20px;
+        br {
+          display: none;
+        }
+      }
     }
     &-num {
       position: absolute;
@@ -40,15 +80,42 @@
       background: linear-gradient(180deg, #FF4013 40%, $red 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include r(1531) {
+        font-size: 350px;
+      }
+      @include r(1200) {
+        position: relative;
+        font-size: 100px;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+      }
     }
     &-item {
       position: relative;
       min-height: 300px;
+      @include r(1200) {
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+        width: 49%;
+        padding: 15px !important;
+      }
+      @include r(600) {
+        width: 100%;
+      }
       &--1 {
         padding-right: 300px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        @include r(1531) {
+          padding-right: 200px;
+        }
         .about__test-num {
           right: 0;
         }
@@ -58,6 +125,11 @@
         align-items: flex-end;
         padding-bottom: 50px;
         padding-left: 233px;
+        @include r(1531) {
+          min-height: 200px;
+          padding-bottom: 0;
+          padding-left: 173px;
+        }
         .about__test-num {
           left: 0;
           bottom: -130px;
@@ -67,11 +139,22 @@
         min-height: 510px;
         display: flex;
         align-items: center;
+        @include r(1531) {
+          min-height: 400px;
+          padding-left: 80px;
+          padding-top: 140px;
+        }
         .about__test-num {
           right: 0;
           bottom: -40px;
           span:last-child {
             margin-left: -60px;
+            @include r(1531) {
+              margin-left: -54px;
+            }
+            @include r(1200) {
+              margin-left: -15px;
+            }
           }
         }
       }
@@ -80,14 +163,29 @@
         display: flex;
         padding-left: 410px;
         padding-top: 100px;
+        @include r(1531) {
+          min-height: 360px;
+        }
         .about__test-num {
           left: 0;
           bottom: -80px;
           span:nth-child(2) {
             margin-left: -75px;
+            @include r(1531) {
+              margin-left: -54px;
+            }
+            @include r(1200) {
+              margin-left: -15px;
+            }
           }
           span:last-child {
             margin-left: -60px;
+            @include r(1531) {
+              margin-left: -54px;
+            }
+            @include r(1200) {
+              margin-left: -15px;
+            }
           }
         }
       }

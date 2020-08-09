@@ -1,23 +1,23 @@
 <form class="feed section--inner">
     <div class="container">
         <div class="text-center mb-4">
-            <div class="section__title mb-4">Оставьте заявку на проведение<br> предпроектного обследования</div>
-            <div class="ulight">Оставьте заявку на подготовительные работы по вашему проекту.<br>
+            <div class="section__title mb-4">Оставьте заявку на проведение<br class="d-none d-xl-inline"> предпроектного обследования</div>
+            <div class="ulight">Оставьте заявку на подготовительные работы по вашему проекту.<br class="d-none d-xl-inline">
                 Мы обработаем запрос и свяжемся с вами в течение дня</div>
         </div>
         <div class="row">
-            <div class="col-xl-6 mb-5">
+            <div class="col-xl-6 mb-4 mb-xl-5 order-1">
                 <input class="w-100 mb-3" type="text" placeholder="Имя*">
                 <input class="w-100 mb-3" type="email" placeholder="E-mail*">
                 <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
             </div>
-            <div class="col-xl-6 mb-5">
+            <div class="col-xl-6 mb-4 mb-xl-5 order-2">
                 <textarea class="feed__textarea w-100" placeholder="Ваше сообщение*"></textarea>
             </div>
-            <div class="col-xl-6 mb-4">
-                <div class="d-flex">
-                    <button class="button button--white w-50 mr-3" type="submit">Отправить заявку</button>
-                    <label class="button button--tr button--tr-white button--file w-50">
+            <div class="col-xl-6 mb-4 mb-xl-5 order-4 order-xl-3">
+                <div class="d-flex flex-column flex-sm-row">
+                    <button class="button button--white w-50 mr-xl-3 order-2 order-xl-1" type="submit">Отправить заявку</button>
+                    <label class="button button--tr button--tr-white button--file w-50 mr-sm-3 mr-xl-0 mb-2 mb-sm-0 order-1 order-xl-2">
                         <input class="button--file__input js-file-input" type="file" multiple>
                         <span>Прикрепить файл</span>
                         <svg class="ml-2" width="45" height="45">
@@ -26,10 +26,10 @@
                     </label>
                 </div>
             </div>
-            <div class="col-xl-6 mb-4">
+            <div class="col-xl-6 mb-4 mb-xl-5 order-3 order-xl-4">
                 <div class="file-list"></div>
             </div>
-            <div class="text-center w-100">
+            <div class="col-xl-12 text-center order-5">
                 <span class="p3">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink feed__policy" href="#">обработку персональных данных</a></span>
             </div>
         </div>

@@ -8,11 +8,19 @@
     }
     &-image {
       max-height: 350px;
+      @include r(1200) {
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
+      }
     }
     &-title {
       min-height: 125px;
       display: flex;
       align-items: flex-end;
+      @include r(1200) {
+        min-height: unset;
+      }
     }
     &-descr {
       position: relative;
@@ -20,6 +28,9 @@
       margin-top: 54px;
       padding-left: 23px;
       padding-right: 23px;
+      @include r(600) {
+        padding-left: 73px;
+      }
       &::before {
         position: absolute;
         content: '';
@@ -136,6 +147,9 @@
         min-height: 380px;
         @include cv;
         background-position-x: 0;
+        @include r(600) {
+          min-height: 260px;
+        }
       }
     }
     &-bot {
@@ -145,15 +159,35 @@
         @include ease;
         @include cv;
         background-position-x: 0;
+        @include r(600) {
+          min-height: 130px;
+        }
       }
     }
   }
 
   &__accordion {
+    width: 100%;
     &:not(:last-child) {
       margin-bottom: 35px;
       .product-page__accordion-descr {
-        border-bottom: 1px solid $gray2;
+        @include rmin(600) {
+          border-bottom: 1px solid $gray2;
+        }
+      }
+    }
+
+    &-wrp {
+      position: relative;
+    }
+
+    &-nav {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: none;
+      @include r(600) {
+        display: flex;
       }
     }
 
@@ -168,11 +202,22 @@
       @include rmin(1200) {
         padding-left: 45px;
       }
+      @include r(600) {
+        max-height: unset;
+      }
     }
 
     &-title {
       cursor: pointer;
       @include cubic3;
+      @include r(600) {
+        font-size: 25px;
+        color: $orange;
+        padding-right: 100px;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+      }
       &:hover {
         color: $gray;
       }
@@ -180,7 +225,9 @@
 
     &-descr {
       margin-top: 25px;
-      display: none;
+      @include rmin(600) {
+        display: none;
+      }
     }
 
     &.active {
@@ -194,6 +241,9 @@
     &-image {
       min-height: 238px;
       @include cv;
+      @include r(600) {
+        min-height: 100px;
+      }
     }
     &-descr {
       max-width: 366px;
@@ -204,16 +254,33 @@
     &-descr {
       max-width: 954px;
     }
+    &-button {
+      @include r(1200) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include r(600) {
+        width: 100%;
+      }
+    }
     &-buttons {
+      @include r(600) {
+        width: 100%;
+      }
       .button {
         padding-left: 40px;
         padding-right: 40px;
-        &:nth-child(1) {
-          position: relative;
-          z-index: 1;
+        @include r(600) {
+          width: 100%;
         }
-        &:nth-child(2) {
-          margin-left: -1px;
+        @include rmin(600) {
+          &:nth-child(1) {
+            position: relative;
+            z-index: 1;
+          }
+          &:nth-child(2) {
+            margin-left: -1px;
+          }
         }
       }
     }

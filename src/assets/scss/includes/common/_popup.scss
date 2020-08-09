@@ -13,9 +13,15 @@
     @include r(1531) {
       min-height: 216px;
     }
+    @include r(1200) {
+      min-height: 150px;
+    }
   }
   .button {
     padding: 26px 9px;
+    @include r(600) {
+      width: 100% !important;
+    }
   }
   .file__button:hover {
     svg {
@@ -81,5 +87,13 @@
   .popup {
     transform: translateY(0);
     opacity: 1;
+  }
+  @include r(1200) {
+    .header__bot-in {
+      .container {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 }

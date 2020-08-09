@@ -2,7 +2,10 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <div class="section__title">Продукты</div>
-            <a class="section__link" href="#">Все продукты</a>
+            <div class="products__count-wrp d-sm-none">
+                <span class="products__count">01</span>/<span class="products__count-amount">02</span>
+            </div>
+            <a class="section__link d-none d-sm-block" href="#">Все продукты</a>
         </div>
     </div>
     <div class="products__in">
@@ -100,5 +103,18 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="products__nav d-flex d-sm-none justify-content-between align-items-center mt-3">
+        <button class="button--square button--square--black js-products-prev">
+            <svg width="13" height="22">
+                <use xlink:href="#arrow-left"></use>
+            </svg>
+        </button>
+        <a href="#">Все продукты</a>
+        <button class="button--square js-products-next">
+            <svg width="13" height="22">
+                <use xlink:href="#arrow-right"></use>
+            </svg>
+        </button>
     </div>
 </section>

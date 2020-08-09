@@ -20,7 +20,7 @@ layout: inner--dark
 <section class="section--inner section--white">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-xl-6">
+            <div class="col-xl-6 mb-4 mb-xl-0">
                 <div class="product-page__slider-list">
                     <div class="product-page__slider-item" data-accordion="1">
                         <div class="product-page__slider-loader"><div class="loader"><span></span><span></span><span></span><span></span></div></div>
@@ -285,7 +285,19 @@ layout: inner--dark
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6 product-page__accordion-wrp">
+                <div class="product-page__accordion-nav">
+                    <button class="button--square button--square--black js-product-accordion-prev">
+                        <svg width="13" height="22">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="button--square js-product-accordion-next">
+                        <svg width="13" height="22">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
                 <div class="product-page__accordion-list">
                     <div class="product-page__accordion" data-accordion="1">
                         <div class="product-page__accordion-title bold">Портрет клиента 360°</div>
@@ -537,14 +549,14 @@ layout: inner--dark
 <section class="section--inner section--dark">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 mb-3 mb-xl-0">
+            <div class="col-xl-6 mb-5 mb-xl-0">
                 <div class="h-100 d-flex flex-column justify-content-between align-items-start">
                     <div class="section__title mb-3 mb-xl-4">Заголовок про тарифы <br>
                         продукта (если&nbsp;тариф&nbsp;1)  Marketing Creatio</div>
                     <div class="light mb-3 mb-xl-4">Для компаний, которые хотят втоматизировать работу
                         с обращениями клиентов. Управление обращениями по всем каналам
                         коммуникаций, а также автоматизация задач контакт-центров</div>
-                    <a class="button button--orange d-flex align-items-center" href="#">
+                    <a class="button button--orange product-page__tariff-button d-flex align-items-center justify-content-center" href="#">
                         <span class="mr-2 mr-xl-3">Сравнить тарифы</span>
                         <svg width="29" height="35" fill="#fff">
                             <use xlink:href="#document"></use>
@@ -553,11 +565,11 @@ layout: inner--dark
                 </div>
             </div>
             <div class="col-xl-5 offset-xl-1">
-                <div class="h-100 d-flex flex-column justify-content-between align-items-start">
-                    <div class="section__title mb-3 mb-xl-4"><span class="regular">от</span> <br>
+                <div class="h-100 d-flex flex-column justify-content-between align-items-center align-items-xl-start">
+                    <div class="section__title mb-3 mb-xl-4"><span class="regular">от</span> <br class="d-none d-xl-inline">
                         <span class="bold white">109 494 <span class="rub"></span></span> <span class="regular">в год</span>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 d-flex flex-column align-items-center align-items-xl-start">
                         <div class="light mb-2">за 1-го пользователя*</div>
                         <label class="button--radio ulight">
                             <div class="button--radio__label">cloud</div>
@@ -566,7 +578,7 @@ layout: inner--dark
                             <div class="button--radio__label">on-site</div>
                         </label>
                     </div>
-                    <div class="product-page__tariff-buttons d-flex flex-column flex-sm-row">
+                    <div class="product-page__tariff-buttons d-flex flex-column flex-sm-row mt-5 mt-xl-0">
                         <button class="button button--red" data-src="#popup--call" data-src>Купить</button>
                         <button class="button button--tr button--tr-white" data-src="#popup--success" data-src>Попробовать бесплатно</button>
                     </div>
@@ -582,7 +594,8 @@ layout: inner--dark
             <div class="light mb-3 mb-xl-4 product-page__tariff-descr">Для компаний, которые хотят втоматизировать работу
                 с обращениями клиентов. Управление обращениями по всем каналам
                 коммуникаций, а также автоматизация задач контакт-центров</div>
-            <a class="button button--orange d-flex align-items-center" href="#">
+
+            <a class="button button--orange product-page__tariff-button d-flex align-items-center justify-content-center mb-5 mb-xl-0" href="#">
                 <span class="mr-2 mr-xl-3">Сравнить тарифы</span>
                 <svg width="29" height="35" fill="#fff">
                     <use xlink:href="#document"></use>
@@ -596,7 +609,7 @@ layout: inner--dark
                 <div class="button--radio__switch"></div>
                 <div class="button--radio__label">on-site</div>
             </label>
-            <div class="product-page__tariff-buttons d-flex flex-column flex-sm-row">
+            <div class="product-page__tariff-buttons d-flex flex-column flex-sm-row mt-5 mt-xl-0">
                 <button class="button button--red" data-src="#popup--call" data-src>Купить</button>
                 <button class="button button--tr button--tr-white" data-src="#popup--success" data-src>Попробовать бесплатно</button>
             </div>

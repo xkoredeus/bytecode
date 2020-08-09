@@ -15,11 +15,13 @@
 <body>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> preloader}}
-    <div class="header__wrp header__wrp--black">
-        {{> header}}
+    <div class="layout">
+        <div class="header__wrp header__wrp--black">
+            {{> header}}
+        </div>
+        {{> body}}
+        {{> footer}}
     </div>
-    {{> body}}
-    {{> footer}}
 
     {{> svg}}
 

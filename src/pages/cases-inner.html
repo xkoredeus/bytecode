@@ -5,8 +5,8 @@ layout: inner
     <div class="section--inner">
         <div class="container">
             <div class="row align-items-xl-center">
-                <div class="col-xl-7">
-                    <div class="section__title mb-2 mb-xl-4">CRM для строительной компании: как внедрить CRM за неделю и не упустить
+                <div class="col-xl-7 col-sm-7 order-2 order-sm-1">
+                    <div class="section__title mb-3 mb-xl-4">CRM для строительной компании: как внедрить CRM за неделю и не упустить
                         звонок на сто пятьдесят миллионов рублей</div>
                     <p class="ulight p2">Рынок загородного строительства всегда славился своей
                         масштабностью: большие рекламные бюджеты, длинный цикл
@@ -19,7 +19,7 @@ layout: inner
                         наступить на эти грабли и стать лидером своей ниши. Рынок загородного строительства всегда славился своей
                         масштабностью: большие рекламные бюджеты</p>
                 </div>
-                <div class="col-xl-4 offset-xl-1">
+                <div class="col-xl-4 col-sm-4 offset-xl-1 order-1 order-sm-2 mb-3 mb-sm-0">
                     <img class="case-begin__img img-responsive" src="{{root}}assets/img/case-banner__bg.jpg" alt="case-begin__img">
                 </div>
             </div>
@@ -27,7 +27,7 @@ layout: inner
     </div>
     <div class="section--inner">
         <div class="container">
-            <div class="case-header d-flex align-items-end mb-3 mb-xl-5">
+            <div class="case-header d-flex flex-column flex-sm-row  align-items-center align-items-xl-end mb-3 mb-xl-5">
                 <img class="case-header__logo" src="{{root}}assets/img/clients-inner__logo.png" alt="case-header__logo">
                 <div class="case-header__divider"></div>
                 <div class="section__title">Клиент ООО <br>
@@ -64,7 +64,7 @@ layout: inner
         </div>
     </div>
 </section>
-<section class="section--inner section--dark">
+<section class="section--inner section--dark case-info">
     <div class="container">
         <div class="row mb-3 mb-xl-5">
             <div class="col-xl-7">
@@ -83,24 +83,27 @@ layout: inner
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-11 offset-xl-1">
-                <div class="section__subtitle mb-2 mb-xl-5">Управляйте воронкой лидов.</div>
-            </div>
-            <div class="col-xl-5 offset-xl-2 col-sm-6">
-                <p class="ulight">Фиксируйте потребности потенциальных клиентов и отслеживайте источники
-                    их поступления. Система позволяет быстро подключить систему сквозной аналитики Roistat, для анализа эффективности каналов лидогенерации.
-                    Управляйте воронкой лидов. Фиксируйте потребности потенциальных клиентов и отслеживайте источники их поступления. Система позволяет
-                    быстро подключить систему сквозной аналитики Roistat, для анализа эффективности.</p>
-            </div>
-            <div class="col-xl-5 col-sm-6">
-                <p class="ulight">С помощью портала ваши клиенты всегда будут в курсе новостей компании и
-                    предоставляемых услуг, а также смогут самостоятельно найти ответы на
-                    возникшие вопросы в публичной базе знаний или оставить комментарий по
-                    обращению на специальной странице благодарности.Фиксируйте потребности потенциальных клиентов и отслеживайте источники
-                    их поступления. </p>
+        <div class="case-info__in">
+            <div class="row">
+                <div class="col-xl-11 offset-xl-1">
+                    <div class="section__subtitle mb-2 mb-xl-5">Управляйте воронкой лидов.</div>
+                </div>
+                <div class="col-xl-5 offset-xl-2 col-sm-6">
+                    <p class="ulight">Фиксируйте потребности потенциальных клиентов и отслеживайте источники
+                        их поступления. Система позволяет быстро подключить систему сквозной аналитики Roistat, для анализа эффективности каналов лидогенерации.
+                        Управляйте воронкой лидов. Фиксируйте потребности потенциальных клиентов и отслеживайте источники их поступления. Система позволяет
+                        быстро подключить систему сквозной аналитики Roistat, для анализа эффективности.</p>
+                </div>
+                <div class="col-xl-5 col-sm-6">
+                    <p class="ulight">С помощью портала ваши клиенты всегда будут в курсе новостей компании и
+                        предоставляемых услуг, а также смогут самостоятельно найти ответы на
+                        возникшие вопросы в публичной базе знаний или оставить комментарий по
+                        обращению на специальной странице благодарности.Фиксируйте потребности потенциальных клиентов и отслеживайте источники
+                        их поступления. </p>
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 {{> type-block}}
@@ -158,24 +161,26 @@ layout: inner
 </section>
 <section class="section--inner">
     <div class="container">
-        <a class="link-arrow link-arrow--text" href="#">
+        <div class="pb-5 pb-sm-0">
+            <a class="link-arrow link-arrow--text" href="#">
             <span class="link-arrow__title">
                 <span class="link-arrow__title-bg">
                     <span>Узнайте, как Байт Код поможет в решении ваших бизнес-задач</span>
                 </span>
             </span>
-            <div class="link-arrow__button button--square">
-                <svg width="13" height="22">
-                    <use xlink:href="#arrow-right"></use>
-                </svg>
-            </div>
-            <span class="link-arrow__button-text p2">Заказать презентацию</span>
-        </a>
+                <div class="link-arrow__button button--square">
+                    <svg width="13" height="22">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+                <span class="link-arrow__button-text p2">Заказать презентацию</span>
+            </a>
+        </div>
     </div>
 </section>
 <section class="section--inner section--white">
     <div class="container">
-        <div class="section__title mb-3 mb-xl-4">Второй заголовок (например что делали) <br> Не следует забывать, что потускнели светлые
+        <div class="section__title mb-3 mb-xl-4 mt-sm-3 mt-xl-0">Второй заголовок (например что делали) <br> Не следует забывать, что потускнели светлые
             лики икон!
         </div>
         <p class="ulight">Перед началом работы был проведен аудит бизнес-процессов. Интеграторы постарались разобраться, почему
@@ -248,7 +253,7 @@ layout: inner
 <section class="case-profit section--inner">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-4 col-sm-4 mb-3 mb-sm-4 mb-xl-0">
+            <div class="col-xl-4 col-sm-6 mb-3 mb-sm-4 mb-xl-0">
                 <div class="case-profit__item">
                     <div class="case-profit__item-num">
                         <span>x</span><span>2</span><span>,</span><span>5</span>
@@ -256,7 +261,7 @@ layout: inner
                     <div class="case-profit__item-title">Финансовый мир очнулся: <br> глубокий уровень погружения бодрит</div>
                 </div>
             </div>
-            <div class="col-xl-4 col-sm-4 mb-3 mb-sm-4 mb-xl-0">
+            <div class="col-xl-4 col-sm-6 mb-3 mb-sm-4 mb-xl-0">
                 <div class="case-profit__item">
                     <div class="case-profit__item-num">
                         <span>+</span><span>6</span><span>0</span><span>%</span>
@@ -267,7 +272,7 @@ layout: inner
                         наши планы</div>
                 </div>
             </div>
-            <div class="col-xl-4 col-sm-4 mb-3 mb-sm-4 mb-xl-0">
+            <div class="col-xl-4 col-sm-6 mb-3 mb-sm-4 mb-xl-0">
                 <div class="case-profit__item">
                     <div class="case-profit__item-num">
                         <span>+</span><span>4</span><span>0</span><span>0</span>

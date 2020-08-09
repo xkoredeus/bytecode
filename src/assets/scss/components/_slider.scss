@@ -2,6 +2,10 @@
   padding: 0 30px;
   overflow: hidden;
   position: relative;
+  @include r(1531) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   @include r(1200) {
     padding: 0;
   }
@@ -12,6 +16,11 @@
     position: relative;
     color: #fff;
     background-color: $black;
+    @include r(1531) {
+      .section__title {
+        font-size: 30px;
+      }
+    }
     @include rmin(1200) {
       min-height: 500px;
       height: calc(100vh - 240px);
@@ -19,15 +28,25 @@
     @include r(1200) {
       padding-top: 30px;
       padding-bottom: 100px;
+      br {
+        display: none;
+      }
       .slider__nav {
         display: none !important;
       }
     }
+    @include r(600) {
+      padding-bottom: 70px;
+    }
     &-descr {
       @include ease;
-      @include r(1531) {
+      @include r(1340) {
         transform: translateX(30px);
         padding-top: 50px;
+      }
+      @include r(1200) {
+        padding-top: 30px;
+        min-height: 200px;
       }
     }
     &-overlay {
@@ -46,7 +65,7 @@
       @include r(600) {
         position: absolute;
         bottom: 0;
-        left: -15px;
+        left: 0;
         width: 100%;
         max-width: calc(100% - 100px);
       }
@@ -54,6 +73,20 @@
     &-in {
       position: relative;
       overflow: hidden;
+    }
+    &--1 {
+      @include r(1531) {
+        .slider__item-img {
+          max-width: 350px;
+          padding-left: 40px;
+        }
+      }
+      @include r(1200) {
+        .slider__item-img {
+          max-width: unset;
+          padding-left: 0;
+        }
+      }
     }
     &--2 {
       .slider__item-overlay {
@@ -63,6 +96,11 @@
     &--3 {
       .slider__item-overlay {
         background-color: $gray;
+      }
+      @include r(1531) {
+        .slider__item-img-wrp {
+          align-items: flex-end;
+        }
       }
     }
     &--4 {
@@ -94,7 +132,7 @@
       @include r(1690) {
         top: 50px;
       }
-      @include r(1531) {
+      @include r(1340) {
         max-width: 310px;
       }
       @include r(1200) {
@@ -109,6 +147,9 @@
       &-wrp {
         font-family: $mlig;
         margin-bottom: 40px;
+        @include r(1531) {
+          font-size: 30px;
+        }
         @include r(1200) {
           font-size: 16px;
           color: $gray;
@@ -126,19 +167,34 @@
       z-index: 1;
       @include ease;
       @include r(1531) {
+        max-width: 550px;
+      }
+      @include r(1340) {
         opacity: .5;
       }
       @include r(1200) {
         opacity: 1;
-        max-height: 400px;
+        height: 400px;
+        object-fit: contain;
+        width: auto;
+      }
+      @include r(600) {
+        height: 250px;
       }
       &-wrp {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        @include r(600) {
+        @include r(1531) {
           justify-content: flex-start;
+          align-items: center;
+        }
+        @include r(1200) {
+          justify-content: center;
+          align-items: flex-end;
+        }
+        @include r(600) {
           margin-top: 30px;
         }
       }
@@ -146,7 +202,7 @@
     &-blur {
       position: absolute;
       left: 50%;
-      bottom: 50px;
+      bottom: -45px;
       transform: translateX(-50%);
       @include r(1200) {
         display: none;
@@ -159,7 +215,7 @@
     bottom: 0;
     display: flex;
     @include cubic3;
-    z-index: 1;
+    z-index: 2;
     &--mobile {
       position: absolute;
       right: 0;
@@ -180,9 +236,6 @@
           transform: translateX(-200px);
         }
       }
-      //.slider__nav {
-      //  transform: translateX(-200px);
-      //}
     }
     &.active {
       &:hover {
@@ -216,7 +269,7 @@
             color: $gray2;
             transform: translate(0) !important;
             left: 30px;
-            @include r(1531) {
+            @include r(1340) {
               left: 15px;
               top: 20px;
               font-size: $h1-medium;
