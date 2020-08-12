@@ -11816,6 +11816,8 @@ a:hover {
   z-index: 1;
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
+  width: auto !important;
+  max-height: 890px;
 }
 
 @media only screen and (max-width: 1531px) {
