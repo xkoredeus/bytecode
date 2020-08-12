@@ -15,40 +15,42 @@
 <body>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> preloader}}
-    <div class="service-banner section--black">
-        <div class="header__wrp">
-            {{> header}}
-        </div>
-        <section class="section--inner">
-            <div class="service-banner__in">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6">
-                            <div class="section__title mb-3 mb-xl-4">Разработка решений на
-                                базе Creatio и дальнейшая
-                                техническая поддержка</div>
-                            <p class="ulight">
-                                Платформа Creatio построена на открытых принципах кастомизации. Это позволяет нашим разработчикам свободно и без ограничений создавать собственные модули, а также модифицировать существующую функциональность
-                                для получения требуемой конфигурации системы.
-                            </p>
-                            <p class="ulight">
-                                Это общий блок, кратко описывающий услугу. Он обязательный. Далее идут блоки с заголовками. их количество
-                                может быть от 1-го до 4-х максимально.
-                            </p>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="service-banner__image-wrp">
-                                <img class="service-banner__image" src="{{root}}assets/img/service-banner__image.png" alt="service-banner__image">
+    <div class="layout">
+        <div class="service-banner section--black">
+            <div class="header__wrp">
+                {{> header}}
+            </div>
+            <section class="section--inner">
+                <div class="service-banner__in">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6">
+                                <div class="section__title mb-3 mb-xl-4">Разработка решений на
+                                    базе Creatio и дальнейшая
+                                    техническая поддержка</div>
+                                <p class="ulight">
+                                    Платформа Creatio построена на открытых принципах кастомизации. Это позволяет нашим разработчикам свободно и без ограничений создавать собственные модули, а также модифицировать существующую функциональность
+                                    для получения требуемой конфигурации системы.
+                                </p>
+                                <p class="ulight">
+                                    Это общий блок, кратко описывающий услугу. Он обязательный. Далее идут блоки с заголовками. их количество
+                                    может быть от 1-го до 4-х максимально.
+                                </p>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="service-banner__image-wrp">
+                                    <img class="service-banner__image" src="{{root}}assets/img/service-banner__image.png" alt="service-banner__image">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
 
-    {{> body}}
-    {{> footer}}
+        {{> body}}
+        {{> footer}}
+    </div>
 
     {{> svg}}
 

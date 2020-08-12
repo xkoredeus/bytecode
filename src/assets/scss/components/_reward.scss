@@ -1,9 +1,22 @@
 .reward {
+  overflow: hidden;
   &__descr {
     padding: 30px 130px 0;
+    @include r(1200) {
+      padding: 0;
+    }
   }
   &__right {
     position: relative;
+    @include r(1200) {
+      min-height: 300px;
+      @include cv;
+      background-position: 100% 0;
+      background-image: url('../img/reward__image--1.jpg');
+      img {
+        display: none;
+      }
+    }
   }
   &__logo {
     &-wrapper {
@@ -15,6 +28,9 @@
       background-color: #fff;
       box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
       @include flex-center;
+      @include r(1200) {
+        display: none;
+      }
     }
   }
   &__brands {
@@ -23,9 +39,29 @@
     .owl-stage-outer {
       overflow: visible;
     }
+    @include r(1200) {
+      padding: 50px 0;
+    }
+    @include r(600) {
+      padding-top: 30px;
+      .owl-item.center {
+        .reward__brands-item {
+          transform: scale(1.3);
+          box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1)
+        }
+        .reward__brands-image {
+          filter: grayscale(0);
+        }
+      }
+    }
     &-item {
       min-height: 80px;
       @include flex-center;
+      @include ease;
+      @include r(600) {
+        padding: 15px;
+        min-height: 120px;
+      }
     }
     &-image {
       max-width: 100%;

@@ -60,6 +60,9 @@
     @include r(1200) {
       font-size: $p1-small;
     }
+    @include r(600) {
+      font-family: $mreg;
+    }
     &::after {
       position: absolute;
       content: '';
@@ -85,10 +88,19 @@
   min-height: 450px;
   background-color: $gray2;
   @include cv;
+  @include r(1200) {
+    min-height: 300px;
+  }
+  @include r(600) {
+    min-height: 200px;
+  }
   &--fixed {
     position: absolute;
     top: 0;
     min-width: 900px;
+    @include r(1200) {
+      min-width: 100%;
+    }
     &--left {
       right: 0;
     }
@@ -99,5 +111,11 @@
   &-wrp {
     position: relative;
     min-height: 450px;
+    @include r(1200) {
+      min-height: 300px;
+    }
+    @include r(600) {
+      min-height: 200px;
+    }
   }
 }

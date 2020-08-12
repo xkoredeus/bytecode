@@ -8,6 +8,9 @@
     &__nav {
       display: flex;
       align-items: center;
+      @include r(600) {
+        display: none;
+      }
       &-link {
         font-size: 16px;
         color: $gray2;

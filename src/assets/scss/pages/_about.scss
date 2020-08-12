@@ -3,6 +3,16 @@
   &__title {
     .section__title {
       margin-top: 60px;
+      @include r(1200) {
+        margin-top: 0 !important;
+        font-size: 20px;
+      }
+    }
+    @include r(1200) {
+      flex-direction: column;
+    }
+    @include r(1200) {
+      flex-direction: row;
     }
   }
   &__num {
@@ -13,18 +23,47 @@
     background: linear-gradient(180deg, #FF4013 40%, $red 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include r(1531) {
+      font-size: 140px;
+    }
+    @include r(1200) {
+      font-size: 70px;
+      margin-right: 20px;
+    }
     span:not(:first-child) {
       margin-left: -25px;
+      @include r(1200) {
+        margin-left: -10px;
+      }
     }
   }
 
   &__image {
+    position: absolute;
     min-height: 450px;
     background-color: $gray2;
     @include cv;
-    position: absolute;
     top: 0;
     min-width: 900px;
+    @include r(1531) {
+      height: 300px;
+      object-fit: cover;
+    }
+    @include r(1200) {
+      position: relative;
+      min-height: 300px;
+      width: 100%;
+      height: auto;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      bottom: auto !important;
+      min-width: unset;
+    }
+    @include r(600) {
+      height: 200px;
+      min-height: 220px;
+    }
     &--left {
       right: 0;
     }
@@ -34,6 +73,9 @@
     &-wrp {
       position: relative;
       min-height: 450px;
+      @include r(1200) {
+        min-height: 300px;
+      }
     }
   }
 }

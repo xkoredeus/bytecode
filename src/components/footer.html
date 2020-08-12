@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row mb-3 mb-xl-5">
-            <div class="col-xl-4 col-sm-6">
+            <div class="col-xl-4 col-sm-6 order-2 order-sm-1 footer__divider--bottom">
                 <div class="mb-1">
                     <a class="bold white" href="tel:88462007762">8 846 200 77 62</a>
                     <span class="footer__divider">|</span>
@@ -26,16 +26,16 @@
                 </div>
 
                 <div class="mb-1">
-                    <span class="bold white">Самара:</span>
+                    <span class="bold white not-under">Самара:</span>
                     <span>ул. Аэродромная, д. 45, к. БЦ «А-45», оф. 702/1</span>
                 </div>
                 <div>
-                    <span class="bold white">Москва:</span>
+                    <span class="bold white not-under">Москва:</span>
                     <span>ул. Казакова, д. 8, стр. 2</span>
                 </div>
             </div>
-            <div class="offset-xl-1 col-xl-5 d-flex">
-                <div class="d-flex flex-column justify-content-between align-items-start mr-5">
+            <div class="offset-xl-1 col-xl-5 col-sm-6 d-flex flex-column flex-sm-row order-1 order-sm-2 footer__divider--bottom">
+                <div class="d-flex flex-column justify-content-between align-items-start mr-sm-5">
                     <a class="footer__link" href="#">Продукты</a>
                     <a class="footer__link" href="#">О компании</a>
                     <a class="footer__link" href="#">Кейсы</a>
@@ -52,10 +52,10 @@
                     <a class="footer__link" href="#">Ссылка</a>
                 </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 order-3 footer__divider--bottom">
                 <div class="footer__socials">
                     <div class="footer__socials-title">Мы в социальных сетях</div>
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-start justify-content-xl-between align-items-center">
                         <a class="footer__socials-link" href="#">
                             <svg class="footer__socials-icon" width="9" height="20">
                                 <use xlink:href="#fb"></use>
@@ -85,19 +85,19 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
-            <a href="#" class="footer__logo">
+        <div class="d-flex justify-content-xl-center align-items-center">
+            <a href="#" class="footer__logo d-none d-xl-flex">
                 <svg class="footer__logo-icon" width="198" height="47">
                     <use xlink:href="#logo"></use>
                 </svg>
                 <span class="footer__logo-text">автоматизация CRM-процессов</span>
             </a>
-            <div class="footer__copy">
-                <div class="mb-1">© 2020 «БК».</div>
+            <div class="footer__copy d-flex flex-xl-column">
+                <div class="mb-xl-1 mr-2 mr-xl-0">© 2020 «БК».</div>
                 Все права защищены.
             </div>
         </div>
-        <button class="footer__button button--square button--square--orange js-scroll-top">
+        <button class="footer__button button--square button--square--orange js-scroll-top d-none d-xl-block">
             <svg width="22" height="13">
                 <use xlink:href="#arrow-top"></use>
             </svg>

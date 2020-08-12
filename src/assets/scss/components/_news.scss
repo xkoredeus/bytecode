@@ -40,6 +40,12 @@
       overflow: hidden;
       display: inline-block;
       @include ease;
+      @include r(1531) {
+        height: 21px;
+      }
+      @include r(1200) {
+        height: 17px;
+      }
       svg {
         stroke: $dark;
         transform: translateX(-31px);
@@ -50,5 +56,8 @@
       font-size: $p3;
       margin-top: 35px;
     }
+  }
+  &__nav {
+    transform: translateX(15px);
   }
 }

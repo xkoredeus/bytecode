@@ -116,530 +116,576 @@
             <span></span>
             <span></span>
         </div>
-    </div>    <div class="header__wrp header__wrp--light">
-        <header class="header__in">
-            <button class="header__ui header__logo--fixed js-toggle-header">
-                <svg width="29" height="39">
-                    <use xlink:href="#logo-first"></use>
-                </svg>
-            </button>
-            <button class="header__ui header__hmb js-toggle-menu" type="button">
-                <div class="header__hmb-in">
-                    <div class="header__hmb-icon header__hmb-icon--1">
-                        <svg width="47" height="16">
-                            <use xlink:href="#hamburger"></use>
-                        </svg>
+    </div>    <div class="layout">
+        <div class="header__wrp header__wrp--light">
+            <header class="header__in">
+                <button class="header__ui header__hmb js-toggle-menu d-none d-xl-flex" type="button">
+                    <div class="header__hmb-in">
+                        <div class="header__hmb-icon header__hmb-icon--1">
+                            <svg width="47" height="16">
+                                <use xlink:href="#hamburger"></use>
+                            </svg>
+                        </div>
+                        <div class="header__hmb-icon header__hmb-icon--2">
+                            <svg width="36" height="36">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="header__hmb-icon header__hmb-icon--2">
-                        <svg width="36" height="36">
-                            <use xlink:href="#cross"></use>
-                        </svg>
+                </button>
+                <div class="header">
+                    <div class="header__overlay js-header__overlay"></div>
+                    <div class="header__top">
+                        <div class="header__top-in">
+                            <div class="container">
+                                <div class="header__row flex-column flex-sm-row">
+                                    <a href="index.html" class="header__logo order-3 order-sm-1 mt-4 mt-sm-0">
+                                        <svg class="header__logo-icon" width="177" height="37">
+                                            <use class="header__logo-icon-use" xlink:href="#logo"></use>
+                                        </svg>
+                                        <span class="header__logo-text">Внедрение BPM<br> и&nbsp;CRM решений</span>
+                                    </a>
+                                    <div class="header__contacts d-none d-xl-flex order-2">
+                                        <div class="header__item">
+                                            <svg width="18" height="23">
+                                                <use xlink:href="#geo"></use>
+                                            </svg>
+                                            <span class="ml-2">Москва, ул. Казакова, д. 8, стр. 2</span>
+                                        </div>
+                                        <div class="header__item">
+                                            <svg width="23" height="23">
+                                                <use xlink:href="#clocks"></use>
+                                            </svg>
+                                            <span class="ml-2">пн-пт с 9 до 18 по мск</span>
+                                        </div>
+                                        <a class="header__item header__item-link" href="mailto:sales@bytecodecrm.ru">
+                                            <svg width="25" height="20">
+                                                <use xlink:href="#mail"></use>
+                                            </svg>
+                                            <span class="ml-2">sales@bytecodecrm.ru</span>
+                                        </a>
+                                    </div>
+                                    <a class="header__tel order-1 order-sm-3 align-self-start align-self-sm-auto" href="tel:84954814696">8 495 481-46-96</a>
+                                    <button class="header__ui header__hmb js-toggle-menu d-block d-xl-none" type="button">
+                                        <div class="header__hmb-in">
+                                            <div class="header__hmb-icon header__hmb-icon--1">
+                                                <svg width="35" height="12">
+                                                    <use xlink:href="#hamburger"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="header__hmb-icon header__hmb-icon--2">
+                                                <svg width="35" height="35">
+                                                    <use xlink:href="#cross"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </button>
-            <div class="header">
-                <div class="header__overlay js-header__overlay"></div>
-                <div class="header__top">
-                    <div class="header__top-in">
-                        <div class="container">
-                            <div class="header__row">
-                                <a href="index.html" class="header__logo">
-                                    <svg class="header__logo-icon" width="177" height="37">
-                                        <use class="header__logo-icon-use" xlink:href="#logo"></use>
-                                    </svg>
-                                    <span class="header__logo-text">автоматизация<br> CRM-процессов</span>
-                                </a>
-                                <div class="header__contacts">
-                                    <div class="header__item">
+                    <div class="header__bot">
+                        <div class="header__bot-in" id="mobile-menu">
+                            <div class="container">
+                                <div class="header__bot-in-top">
+                                    <div class="header__logo">
+                                        <svg class="header__logo-icon" width="110" height="23">
+                                            <use class="header__logo-icon-use" xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="header__hmb-icon js-close-mob-menu">
+                                        <svg width="25" height="25">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="header__contacts d-xl-none d-flex flex-column align-items-center">
+                                    <div class="header__item mb-3">
                                         <svg width="18" height="23">
                                             <use xlink:href="#geo"></use>
-                                            <span class="ml-2">Москва, ул. Казакова, д. 8, стр. 2</span>
                                         </svg>
+                                        <span class="ml-2">Москва, ул. Казакова, д. 8, стр. 2</span>
                                     </div>
-                                    <div class="header__item">
+                                    <div class="header__item mb-3">
                                         <svg width="23" height="23">
                                             <use xlink:href="#clocks"></use>
-                                            <span class="ml-2">пн-пт с 9 до 18 по мск</span>
                                         </svg>
+                                        <span class="ml-2">пн-пт с 9 до 18 по мск</span>
                                     </div>
-                                    <a class="header__item header__item-link" href="mailto:sales@bytecodecrm.ru">
+                                    <a class="header__item header__item-link mb-3" href="mailto:sales@bytecodecrm.ru">
                                         <svg width="25" height="20">
                                             <use xlink:href="#mail"></use>
-                                            <span class="ml-2">sales@bytecodecrm.ru</span>
                                         </svg>
+                                        <span class="ml-2">sales@bytecodecrm.ru</span>
                                     </a>
+                                    <a class="header__tel" href="tel:84954814696">8 495 481-46-96</a>
                                 </div>
-                                <a class="header__tel" href="tel:84954814696">8 495 481-46-96</a>
+                                <div class="header__row flex-column flex-xl-row mt-3 mt-xl-0">
+                                    <nav class="header__nav order-2 order-xl-1">
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#">
+                                                <span>Продукты</span>
+                                                <span class="header__nav-link-arrow">
+                                                    <svg width="9" height="45">
+                                                        <use xlink:href="#long-arrow-bottom"></use>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <div class="header__dropdown">
+                                                <div class="header__dropdown-in">
+                                                    <div class="light mb-4">CRM-решения</div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Distributors Creatio</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Marketing Creatio</a>
+                                                                <div class="p3">Мультиканальная платформа для управления
+                                                                    маркетинговыми кампаниями</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="header__promo" style="background-image: url('assets/img/header__promo-bg.jpg');">
+                                                    <div class="header__promo-in">
+                                                        <div class="header__promo-title">25% на Marketing Creatio</div>
+                                                        <div class="header__promo-descr light">Первые 2000 лицензий со скидкой 25%! Предложение ограничено. Внедрение не
+                                                            входит в стоимость приобретения.</div>
+                                                    </div>
+                                                    <button class="button--square button--square--white">
+                                                        <svg width="13" height="22">
+                                                            <use xlink:href="#arrow-right"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#">
+                                                <span>Услуги</span>
+                                                <span class="header__nav-link-arrow">
+                                                    <svg width="9" height="45">
+                                                        <use xlink:href="#long-arrow-bottom"></use>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <div class="header__dropdown">
+                                                <div class="header__dropdown-in">
+                                                    <div class="light mb-4">CRM-решения</div>
+                                                    <div class="row">
+                                                        <div class="col-xl-4">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Название Услуги номер 1</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Название Услуги для по
+                                                                    ускоренному внедрению</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Новая услуга</a>
+                                                                <div class="p3">Мультиканальная платформа для управления
+                                                                    маркетинговыми кампаниями</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="header__dropdown-item">
+                                                                <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
+                                                                <div class="p3">Платформа Creatio — это полный набор
+                                                                    инструментов для быстрого изменения бизнес-
+                                                                    процессов, включая проектирование, исполнение и
+                                                                    мониторинг.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#"><span>Кейсы</span></a>
+                                        </div>
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#"><span>Клиенты</span></a>
+                                        </div>
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#"><span>Новости</span></a>
+                                        </div>
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#"><span>О компании</span></a>
+                                        </div>
+                                        <div class="header__nav-link-wrp">
+                                            <a class="header__nav-link" href="#"><span>Контакты</span></a>
+                                        </div>
+                                    </nav>
+                                    <button class="header__button order-1 order-xl-2 mb-4 mb-xl-0" data-fancybox data-src="#popup--call">Задать вопрос</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="header__bot">
-                    <div class="container">
-                        <div class="header__row">
-                            <nav class="header__nav">
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">
-                                        <span>Продукты</span>
-                                        <span class="header__nav-link-arrow">
-                                        <svg width="9" height="45">
-                                            <use xlink:href="#long-arrow-bottom"></use>
-                                        </svg>
-                                    </span>
-                                    </a>
-                                    <div class="header__dropdown">
-                                        <div class="header__dropdown-in">
-                                            <div class="light mb-4">CRM-решения</div>
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Distributors Creatio</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Marketing Creatio</a>
-                                                        <div class="p3">Мультиканальная платформа для управления
-                                                            маркетинговыми кампаниями</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="header__promo" style="background-image: url('assets/img/header__promo-bg.jpg');">
-                                            <div class="header__promo-in">
-                                                <div class="header__promo-title">25% на Marketing Creatio</div>
-                                                <div class="header__promo-descr light">Первые 2000 лицензий со скидкой 25%! Предложение ограничено. Внедрение не
-                                                    входит в стоимость приобретения.</div>
-                                            </div>
-                                            <button class="button--square button--square--white">
-                                                <svg width="13" height="22">
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">
-                                        <span>Услуги</span>
-                                        <span class="header__nav-link-arrow">
-                                        <svg width="9" height="45">
-                                            <use xlink:href="#long-arrow-bottom"></use>
-                                        </svg>
-                                    </span>
-                                    </a>
-                                    <div class="header__dropdown">
-                                        <div class="header__dropdown-in">
-                                            <div class="light mb-4">CRM-решения</div>
-                                            <div class="row">
-                                                <div class="col-xl-4">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Название Услуги номер 1</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Название Услуги для по
-                                                            ускоренному внедрению</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Новая услуга</a>
-                                                        <div class="p3">Мультиканальная платформа для управления
-                                                            маркетинговыми кампаниями</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4">
-                                                    <div class="header__dropdown-item">
-                                                        <a class="header__dropdown-link mb-2" href="#">Sales Creatio</a>
-                                                        <div class="p3">Платформа Creatio — это полный набор
-                                                            инструментов для быстрого изменения бизнес-
-                                                            процессов, включая проектирование, исполнение и
-                                                            мониторинг.</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">Кейсы</a>
-                                </div>
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">Клиенты</a>
-                                </div>
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">Новости</a>
-                                </div>
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">О компании</a>
-                                </div>
-                                <div class="header__nav-link-wrp">
-                                    <a class="header__nav-link" href="#">Контакты</a>
-                                </div>
-                            </nav>
-                            <button class="header__button" data-fancybox data-src="#popup--call">Задать вопрос</button>
+            </header>        </div>
+        <section class="section--inner">
+            <div class="container">
+                <div class="section__title mb-3 mb-xl-4">Новости</div>
+                <div class="news__list">
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            05 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Всё для организации электронного документооборота — подборка готовых решений на Creatio Marketplace </span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">
+                            Преимущества перехода на электронный документооборот сложно переоценить:
+                            процесс становится менее ресурсоемким,
+                            обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
+                            на печать...
+                        </div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            09 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">Один из крупнейших агрохолдингов России, внедрил систему управления ИТ-процессами
+                            на базе решения ITSM Box Creatio. Она стала для компании мощным фундаментом для оптимизации процессов поддержки и предоставления ИТ-услуг и, как результат, повышения эффективности предприятия...</div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            04 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Проекты трансформации клиентского сервиса в «Службе добрых дел» — в числе лучших по версии СХ WORLD AWARDS ВСЕ НОВОСТИ</span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">«Служба добрых дел», предоставляющая услуги по обслуживанию цифровой техники, получила признание сразу в нескольких номинациях международной премии CX WORLD AWARDS. Компания стала победителем в номинации «Клиентский опыт в контакт-центре», дошла до финала в категориях «Клиентоцентричная корпоративная культура» и «Проект изменения, СХ трансформация бизнеса», а также получила высокое одобрение жюри в номинации «Лучший клиентский опыт в B2C»...</div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            09 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">
+                            Преимущества перехода на электронный документооборот сложно переоценить:
+                            процесс становится менее ресурсоемким,
+                            обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
+                            на печать...
+                        </div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            05 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Всё для организации электронного документооборота — подборка готовых решений на Creatio Marketplace </span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">
+                            Преимущества перехода на электронный документооборот сложно переоценить:
+                            процесс становится менее ресурсоемким,
+                            обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
+                            на печать...
+                        </div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            09 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">Один из крупнейших агрохолдингов России, внедрил систему управления ИТ-процессами
+                            на базе решения ITSM Box Creatio. Она стала для компании мощным фундаментом для оптимизации процессов поддержки и предоставления ИТ-услуг и, как результат, повышения эффективности предприятия...</div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            04 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Проекты трансформации клиентского сервиса в «Службе добрых дел» — в числе лучших по версии СХ WORLD AWARDS ВСЕ НОВОСТИ</span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">«Служба добрых дел», предоставляющая услуги по обслуживанию цифровой техники, получила признание сразу в нескольких номинациях международной премии CX WORLD AWARDS. Компания стала победителем в номинации «Клиентский опыт в контакт-центре», дошла до финала в категориях «Клиентоцентричная корпоративная культура» и «Проект изменения, СХ трансформация бизнеса», а также получила высокое одобрение жюри в номинации «Лучший клиентский опыт в B2C»...</div>
+                    </div>
+                    <div class="news__item">
+                        <div class="news__item-date">
+                            09 <span>/ июня '20</span>
+                        </div>
+                        <a class="news__item-link" href="#">
+                            <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
+                            <span class="news__item-arrow">
+                                    <svg width="41" height="10">
+                                        <use xlink:href="#long-arrow-right"></use>
+                                    </svg>
+                                </span>
+                        </a>
+                        <div class="news__item-descr">
+                            Преимущества перехода на электронный документооборот сложно переоценить:
+                            процесс становится менее ресурсоемким,
+                            обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
+                            на печать...
                         </div>
                     </div>
                 </div>
             </div>
-        </header>    </div>
-    <section class="section--inner">
-        <div class="container">
-            <div class="section__title mb-3 mb-xl-4">Новости</div>
-            <div class="news__list">
-                <div class="news__item">
-                    <div class="news__item-date">
-                        05 <span>/ июня '20</span>
-                    </div>
-                    <a class="news__item-link" href="#">
-                        <span>Всё для организации электронного документооборота — подборка готовых решений на Creatio Marketplace </span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
+        </section>
+        <div class="pagination">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="button--square button--square--tr" href="#">
+                        <svg width="13" height="22">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
                     </a>
-                    <div class="news__item-descr">
-                        Преимущества перехода на электронный документооборот сложно переоценить:
-                        процесс становится менее ресурсоемким,
-                        обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
-                        на печать...
+                    <div class="pagination__list">
+                        <a class="pagination__link" href="#">1</a>
+                        <a class="pagination__link" href="#">2</a>
+                        <a class="pagination__link" href="#">3</a>
+                        <a class="pagination__link pagination__link--here" href="#">4</a>
+                        <a class="pagination__link" href="#">5</a>
+                        <a class="pagination__link" href="#">6</a>
+                        <a class="pagination__link" href="#">7</a>
                     </div>
+                    <a class="button--square button--square--tr" href="#">
+                        <svg width="13" height="22">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
                 </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        09 <span>/ июня '20</span>
-                    </div>
-                    <a class="news__item-link" href="#">
-                        <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">Один из крупнейших агрохолдингов России, внедрил систему управления ИТ-процессами
-                        на базе решения ITSM Box Creatio. Она стала для компании мощным фундаментом для оптимизации процессов поддержки и предоставления ИТ-услуг и, как результат, повышения эффективности предприятия...</div>
+            </div>
+        </div><form class="feed section--inner">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <div class="section__title mb-4">Оставьте заявку на проведение<br class="d-none d-xl-inline"> предпроектного обследования</div>
+                    <div class="ulight">Оставьте заявку на подготовительные работы по вашему проекту.<br class="d-none d-xl-inline">
+                        Мы обработаем запрос и свяжемся с вами в течение дня</div>
                 </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        04 <span>/ июня '20</span>
+                <div class="row">
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-1">
+                        <input class="w-100 mb-3" type="text" placeholder="Имя*">
+                        <input class="w-100 mb-3" type="email" placeholder="E-mail*">
+                        <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
                     </div>
-                    <a class="news__item-link" href="#">
-                        <span>Проекты трансформации клиентского сервиса в «Службе добрых дел» — в числе лучших по версии СХ WORLD AWARDS ВСЕ НОВОСТИ</span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-2">
+                        <textarea class="feed__textarea w-100" placeholder="Ваше сообщение*"></textarea>
+                    </div>
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-4 order-xl-3">
+                        <div class="d-flex flex-column flex-sm-row">
+                            <button class="button button--white w-50 mr-xl-3 order-2 order-xl-1" type="submit">Отправить заявку</button>
+                            <label class="button button--tr button--tr-white button--file w-50 mr-sm-3 mr-xl-0 mb-2 mb-sm-0 order-1 order-xl-2">
+                                <input class="button--file__input js-file-input" type="file" multiple>
+                                <span>Прикрепить файл</span>
+                                <svg class="ml-2" width="45" height="45">
+                                    <use xlink:href="#brace"></use>
                                 </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">«Служба добрых дел», предоставляющая услуги по обслуживанию цифровой техники, получила признание сразу в нескольких номинациях международной премии CX WORLD AWARDS. Компания стала победителем в номинации «Клиентский опыт в контакт-центре», дошла до финала в категориях «Клиентоцентричная корпоративная культура» и «Проект изменения, СХ трансформация бизнеса», а также получила высокое одобрение жюри в номинации «Лучший клиентский опыт в B2C»...</div>
-                </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        09 <span>/ июня '20</span>
+                            </label>
+                        </div>
                     </div>
-                    <a class="news__item-link" href="#">
-                        <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">
-                        Преимущества перехода на электронный документооборот сложно переоценить:
-                        процесс становится менее ресурсоемким,
-                        обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
-                        на печать...
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-3 order-xl-4">
+                        <div class="file-list"></div>
                     </div>
-                </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        05 <span>/ июня '20</span>
-                    </div>
-                    <a class="news__item-link" href="#">
-                        <span>Всё для организации электронного документооборота — подборка готовых решений на Creatio Marketplace </span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">
-                        Преимущества перехода на электронный документооборот сложно переоценить:
-                        процесс становится менее ресурсоемким,
-                        обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
-                        на печать...
-                    </div>
-                </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        09 <span>/ июня '20</span>
-                    </div>
-                    <a class="news__item-link" href="#">
-                        <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">Один из крупнейших агрохолдингов России, внедрил систему управления ИТ-процессами
-                        на базе решения ITSM Box Creatio. Она стала для компании мощным фундаментом для оптимизации процессов поддержки и предоставления ИТ-услуг и, как результат, повышения эффективности предприятия...</div>
-                </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        04 <span>/ июня '20</span>
-                    </div>
-                    <a class="news__item-link" href="#">
-                        <span>Проекты трансформации клиентского сервиса в «Службе добрых дел» — в числе лучших по версии СХ WORLD AWARDS ВСЕ НОВОСТИ</span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">«Служба добрых дел», предоставляющая услуги по обслуживанию цифровой техники, получила признание сразу в нескольких номинациях международной премии CX WORLD AWARDS. Компания стала победителем в номинации «Клиентский опыт в контакт-центре», дошла до финала в категориях «Клиентоцентричная корпоративная культура» и «Проект изменения, СХ трансформация бизнеса», а также получила высокое одобрение жюри в номинации «Лучший клиентский опыт в B2C»...</div>
-                </div>
-                <div class="news__item">
-                    <div class="news__item-date">
-                        09 <span>/ июня '20</span>
-                    </div>
-                    <a class="news__item-link" href="#">
-                        <span>Холдинг КОМОС ГРУПП внедрил систему управления ИТ-процессами на базе решения ITSM Box Creatio</span>
-                        <span class="news__item-arrow">
-                                <svg width="41" height="10">
-                                    <use xlink:href="#long-arrow-right"></use>
-                                </svg>
-                            </span>
-                    </a>
-                    <div class="news__item-descr">
-                        Преимущества перехода на электронный документооборот сложно переоценить:
-                        процесс становится менее ресурсоемким,
-                        обмен подписанными документами происходит моментально, нет бумажных аналогов и расходов
-                        на печать...
+                    <div class="col-xl-12 text-center order-5">
+                        <span class="p3">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink feed__policy" href="#">обработку персональных данных</a></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="pagination">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <a class="button--square button--square--tr" href="#">
-                    <svg width="13" height="22">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                </a>
-                <div class="pagination__list">
-                    <a class="pagination__link" href="#">1</a>
-                    <a class="pagination__link" href="#">2</a>
-                    <a class="pagination__link" href="#">3</a>
-                    <a class="pagination__link pagination__link--here" href="#">4</a>
-                    <a class="pagination__link" href="#">5</a>
-                    <a class="pagination__link" href="#">6</a>
-                    <a class="pagination__link" href="#">7</a>
-                </div>
-                <a class="button--square button--square--tr" href="#">
-                    <svg width="13" height="22">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div><form class="feed section--inner">
-        <div class="container">
-            <div class="text-center mb-4">
-                <div class="section__title mb-4">Оставьте заявку на проведение<br> предпроектного обследования</div>
-                <div class="ulight">Оставьте заявку на подготовительные работы по вашему проекту.<br>
-                    Мы обработаем запрос и свяжемся с вами в течение дня</div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6 mb-5">
-                    <input class="w-100 mb-3" type="text" placeholder="Имя*">
-                    <input class="w-100 mb-3" type="email" placeholder="E-mail*">
-                    <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
-                </div>
-                <div class="col-xl-6 mb-5">
-                    <textarea class="feed__textarea w-100" placeholder="Ваше сообщение*"></textarea>
-                </div>
-                <div class="col-xl-6 mb-4">
-                    <div class="d-flex">
-                        <button class="button button--white w-50 mr-3" type="submit">Отправить заявку</button>
-                        <label class="button button--tr button--tr-white button--file w-50">
-                            <input class="button--file__input js-file-input" type="file" multiple>
-                            <span>Прикрепить файл</span>
-                            <svg class="ml-2" width="45" height="45">
-                                <use xlink:href="#brace"></use>
-                            </svg>
-                        </label>
+        </form>        <footer class="footer">
+            <div class="container">
+                <div class="row mb-3 mb-xl-5">
+                    <div class="col-xl-4 col-sm-6 order-2 order-sm-1 footer__divider--bottom">
+                        <div class="mb-1">
+                            <a class="bold white" href="tel:88462007762">8 846 200 77 62</a>
+                            <span class="footer__divider">|</span>
+                            <span>Самара</span>
+                        </div>
+                        <div class="mb-3">
+                            <a class="bold white" href="tel:84954814696">8 495 481-46-96</a>
+                            <span class="footer__divider">|</span>
+                            <span>Москва</span>
+                        </div>
+                        <div class="mb-3">пн-пт 9-18 по мск</div>
+        
+                        <div class="mb-1">
+                            <a class="bold white" href="mailto:info@bytecodecrm.ru">info@bytecodecrm.ru</a>
+                            <span class="footer__divider">|</span>
+                            <span>Для предложений</span>
+                        </div>
+                        <div class="mb-3">
+                            <a class="bold white" href="mailto:sales@bytecodecrm.ru">sales@bytecodecrm.ru</a>
+                            <span class="footer__divider">|</span>
+                            <span>Для заявок</span>
+                        </div>
+        
+                        <div class="mb-1">
+                            <span class="bold white not-under">Самара:</span>
+                            <span>ул. Аэродромная, д. 45, к. БЦ «А-45», оф. 702/1</span>
+                        </div>
+                        <div>
+                            <span class="bold white not-under">Москва:</span>
+                            <span>ул. Казакова, д. 8, стр. 2</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xl-6 mb-4">
-                    <div class="file-list"></div>
-                </div>
-                <div class="text-center w-100">
-                    <span class="p3">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink feed__policy" href="#">обработку персональных данных</a></span>
-                </div>
-            </div>
-        </div>
-    </form>    <footer class="footer">
-        <div class="container">
-            <div class="row mb-3 mb-xl-5">
-                <div class="col-xl-4 col-sm-6">
-                    <div class="mb-1">
-                        <a class="bold white" href="tel:88462007762">8 846 200 77 62</a>
-                        <span class="footer__divider">|</span>
-                        <span>Самара</span>
+                    <div class="offset-xl-1 col-xl-5 col-sm-6 d-flex flex-column flex-sm-row order-1 order-sm-2 footer__divider--bottom">
+                        <div class="d-flex flex-column justify-content-between align-items-start mr-sm-5">
+                            <a class="footer__link" href="#">Продукты</a>
+                            <a class="footer__link" href="#">О компании</a>
+                            <a class="footer__link" href="#">Кейсы</a>
+                            <a class="footer__link" href="#">Клиенты</a>
+                            <a class="footer__link" href="#">Новости</a>
+                            <a class="footer__link" href="#">Контакты</a>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between align-items-start">
+                            <a class="footer__link" href="#">Услуги</a>
+                            <a class="footer__link" href="#">Еще ссылка на страницу</a>
+                            <a class="footer__link" href="#">Ссылка</a>
+                            <a class="footer__link" href="#">Согласие на обработку персональных данных</a>
+                            <a class="footer__link" href="#">Ссылка</a>
+                            <a class="footer__link" href="#">Ссылка</a>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <a class="bold white" href="tel:84954814696">8 495 481-46-96</a>
-                        <span class="footer__divider">|</span>
-                        <span>Москва</span>
-                    </div>
-                    <div class="mb-3">пн-пт 9-18 по мск</div>
-    
-                    <div class="mb-1">
-                        <a class="bold white" href="mailto:info@bytecodecrm.ru">info@bytecodecrm.ru</a>
-                        <span class="footer__divider">|</span>
-                        <span>Для предложений</span>
-                    </div>
-                    <div class="mb-3">
-                        <a class="bold white" href="mailto:sales@bytecodecrm.ru">sales@bytecodecrm.ru</a>
-                        <span class="footer__divider">|</span>
-                        <span>Для заявок</span>
-                    </div>
-    
-                    <div class="mb-1">
-                        <span class="bold white">Самара:</span>
-                        <span>ул. Аэродромная, д. 45, к. БЦ «А-45», оф. 702/1</span>
-                    </div>
-                    <div>
-                        <span class="bold white">Москва:</span>
-                        <span>ул. Казакова, д. 8, стр. 2</span>
-                    </div>
-                </div>
-                <div class="offset-xl-1 col-xl-5 d-flex">
-                    <div class="d-flex flex-column justify-content-between align-items-start mr-5">
-                        <a class="footer__link" href="#">Продукты</a>
-                        <a class="footer__link" href="#">О компании</a>
-                        <a class="footer__link" href="#">Кейсы</a>
-                        <a class="footer__link" href="#">Клиенты</a>
-                        <a class="footer__link" href="#">Новости</a>
-                        <a class="footer__link" href="#">Контакты</a>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between align-items-start">
-                        <a class="footer__link" href="#">Услуги</a>
-                        <a class="footer__link" href="#">Еще ссылка на страницу</a>
-                        <a class="footer__link" href="#">Ссылка</a>
-                        <a class="footer__link" href="#">Согласие на обработку персональных данных</a>
-                        <a class="footer__link" href="#">Ссылка</a>
-                        <a class="footer__link" href="#">Ссылка</a>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="footer__socials">
-                        <div class="footer__socials-title">Мы в социальных сетях</div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a class="footer__socials-link" href="#">
-                                <svg class="footer__socials-icon" width="9" height="20">
-                                    <use xlink:href="#fb"></use>
-                                </svg>
-                            </a>
-                            <a class="footer__socials-link" href="#">
-                                <svg class="footer__socials-icon" width="21" height="21">
-                                    <use xlink:href="#in"></use>
-                                </svg>
-                            </a>
-                            <a class="footer__socials-link" href="#">
-                                <svg class="footer__socials-icon" width="18" height="18">
-                                    <use xlink:href="#tg"></use>
-                                </svg>
-                            </a>
-                            <a class="footer__socials-link" href="#">
-                                <svg class="footer__socials-icon" width="22" height="16">
-                                    <use xlink:href="#yu"></use>
-                                </svg>
-                            </a>
-                            <a class="footer__socials-link" href="#">
-                                <svg class="footer__socials-icon" width="20" height="12">
-                                    <use xlink:href="#vk"></use>
-                                </svg>
-                            </a>
+                    <div class="col-xl-2 order-3 footer__divider--bottom">
+                        <div class="footer__socials">
+                            <div class="footer__socials-title">Мы в социальных сетях</div>
+                            <div class="d-flex justify-content-start justify-content-xl-between align-items-center">
+                                <a class="footer__socials-link" href="#">
+                                    <svg class="footer__socials-icon" width="9" height="20">
+                                        <use xlink:href="#fb"></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__socials-link" href="#">
+                                    <svg class="footer__socials-icon" width="21" height="21">
+                                        <use xlink:href="#in"></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__socials-link" href="#">
+                                    <svg class="footer__socials-icon" width="18" height="18">
+                                        <use xlink:href="#tg"></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__socials-link" href="#">
+                                    <svg class="footer__socials-icon" width="22" height="16">
+                                        <use xlink:href="#yu"></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__socials-link" href="#">
+                                    <svg class="footer__socials-icon" width="20" height="12">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-center align-items-center">
-                <a href="#" class="footer__logo">
-                    <svg class="footer__logo-icon" width="198" height="47">
-                        <use xlink:href="#logo"></use>
-                    </svg>
-                    <span class="footer__logo-text">автоматизация CRM-процессов</span>
-                </a>
-                <div class="footer__copy">
-                    <div class="mb-1">© 2020 «БК».</div>
-                    Все права защищены.
+                <div class="d-flex justify-content-xl-center align-items-center">
+                    <a href="#" class="footer__logo d-none d-xl-flex">
+                        <svg class="footer__logo-icon" width="198" height="47">
+                            <use xlink:href="#logo"></use>
+                        </svg>
+                        <span class="footer__logo-text">автоматизация CRM-процессов</span>
+                    </a>
+                    <div class="footer__copy d-flex flex-xl-column">
+                        <div class="mb-xl-1 mr-2 mr-xl-0">© 2020 «БК».</div>
+                        Все права защищены.
+                    </div>
                 </div>
+                <button class="footer__button button--square button--square--orange js-scroll-top d-none d-xl-block">
+                    <svg width="22" height="13">
+                        <use xlink:href="#arrow-top"></use>
+                    </svg>
+                </button>
             </div>
-            <button class="footer__button button--square button--square--orange js-scroll-top">
-                <svg width="22" height="13">
-                    <use xlink:href="#arrow-top"></use>
-                </svg>
-            </button>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <svg width="0" height="0" class="svg-sprite">
         <symbol viewBox="0 0 177 37" xmlns="http://www.w3.org/2000/svg" id="logo">
@@ -764,18 +810,18 @@
                         Мы отвечаем на все запросы в течение дня</div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6 mb-5">
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-1">
                         <input class="w-100 mb-3" type="text" placeholder="Имя*">
                         <input class="w-100 mb-3" type="email" placeholder="E-mail*">
                         <input class="w-100 js-tel" type="tel" placeholder="Телефон*">
                     </div>
-                    <div class="col-xl-6 mb-5">
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-2">
                         <textarea class="popup__textarea w-100" placeholder="Ваше сообщение*"></textarea>
                     </div>
-                    <div class="col-xl-6 mb-4">
-                        <div class="d-flex">
-                            <button class="button button--orange w-50 mr-3" type="submit">Отправить сообщение</button>
-                            <label class="button button--tr button--tr-white button--file w-50">
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-4 order-xl-3">
+                        <div class="d-flex flex-column flex-sm-row">
+                            <button class="button button--orange w-50 mr-xl-3 order-2 order-xl-1" type="submit">Отправить сообщение</button>
+                            <label class="button button--tr button--tr-white button--file w-50 mr-sm-3 mr-xl-0 mb-2 mb-sm-0 order-1 order-xl-2">
                                 <input class="button--file__input js-file-input" type="file" multiple>
                                 <span>Прикрепить файл</span>
                                 <svg class="ml-2" width="45" height="45">
@@ -784,10 +830,10 @@
                             </label>
                         </div>
                     </div>
-                    <div class="col-xl-6 mb-4">
+                    <div class="col-xl-6 mb-4 mb-xl-5 order-3 order-xl-4">
                         <div class="file-list white"></div>
                     </div>
-                    <div class="text-center w-100 pink">
+                    <div class="text-center w-100 pink order-5">
                         <span class="p3">Нажимая на кнопку «Отправить заявку», вы даёте согласие на <a class="pink popup__policy" href="#popup--success" data-fancybox>обработку персональных данных</a></span>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 .button {
   position: relative;
   font-size: $h4;
-  font-family: $mreg;
+  font-family: $mmed;
   text-align: center;
   display: inline-block;
   outline: none;
@@ -13,6 +13,10 @@
   @include ease;
   @include r(1531) {
     font-size: $h4-medium;
+  }
+  @include r(600) {
+    font-size: 14px;
+    padding: 20px 13px;
   }
   &:hover {
     color: #fff;
@@ -63,6 +67,8 @@
       visibility: hidden;
     }
   }
+
+
   &--square {
     width: 100px;
     height: 100px;
@@ -71,6 +77,10 @@
     @include ease;
     border: none;
     box-shadow: none;
+    @include r(600) {
+      width: 60px;
+      height: 60px;
+    }
     svg {
       stroke: #fff;
       @include ease;
@@ -148,9 +158,22 @@
     border-radius: 50px;
     background-color: #fff;
     @include ease;
-    svg {
+    display: flex;
+    align-items: center;
+    @include r(600) {
+      font-size: 16px;
+      padding: 15px 25px;
+    }
+    &__icon {
       fill: $black;
       @include ease;
+      @include r(1200) {
+        width: 15px;
+        height: 17px;
+        span {
+          margin-top: 4px;
+        }
+      }
     }
     &:hover {
       color: #fff;
@@ -224,12 +247,16 @@
     }
     @include r(1200) {
       font-size: $h1-small;
+      padding: 0 13px;
     }
     &-bg {
       position: relative;
       outline: $tr solid 0.46em;
       -moz-outline-offset: -0.04em;
       @include ease;
+      @include r(600) {
+        outline: $orange solid 0.46em;
+      }
       span {
         color: $dark;
         position: relative;
@@ -238,6 +265,13 @@
         @include ease;
         @include r(1531) {
           padding: 6.2px 0;
+        }
+        @include r(1200) {
+          padding: 5.2px 0;
+        }
+        @include r(600) {
+          color: #fff;
+          background-color: $orange;
         }
       }
     }
@@ -255,6 +289,13 @@
     @include r(1531) {
       top: calc(100% + 17.5px);
     }
+    @include r(1200) {
+      top: calc(100% + 11.5px);
+    }
+    @include r(600) {
+      opacity: 1;
+      visibility: visible;
+    }
     &-text {
       position: absolute;
       font-family: $mmed;
@@ -271,6 +312,15 @@
       visibility: hidden;
       transform: translateX(-5px);
       @include ease;
+      @include r(600) {
+        left: 60px;
+        top: calc(100% + 11.5px);
+        height: 70px;
+        width: 260px;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0);
+      }
     }
   }
   &:hover {

@@ -1,69 +1,16 @@
 .case {
-  &__item {
-    position: relative;
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    overflow: hidden;
-    @include cv;
-    padding: 38px;
-    &::before {
-      @include ovl;
-      background-color: #fff;
-      opacity: .8;
-      @include ease;
-    }
-    & > * {
-      position: relative;
-    }
-    &-logo {
-      font-family: $mbold;
-      font-size: $h1;
-      @include r(1531) {
-        font-size: $h1-medium;
-      }
-      @include r(1200) {
-        font-size: $h1-small;
-      }
-    }
-    &-link {
-      font-family: $mulig;
-    }
-    &-arrow {
-      width: 10px;
-      height: 20px;
-      overflow: hidden;
-      display: inline-block;
-      @include ease;
-      svg {
-        stroke: $dark;
-        transform: translateX(-31px);
-        @include ease;
-      }
-    }
-    &:hover {
-      color: #fff;
-      &::before {
-        background-color: $dark;
-      }
-      .case__item-arrow {
-        width: 41px;
-      }
-      .case__item-link svg {
-        stroke: #fff;
-        transform: translateX(0);
-      }
-    }
-  }
-
   &-begin {
     color: $gray2;
     background-color: $black;
+
     &__img {
       max-height: 800px;
       font-size: $p3;
+      @include r(1200) {
+        max-height: 356px;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -73,12 +20,25 @@
       max-width: 328px;
       height: auto;
     }
+
     &__divider {
       width: 1px;
       min-height: 133px;
       height: 100%;
       background-color: $gray2;
       margin: 0 35px 0 20px;
+      @include r(600) {
+        width: 100%;
+        height: 1px;
+        min-height: auto;
+        margin: 35px auto;
+      }
+    }
+
+    @include r(600) {
+      .section__title {
+        text-align: center;
+      }
     }
   }
 
@@ -88,17 +48,39 @@
 
     &__item {
       text-align: center;
+
       &-num {
         font-family: $mbold;
         font-size: 180px;
         line-height: 1;
         margin-bottom: 25px;
+        @include r(1200) {
+          font-size: 100px;
+          margin-bottom: 0;
+        }
+
         span:not(:first-child) {
           margin-left: -25px;
+          @include r(1200) {
+            margin-left: -10px;
+          }
         }
       }
+
       &-title {
         font-family: $mulig;
+        @include r(600) {
+          font-family: $mreg;
+        }
+      }
+    }
+  }
+
+  @include r(600) {
+    &-info {
+      &__in {
+        padding-top: 20px;
+        padding-left: 70px;
       }
     }
   }
@@ -108,6 +90,7 @@
       .button--square:last-child {
         margin-left: -1px;
       }
+      transform: translateX(15px);
     }
   }
 

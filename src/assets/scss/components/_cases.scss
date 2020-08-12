@@ -1,71 +1,142 @@
 .cases {
   background-color: #fff;
   &__item {
-    position: relative;
-    min-height: 710px;
+    border: 10px solid $lgray2;
+    min-height: 606px;
+    @include cv;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    overflow: hidden;
-    @include cv;
-    padding: 40px;
-    &::before {
-      @include ovl;
-      background-color: #fff;
-      opacity: .8;
-      @include ease;
+    @include r(600) {
+      min-height: unset;
     }
-    & > * {
-      position: relative;
+    &-top {
+      min-height: 210px;
+      display: flex;
+      align-items: center;
+      padding-left: 26px;
     }
     &-logo {
-      font-family: $mbold;
-      font-size: $h1;
-      @include r(1531) {
-        font-size: $h1-medium;
-      }
-      @include r(1200) {
-        font-size: $h1-small;
-      }
+      max-width: 178px;
+      height: auto;
     }
-    &-link {
-      font-family: $mbold;
-      font-size: $h3;
-      @include r(1531) {
-        font-size: $h3-medium;
-      }
-      @include r(1200) {
-        font-size: $h3-small;
-      }
-    }
-    &-arrow {
-      width: 10px;
-      height: 30px;
-      overflow: hidden;
-      display: inline-block;
-      @include ease;
-      @include r(1531) {
-        height: 20px;
-      }
-      svg {
-        stroke: $dark;
-        transform: translateX(-31px);
-        @include ease;
-      }
-    }
-    &:hover {
+    &-bot {
+      position: relative;
+      padding: 34px 0 0;
       color: #fff;
       &::before {
-        background-color: $dark;
+        @include ovl;
+        background-color: $black;
+        opacity: .7;
       }
-      .cases__item-arrow {
-        width: 41px;
+      & > * {
+        position: relative;
       }
-      .cases__item-link svg {
-        stroke: #fff;
-        transform: translateX(0);
+    }
+    &-descr {
+      font-size: $p3;
+      line-height: 1.4;
+      padding: 20px 23px 40px;
+      @include r(600) {
+        padding: 20px 23px 40px 76px;
+      }
+    }
+    .link-arrow {
+      &__title {
+        font-size: $p1;
+        padding: 0 20px;
+        &-bg {
+          outline-width: .6em;
+          span {
+            color: #fff;
+            padding: 3.5px 0;
+          }
+        }
+      }
+      &__button {
+        left: 5px;
+        top: calc(100% + 14px);
+      }
+      &:hover {
+        .link-arrow {
+          &__title {
+            &-bg {
+              outline-width: .6em;
+            }
+          }
+        }
       }
     }
   }
 }
+//.cases {
+//  background-color: #fff;
+//  &__item {
+//    position: relative;
+//    min-height: 710px;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//    align-items: flex-start;
+//    overflow: hidden;
+//    @include cv;
+//    padding: 40px;
+//    &::before {
+//      @include ovl;
+//      background-color: #fff;
+//      opacity: .8;
+//      @include ease;
+//    }
+//    & > * {
+//      position: relative;
+//    }
+//    &-logo {
+//      font-family: $mbold;
+//      font-size: $h1;
+//      @include r(1531) {
+//        font-size: $h1-medium;
+//      }
+//      @include r(1200) {
+//        font-size: $h1-small;
+//      }
+//    }
+//    &-link {
+//      font-family: $mbold;
+//      font-size: $h3;
+//      @include r(1531) {
+//        font-size: $h3-medium;
+//      }
+//      @include r(1200) {
+//        font-size: $h3-small;
+//      }
+//    }
+//    &-arrow {
+//      width: 10px;
+//      height: 30px;
+//      overflow: hidden;
+//      display: inline-block;
+//      @include ease;
+//      @include r(1531) {
+//        height: 20px;
+//      }
+//      svg {
+//        stroke: $dark;
+//        transform: translateX(-31px);
+//        @include ease;
+//      }
+//    }
+//    &:hover {
+//      color: #fff;
+//      &::before {
+//        background-color: $dark;
+//      }
+//      .cases__item-arrow {
+//        width: 41px;
+//      }
+//      .cases__item-link svg {
+//        stroke: #fff;
+//        transform: translateX(0);
+//      }
+//    }
+//  }
+//}

@@ -5,6 +5,16 @@
   padding-top: 93px;
   padding-bottom: 20px;
   overflow: hidden;
+  @include r(600) {
+    padding-top: 50px;
+    .bold {
+      font-family: $mreg;
+      border-bottom: 1px solid #fff;
+    }
+    .not-under {
+      border-bottom: none;
+    }
+  }
   &:hover {
     .footer__button {
       bottom: -20px;
@@ -24,10 +34,29 @@
   }
   &__divider {
     margin: 0 1px;
+    &--bottom {
+      @include r(600) {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        &::after {
+          position: absolute;
+          content: '';
+          width: calc(100% - 30px);
+          height: 1px;
+          bottom: 0;
+          left: 15px;
+          background-color: #464850;
+        }
+      }
+    }
   }
   &__link {
     position: relative;
     color: $gray2;
+    @include r(600) {
+      margin-bottom: 5px;
+    }
     &::after {
       position: absolute;
       content: '';
@@ -48,12 +77,22 @@
   &__socials {
     &-title {
       margin-bottom: 20px;
+      @include r(1200) {
+        margin-bottom: 10px;
+      }
     }
     &-icon {
       fill: #fff;
       @include ease;
       &:hover {
         fill: $red;
+      }
+    }
+    &-link {
+      @include r(1200) {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
       }
     }
   }
