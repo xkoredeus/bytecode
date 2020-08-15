@@ -60,7 +60,9 @@ $container2: 1150px;
 }
 
 .layout {
-  overflow: hidden;
+  @include r(1200) {
+    overflow: hidden;
+  }
 }
 
 .svg-sprite {
