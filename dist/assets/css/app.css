@@ -12024,14 +12024,14 @@ a:hover {
 }
 
 .products__in {
-  padding: 0 150px 0 64px;
-  overflow: hidden;
+  position: relative;
 }
 
-@media only screen and (max-width: 1531px) {
+@media only screen and (max-width: 1200px) {
   .products__in {
     padding-left: 20px;
     padding-right: 20px;
+    overflow: hidden;
   }
 }
 
@@ -12044,12 +12044,36 @@ a:hover {
 @media only screen and (max-width: 1200px) {
   .products {
     padding: 100px 0;
+    overflow: hidden;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .products {
     padding: 50px 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .products__slider {
+    position: relative;
+    padding: 0 120px 0 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1531px) {
+  .products__slider {
+    padding: 0 120px;
   }
 }
 
@@ -12063,6 +12087,12 @@ a:hover {
 
 .products__count-wrp span:nth-child(1) {
   font-size: 22px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .product {
+    min-width: 570px;
+  }
 }
 
 .product__title {
@@ -12263,12 +12293,27 @@ a:hover {
 }
 
 .reward__brands {
-  padding: 76px 115px;
+  padding: 76px 0;
   overflow: hidden;
 }
 
 .reward__brands .owl-stage-outer {
   overflow: visible;
+}
+
+@media only screen and (min-width: 1200px) {
+  .reward__brands-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -12306,6 +12351,12 @@ a:hover {
           align-items: center;
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
+}
+
+@media only screen and (min-width: 1200px) {
+  .reward__brands-item {
+    min-width: 140px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -12460,9 +12511,16 @@ a:hover {
   transition: all .43s ease-in-out;
 }
 
+@media only screen and (max-width: 1531px) {
+  .tech__brand-image {
+    max-width: 110px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .tech__brand-image {
     max-height: 40px;
+    max-width: unset;
   }
 }
 
@@ -12558,6 +12616,30 @@ a:hover {
   overflow: hidden;
 }
 
+@media only screen and (min-width: 1200px) {
+  .news__in .container {
+    max-width: unset;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .news__slider {
+    position: relative;
+    padding: 0 120px 0 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+  }
+}
+
 .news .owl-stage-outer {
   overflow: visible;
 }
@@ -12565,6 +12647,20 @@ a:hover {
 .news__item {
   background-color: #fff;
   padding: 30px;
+}
+
+@media only screen and (min-width: 1531px) {
+  .news__item {
+    min-width: 470px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .news__item {
+    width: 100%;
+    max-width: 370px;
+    margin-right: 30px;
+  }
 }
 
 .news__item-date {

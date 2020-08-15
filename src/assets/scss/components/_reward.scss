@@ -34,10 +34,18 @@
     }
   }
   &__brands {
-    padding: 76px 115px;
+    padding: 76px 0;
     overflow: hidden;
     .owl-stage-outer {
       overflow: visible;
+    }
+    @include rmin(1200) {
+      &-slider {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+      }
     }
     @include r(1200) {
       padding: 50px 0;
@@ -58,6 +66,9 @@
       min-height: 80px;
       @include flex-center;
       @include ease;
+      @include rmin(1200) {
+        min-width: 140px;
+      }
       @include r(600) {
         padding: 15px;
         min-height: 120px;

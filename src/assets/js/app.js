@@ -87,133 +87,205 @@ $(() => {
         $(this).siblings('.owl-item').removeClass('hover-on-promo');
     });
 });
+
 $(() => {
-    $('.products__slider').owlCarousel({
-        loop: false,
-        dots: false,
-        smartSpeed: 1200,
-        nav: false,
-        mouseDrag: true,
-        // navText: ["<svg width='28' height='9'> <use xlink:href='#steps__arrow--prev'></use></svg><span class='ml-3 d-none d-xl-block'>Предыдущий шаг</span>","<span class='mr-3 d-none d-xl-block'>Следующий шаг</span><svg width='28' height='9'> <use xlink:href='#steps__arrow--next'></use></svg>"],
-        responsive : {
-            0   : {
-                autoHeight: true,
-                items: 1,
-                loop: true,
-                margin: 30,
+    if ( $(window).width() > 1200 ) {
+        const productSliderLength = $('.products__slider').children('.product').length;
+        $('.product__count').text('0' + productSliderLength);
+
+        const $productsSlider = $('.products__slider'),
+            galW = $productsSlider.outerWidth(true),
+            galSW = $productsSlider[0].scrollWidth,
+            wDiff = (galSW / galW) - 1, // widths difference ratio
+            mPadd = 60, // mousemove Padding
+            damp = 20, // Mmusemove response softness
+            mmAA = galW - (mPadd * 2), // the mousemove available area
+            mmAAr = (galW / mmAA); // get available mousemove didderence ratio
+        let posX = 0,
+            mX = 0, // real mouse position
+            mX2 = 0; // modified mouse position
+        $productsSlider.mousemove(function(e) {
+            mX = e.pageX - $(this).parent().offset().left - this.offsetLeft;
+            mX2 = Math.min(Math.max(0, mX - mPadd), mmAA) * mmAAr;
+        });
+        setInterval(function() {
+            posX += (mX2 - posX) / damp; // zeno's paradox equation "catching delay"
+            $productsSlider.scrollLeft(posX * wDiff);
+        }, 10);
+    } else {
+        $('.products__slider').addClass('owl-carousel');
+
+        $('.products__slider').owlCarousel({
+            loop: false,
+            dots: false,
+            smartSpeed: 1200,
+            nav: false,
+            mouseDrag: true,
+            responsive : {
+                0   : {
+                    autoHeight: true,
+                    items: 1,
+                    loop: true,
+                    margin: 30,
+                },
+                600   : {
+                    items: 2,
+                    autoHeight: true,
+                    margin: 15,
+                },
+                1200  : {
+                    items: 3,
+                    margin: 20,
+                },
+                1531 : {
+                    autoHeight: false,
+                    margin: 30,
+                }
             },
-            600   : {
-                items: 2,
-                autoHeight: true,
-                margin: 15,
+            onInitialized: function(e) {
+                $('.product__count').text('0' + this.items().length);
+
+
+                if (!e.namespace)  {
+                    return;
+                }
+                const carousel = e.relatedTarget;
+                $('.products__count').text('0' + (carousel.relative(carousel.current()) + 1));
+                $('.products__count-amount').text('0' + this.items().length);
+
             },
-            1200  : {
-                items: 3,
-                margin: 20,
-            },
-            1531 : {
-                autoHeight: false,
-                margin: 30,
+            onChanged: function(e) {
+                if (!e.namespace)  {
+                    return;
+                }
+                const carousel = e.relatedTarget;
+                $('.products__count').text('0' + (carousel.relative(carousel.current()) + 1));
             }
-        },
-        onInitialized: function(e) {
-            $('.product__count').text('0' + this.items().length);
+        });
 
-
-            if (!e.namespace)  {
-                return;
-            }
-            const carousel = e.relatedTarget;
-            $('.products__count').text('0' + (carousel.relative(carousel.current()) + 1));
-            $('.products__count-amount').text('0' + this.items().length);
-
-        },
-        onChanged: function(e) {
-            if (!e.namespace)  {
-                return;
-            }
-            const carousel = e.relatedTarget;
-            $('.products__count').text('0' + (carousel.relative(carousel.current()) + 1));
-        }
-    });
-
-    $('.js-products-prev').on('click', function productsPrevSlide () {
-        $('.products__slider').trigger('prev.owl.carousel');
-    });
-    $('.js-products-next').on('click', function productsNextSlide () {
-        $('.products__slider').trigger('next.owl.carousel');
-    });
-
+        $('.js-products-prev').on('click', function productsPrevSlide () {
+            $('.products__slider').trigger('prev.owl.carousel');
+        });
+        $('.js-products-next').on('click', function productsNextSlide () {
+            $('.products__slider').trigger('next.owl.carousel');
+        });
+    }
 });
 $(() => {
-    $('.reward__brands-slider').owlCarousel({
-        loop: false,
-        dots: false,
-        items: 11,
-        smartSpeed: 800,
-        margin: 30,
-        nav: false,
-        mouseDrag: true,
-        center: true,
-        loop: true,
-        responsive : {
-            0   : {
-                loop: true,
-                items: 3,
-                center: true,
+    if ( $(window).width() > 1200 ) {
+
+        const $rewardSlider = $('.reward__brands-slider'),
+            galW = $rewardSlider.outerWidth(true),
+            galSW = $rewardSlider[0].scrollWidth,
+            wDiff = (galSW / galW) - 1, // widths difference ratio
+            mPadd = 60, // mousemove Padding
+            damp = 20, // Mmusemove response softness
+            mmAA = galW - (mPadd * 2), // the mousemove available area
+            mmAAr = (galW / mmAA); // get available mousemove didderence ratio
+        let posX = 0,
+            mX = 0, // real mouse position
+            mX2 = 0; // modified mouse position
+        $rewardSlider.mousemove(function(e) {
+            mX = e.pageX - $(this).parent().offset().left - this.offsetLeft;
+            mX2 = Math.min(Math.max(0, mX - mPadd), mmAA) * mmAAr;
+        });
+        setInterval(function() {
+            posX += (mX2 - posX) / damp; // zeno's paradox equation "catching delay"
+            $rewardSlider.scrollLeft(posX * wDiff);
+        }, 10);
+    } else {
+        $('.reward__brands-slider').addClass('owl-carousel');
+        $('.reward__brands-slider').owlCarousel({
+            loop: false,
+            dots: false,
+            items: 11,
+            smartSpeed: 800,
+            margin: 30,
+            nav: false,
+            mouseDrag: true,
+            center: true,
+            loop: true,
+            responsive: {
+                0: {
+                    loop: true,
+                    items: 3,
+                    center: true,
+                },
+                600: {
+                    items: 5,
+                    center: false,
+                },
+                1200: {
+                    items: 8,
+                },
+                1300: {
+                    items: 11,
+                },
             },
-            600   : {
-                items: 5,
-                center: false,
-            },
-            1200 : {
-                items: 8,
-            },
-            1300 : {
-                items: 11,
-            },
-        },
-    });
+        });
+    }
 });
 $(() => {
-    $('.news__slider').owlCarousel({
-        loop: false,
-        dots: false,
-        items: 3,
-        smartSpeed: 800,
-        margin: 30,
-        nav: false,
-        mouseDrag: true,
-        responsive : {
-            0   : {
-                loop: true,
-                autoHeight:true,
-                items: 1,
-            },
-            600   : {
-                items: 2,
-                autoHeight: true,
-                margin: 15,
-            },
-            1200  : {
-                items: 3,
-                margin: 20,
-            },
-            1531 : {
-                autoHeight: false,
-                margin: 30,
-            }
-        },
-    });
+    if ( $(window).width() > 1200 ) {
 
-    $('.js-news-prev').on('click', function productsPrevSlide () {
-        $('.news__slider').trigger('prev.owl.carousel');
-    });
-    $('.js-news-next').on('click', function productsNextSlide () {
-        $('.news__slider').trigger('next.owl.carousel');
-    });
+        const $newsSlider = $('.news__slider'),
+            galW = $newsSlider.outerWidth(true),
+            galSW = $newsSlider[0].scrollWidth,
+            wDiff = (galSW / galW) - 1, // widths difference ratio
+            mPadd = 60, // mousemove Padding
+            damp = 20, // Mmusemove response softness
+            mmAA = galW - (mPadd * 2), // the mousemove available area
+            mmAAr = (galW / mmAA); // get available mousemove didderence ratio
+        let posX = 0,
+            mX = 0, // real mouse position
+            mX2 = 0; // modified mouse position
+        $newsSlider.mousemove(function(e) {
+            mX = e.pageX - $(this).parent().offset().left - this.offsetLeft;
+            mX2 = Math.min(Math.max(0, mX - mPadd), mmAA) * mmAAr;
+        });
+        setInterval(function() {
+            posX += (mX2 - posX) / damp; // zeno's paradox equation "catching delay"
+            $newsSlider.scrollLeft(posX * wDiff);
+        }, 10);
+    } else {
+        $('.news__slider').addClass('owl-carousel');
+        $('.news__slider').owlCarousel({
+            loop: false,
+            dots: false,
+            items: 3,
+            smartSpeed: 800,
+            margin: 30,
+            nav: false,
+            mouseDrag: true,
+            responsive: {
+                0: {
+                    loop: true,
+                    autoHeight: true,
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                    autoHeight: true,
+                    margin: 15,
+                },
+                1200: {
+                    items: 3,
+                    margin: 20,
+                },
+                1531: {
+                    autoHeight: false,
+                    margin: 30,
+                }
+            },
+        });
 
-
+        $('.js-news-prev').on('click', function productsPrevSlide() {
+            $('.news__slider').trigger('prev.owl.carousel');
+        });
+        $('.js-news-next').on('click', function productsNextSlide() {
+            $('.news__slider').trigger('next.owl.carousel');
+        });
+    }
 });
 $(() => {
     $('[data-fancybox]').fancybox({

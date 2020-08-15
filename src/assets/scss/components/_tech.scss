@@ -13,8 +13,12 @@
       max-width: 100%;
       height: auto;
       @include ease;
+      @include r(1531) {
+        max-width: 110px;
+      }
       @include r(600) {
         max-height: 40px;
+        max-width: unset;
       }
     }
     &-arrow {

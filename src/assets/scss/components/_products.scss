@@ -2,11 +2,11 @@
   padding: 150px 0;
   background-color: #fff;
   &__in {
-    padding: 0 150px 0 64px;
-    overflow: hidden;
-    @include r(1531) {
+    position: relative;
+    @include r(1200) {
       padding-left: 20px;
       padding-right: 20px;
+      overflow: hidden;
     }
     @include r(600) {
       padding: 0 10px;
@@ -14,9 +14,23 @@
   }
   @include r(1200) {
     padding: 100px 0;
+    overflow: hidden;
   }
   @include r(600) {
     padding: 50px 0;
+  }
+  &__slider {
+    @include rmin(1200) {
+      position: relative;
+      padding: 0 120px 0 70px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: hidden;
+    }
+    @include rmin(1531) {
+      padding: 0 120px;
+    }
   }
   .owl-stage-outer {
     overflow: visible;
@@ -31,6 +45,9 @@
   }
 }
 .product {
+  @include rmin(1200) {
+    min-width: 570px;
+  }
   &__title {
     min-height: 195px;
     @include r(1531) {
