@@ -182,7 +182,7 @@
       }
       &-title {
         line-height: 1.3;
-        @include r(1531) {
+        @include r(1600) {
           font-size: $h3-medium;
         }
         @include r(1200) {
@@ -202,7 +202,7 @@
         }
         span:nth-child(1) {
           font-size: $p1;
-          @include r(1531) {
+          @include r(1600) {
             font-size: $p1-medium;
           }
           @include r(1200) {

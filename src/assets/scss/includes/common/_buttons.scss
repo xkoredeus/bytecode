@@ -11,7 +11,7 @@
   background-color: $orange;
   text-transform: uppercase;
   @include ease;
-  @include r(1531) {
+  @include r(1600) {
     font-size: $h4-medium;
   }
   @include r(600) {
@@ -241,7 +241,7 @@
     z-index: 1;
     padding: 0 23px;
     display: inline-block;
-    @include r(1531) {
+    @include r(1600) {
       font-size: $h1-medium;
       padding: 0 18px;
     }
@@ -263,7 +263,7 @@
         padding: 7.1px 0;
         background-color: $tr;
         @include ease;
-        @include r(1531) {
+        @include r(1600) {
           padding: 6.2px 0;
         }
         @include r(1200) {
@@ -286,7 +286,7 @@
     top: calc(100% + 22.5px);
     opacity: 0;
     visibility: hidden;
-    @include r(1531) {
+    @include r(1600) {
       top: calc(100% + 17.5px);
     }
     @include r(1200) {

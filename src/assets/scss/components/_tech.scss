@@ -13,7 +13,7 @@
       max-width: 100%;
       height: auto;
       @include ease;
-      @include r(1531) {
+      @include r(1600) {
         max-width: 110px;
       }
       @include r(600) {

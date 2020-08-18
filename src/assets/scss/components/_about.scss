@@ -4,7 +4,7 @@
   background-color: $dark;
   display: grid;
   grid-template-columns: 5fr 1131px 1fr;
-  @include r(1531) {
+  @include r(1600) {
     grid-template-columns: 5fr 911px 1fr;
   }
   @include r(1200) {
@@ -80,7 +80,7 @@
       background: linear-gradient(180deg, #FF4013 40%, $red 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      @include r(1531) {
+      @include r(1600) {
         font-size: 350px;
       }
       @include r(1200) {
@@ -113,7 +113,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        @include r(1531) {
+        @include r(1600) {
           padding-right: 200px;
         }
         .about__test-num {
@@ -125,7 +125,7 @@
         align-items: flex-end;
         padding-bottom: 50px;
         padding-left: 233px;
-        @include r(1531) {
+        @include r(1600) {
           min-height: 200px;
           padding-bottom: 0;
           padding-left: 173px;
@@ -139,7 +139,7 @@
         min-height: 510px;
         display: flex;
         align-items: center;
-        @include r(1531) {
+        @include r(1600) {
           min-height: 400px;
           padding-left: 80px;
           padding-top: 140px;
@@ -149,7 +149,7 @@
           bottom: -40px;
           span:last-child {
             margin-left: -60px;
-            @include r(1531) {
+            @include r(1600) {
               margin-left: -54px;
             }
             @include r(1200) {
@@ -163,7 +163,7 @@
         display: flex;
         padding-left: 410px;
         padding-top: 100px;
-        @include r(1531) {
+        @include r(1600) {
           min-height: 360px;
         }
         .about__test-num {
@@ -171,7 +171,7 @@
           bottom: -80px;
           span:nth-child(2) {
             margin-left: -75px;
-            @include r(1531) {
+            @include r(1600) {
               margin-left: -54px;
             }
             @include r(1200) {
@@ -180,7 +180,7 @@
           }
           span:last-child {
             margin-left: -60px;
-            @include r(1531) {
+            @include r(1600) {
               margin-left: -54px;
             }
             @include r(1200) {

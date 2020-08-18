@@ -23,7 +23,7 @@
     background: linear-gradient(180deg, #FF4013 40%, $red 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @include r(1531) {
+    @include r(1600) {
       font-size: 140px;
     }
     @include r(1200) {
@@ -45,7 +45,7 @@
     @include cv;
     top: 0;
     min-width: 900px;
-    @include r(1531) {
+    @include r(1600) {
       height: 300px;
       object-fit: cover;
     }

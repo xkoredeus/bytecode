@@ -28,7 +28,7 @@
       align-items: flex-start;
       overflow: hidden;
     }
-    @include rmin(1531) {
+    @include rmin(1600) {
       padding: 0 120px;
     }
   }
@@ -50,7 +50,7 @@
   }
   &__title {
     min-height: 195px;
-    @include r(1531) {
+    @include r(1600) {
       min-height: 155px;
     }
     @include r(1200) {

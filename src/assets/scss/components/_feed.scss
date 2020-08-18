@@ -7,7 +7,7 @@
   }
   &__textarea {
     min-height: 257px;
-    @include r(1531) {
+    @include r(1600) {
       min-height: 216px;
     }
     @include r(1200) {

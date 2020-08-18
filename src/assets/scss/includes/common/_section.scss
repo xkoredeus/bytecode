@@ -21,7 +21,7 @@
     font-size: $h1;
     font-family: $mbold;
     line-height: 1.1;
-    @include r(1531) {
+    @include r(1600) {
       font-size: $h1-medium;
     }
     @include r(1200) {
@@ -32,7 +32,7 @@
     font-family: $mbold;
     font-size: $h2;
     line-height: 1.1;
-    @include r(1531) {
+    @include r(1600) {
       font-size: $h2-medium;
     }
     @include r(1200) {
@@ -43,7 +43,7 @@
     font-family: $mbold;
     font-size: $h3;
     line-height: 1.2;
-    @include r(1531) {
+    @include r(1600) {
       font-size: $h3-medium;
     }
     @include r(1200) {
@@ -54,7 +54,7 @@
     position: relative;
     font-family: $mlig;
     font-size: $p1;
-    @include r(1531) {
+    @include r(1600) {
       font-size: $p1-medium;
     }
     @include r(1200) {

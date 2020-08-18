@@ -44,7 +44,7 @@
       &__title {
         font-size: 37px;
         padding: 0 17px;
-        @include r(1531) {
+        @include r(1600) {
           font-size: $h2-medium;
           padding: 0 13px;
         }
@@ -56,7 +56,7 @@
         &-bg span {
           color: $gray2;
           padding: 5.5px 0;
-          @include r(1531) {
+          @include r(1600) {
             padding: 4.2px 0;
           }
           @include r(1200) {
@@ -67,7 +67,7 @@
 
       &__button {
         top: calc(100% + 16.5px);
-        @include r(1531) {
+        @include r(1600) {
           top: calc(100% + 12.5px);
         }
         @include r(1200) {

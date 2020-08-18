@@ -70,7 +70,7 @@
     &-icon {
       fill: #fff;
       @include ease;
-      @include r(1531) {
+      @include r(1600) {
         width: 100px;
         height: 21px;
       }
@@ -84,7 +84,7 @@
       margin-left: 40px;
       max-width: 140px;
       @include ease;
-      @include r(1531) {
+      @include r(1600) {
         font-size: 10px;
         margin-left: 20px;
       }
@@ -108,7 +108,7 @@
         left: -20px;
         top: 50%;
         transform: translateY(-50%);
-        @include r(1531) {
+        @include r(1600) {
           left: -10px;
           height: 24px;
         }
@@ -195,7 +195,7 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
-    @include r(1531) {
+    @include r(1600) {
       font-size: 14px;
       align-items: flex-start;
       &:nth-child(1) {
@@ -249,7 +249,7 @@
     &:hover {
       color: #fff !important;
     }
-    @include r(1531) {
+    @include r(1600) {
       font-size: 20px;
     }
     @include r(1200) {
@@ -338,7 +338,7 @@
     justify-content: space-between;
     flex-grow: 1;
     max-width: 1090px;
-    @include r(1531) {
+    @include r(1600) {
       max-width: 903px;
     }
     @include r(1200) {
@@ -356,7 +356,7 @@
       text-transform: uppercase;
       display: inline-block;
       padding: 8px 20px 8px 0;
-      @include r(1531) {
+      @include r(1600) {
         font-size: 15px;
       }
       @include r(1200) {
@@ -484,7 +484,7 @@
       font-family: $mbold;
       font-size: $h3;
       line-height: 1.1;
-      @include r(1531) {
+      @include r(1600) {
         font-size: $h3-medium;
       }
       @include r(1200) {
@@ -502,7 +502,7 @@
     flex-grow: 1;
     min-width: 467px;
     @include cv;
-    @include r(1531) {
+    @include r(1600) {
       min-width: 300px;
     }
     @include r(600) {
@@ -521,7 +521,7 @@
       font-family: $mbold;
       font-size: $h3;
       color: #fff;
-      @include r(1531) {
+      @include r(1600) {
         font-size: $h3-medium;
       }
       @include r(1200) {
@@ -751,6 +751,11 @@
   .header {
     &__top {
       background-color: $black;
+      //@include r(1600) {
+      //  .header__row {
+      //    padding-right: 50px;
+      //  }
+      //}
       @include r(1300) {
         .header__row {
           padding-right: 50px;

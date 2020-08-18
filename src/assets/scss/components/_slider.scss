@@ -2,7 +2,7 @@
   padding: 0 30px;
   overflow: hidden;
   position: relative;
-  @include r(1531) {
+  @include r(1600) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -16,7 +16,7 @@
     position: relative;
     color: #fff;
     background-color: $black;
-    @include r(1531) {
+    @include r(1600) {
       .section__title {
         font-size: 30px;
       }
@@ -75,7 +75,7 @@
       overflow: hidden;
     }
     &--1 {
-      @include r(1531) {
+      @include r(1600) {
         .slider__item-img {
           max-width: 350px;
           padding-left: 40px;
@@ -97,7 +97,7 @@
       .slider__item-overlay {
         background-color: $gray;
       }
-      @include r(1531) {
+      @include r(1600) {
         .slider__item-img-wrp {
           align-items: flex-end;
         }
@@ -122,7 +122,7 @@
         font-family: $mbold;
         font-size: $h3;
         @include cubic3;
-        @include r(1531) {
+        @include r(1600) {
           font-size: $h3-medium;
         }
         @include r(1200) {
@@ -147,7 +147,7 @@
       &-wrp {
         font-family: $mlig;
         margin-bottom: 40px;
-        @include r(1531) {
+        @include r(1600) {
           font-size: 30px;
         }
         @include r(1200) {
@@ -168,7 +168,7 @@
       @include ease;
       width: auto !important;
       max-height: 890px;
-      @include r(1531) {
+      @include r(1600) {
         max-width: 550px;
       }
       @include r(1340) {
@@ -188,7 +188,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        @include r(1531) {
+        @include r(1600) {
           justify-content: flex-start;
           align-items: center;
         }
