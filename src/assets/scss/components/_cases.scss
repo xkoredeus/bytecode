@@ -46,22 +46,21 @@
         font-size: $p1;
         padding: 0 20px;
         &-bg {
-          outline-width: .6em;
+          box-shadow: 0 0 0 15px $tr;
           span {
             color: #fff;
-            padding: 3.5px 0;
           }
         }
       }
       &__button {
         left: 5px;
-        top: calc(100% + 14px);
+        top: calc(100% + 10.5px);
       }
       &:hover {
         .link-arrow {
           &__title {
             &-bg {
-              outline-width: .6em;
+              box-shadow: 0 0 0 15px $orange;
             }
           }
         }
@@ -69,74 +68,3 @@
     }
   }
 }
-//.cases {
-//  background-color: #fff;
-//  &__item {
-//    position: relative;
-//    min-height: 710px;
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: space-between;
-//    align-items: flex-start;
-//    overflow: hidden;
-//    @include cv;
-//    padding: 40px;
-//    &::before {
-//      @include ovl;
-//      background-color: #fff;
-//      opacity: .8;
-//      @include ease;
-//    }
-//    & > * {
-//      position: relative;
-//    }
-//    &-logo {
-//      font-family: $mbold;
-//      font-size: $h1;
-//      @include r(1600) {
-//        font-size: $h1-medium;
-//      }
-//      @include r(1200) {
-//        font-size: $h1-small;
-//      }
-//    }
-//    &-link {
-//      font-family: $mbold;
-//      font-size: $h3;
-//      @include r(1600) {
-//        font-size: $h3-medium;
-//      }
-//      @include r(1200) {
-//        font-size: $h3-small;
-//      }
-//    }
-//    &-arrow {
-//      width: 10px;
-//      height: 30px;
-//      overflow: hidden;
-//      display: inline-block;
-//      @include ease;
-//      @include r(1600) {
-//        height: 20px;
-//      }
-//      svg {
-//        stroke: $dark;
-//        transform: translateX(-31px);
-//        @include ease;
-//      }
-//    }
-//    &:hover {
-//      color: #fff;
-//      &::before {
-//        background-color: $dark;
-//      }
-//      .cases__item-arrow {
-//        width: 41px;
-//      }
-//      .cases__item-link svg {
-//        stroke: #fff;
-//        transform: translateX(0);
-//      }
-//    }
-//  }
-//}

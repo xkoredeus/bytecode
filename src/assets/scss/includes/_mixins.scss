@@ -19,6 +19,9 @@
 @mixin ease {
   transition: all .43s ease-in-out;
 }
+@mixin ease-fast {
+  transition: all .20s ease-in-out;
+}
 @mixin cubic {
   transition: all .3s cubic-bezier(0.550, 0.055, 0.675, 0.190);
 }

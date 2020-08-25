@@ -40,7 +40,7 @@
       }
     }
     .link-arrow {
-      transform: translateX(-19px);
+      transform: translateX(-16px);
       &__title {
         font-size: 37px;
         padding: 0 17px;
@@ -55,10 +55,6 @@
 
         &-bg span {
           color: $gray2;
-          padding: 5.5px 0;
-          @include r(1600) {
-            padding: 4.2px 0;
-          }
           @include r(1200) {
             color: #fff;
           }
@@ -66,12 +62,8 @@
       }
 
       &__button {
-        top: calc(100% + 16.5px);
-        @include r(1600) {
-          top: calc(100% + 12.5px);
-        }
-        @include r(1200) {
-          top: calc(100% + 8.5px);
+        @include rmin(1200) {
+          left: -4.5px;
         }
       }
     }
