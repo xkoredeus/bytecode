@@ -79,6 +79,9 @@
       height: auto;
       @include ease;
       filter: grayscale(100%);
+      @include r(1200) {
+        width: auto !important;
+      }
       &:hover {
         filter: grayscale(0);
       }

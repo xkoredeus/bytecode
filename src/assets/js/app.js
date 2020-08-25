@@ -215,6 +215,10 @@ $(() => {
                     items: 5,
                     center: false,
                 },
+                800: {
+                    items: 7,
+                    center: false,
+                },
                 1200: {
                     items: 8,
                 },

@@ -78,7 +78,7 @@
 
     &-text {
       position: relative;
-      margin-top: 5px;
+      margin-top: 3px;
       @include ease;
       @include r(1600) {
         font-size: 10px;

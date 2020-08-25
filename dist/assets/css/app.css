@@ -10482,7 +10482,7 @@ a:hover {
 
 .header__logo-text {
   position: relative;
-  margin-top: 5px;
+  margin-top: 3px;
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
 }
@@ -12336,6 +12336,12 @@ a:hover {
   transition: all .43s ease-in-out;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+@media only screen and (max-width: 1200px) {
+  .reward__brands-image {
+    width: auto !important;
+  }
 }
 
 .reward__brands-image:hover {
