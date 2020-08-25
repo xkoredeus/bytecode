@@ -10455,9 +10455,10 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 1;
 }
 
@@ -10472,28 +10473,16 @@ a:hover {
 
 .header__logo-icon {
   fill: #fff;
+  color: #FF4013;
+  width: 157px;
+  height: 32px;
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
 }
 
-@media only screen and (max-width: 1600px) {
-  .header__logo-icon {
-    width: 100px;
-    height: 21px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .header__logo-icon {
-    width: 200px;
-    height: 42px;
-  }
-}
-
 .header__logo-text {
   position: relative;
-  margin-left: 40px;
-  max-width: 140px;
+  margin-top: 5px;
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
 }
@@ -10501,7 +10490,6 @@ a:hover {
 @media only screen and (max-width: 1600px) {
   .header__logo-text {
     font-size: 10px;
-    margin-left: 20px;
   }
 }
 
@@ -10513,43 +10501,7 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
   .header__logo-text {
-    max-width: unset;
-    margin-left: 0;
     margin-top: 20px;
-  }
-  .header__logo-text br {
-    display: none;
-  }
-}
-
-.header__logo-text::before {
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 43px;
-  background-color: #A7A8AF;
-  left: -20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media only screen and (max-width: 1600px) {
-  .header__logo-text::before {
-    left: -10px;
-    height: 24px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .header__logo-text::before {
-    width: 100%;
-    max-width: 200px;
-    height: 1px;
-    left: 50%;
-    top: -10px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
@@ -11207,7 +11159,9 @@ a:hover {
 }
 
 .header__wrp {
+  position: relative;
   min-height: 168px;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -11223,7 +11177,8 @@ a:hover {
 }
 
 .header__wrp--light .header__logo-icon {
-  fill: #34363C;
+  fill: #00151D;
+  color: #41505E;
 }
 
 .header__wrp--light .header__logo-text {
@@ -11304,7 +11259,7 @@ a:hover {
 }
 
 .header__wrp--white .header__logo-icon {
-  fill: #fff;
+  color: #96989c;
 }
 
 .header__wrp--white .header__logo-text {
@@ -11418,6 +11373,7 @@ a:hover {
 
 .sticky .header__wrp--light .header__logo-icon {
   fill: #fff;
+  color: #FF4013;
 }
 
 .sticky .header__wrp--light .header__logo-text {
@@ -11478,6 +11434,10 @@ a:hover {
 
 .sticky .header__wrp--light .header__button:hover::after {
   background-color: #fff;
+}
+
+.sticky .header__wrp--red .header__logo-icon {
+  color: #FF4013;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -11847,6 +11807,7 @@ a:hover {
 @media only screen and (max-width: 600px) {
   .slider__item-img {
     height: 250px;
+    width: 100% !important;
   }
 }
 
@@ -13094,6 +13055,12 @@ a:hover {
   height: 500px;
 }
 
+@media only screen and (max-width: 600px) {
+  .map {
+    height: 300px;
+  }
+}
+
 [class*="ymaps-2"][class*="-ground-pane"] {
   -webkit-filter: grayscale(100%) invert(1);
   filter: grayscale(100%) invert(1);
@@ -13140,6 +13107,12 @@ a:hover {
 @media only screen and (max-width: 1600px) {
   .footer__button {
     right: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer__button {
+    bottom: -20px;
   }
 }
 
@@ -13249,6 +13222,7 @@ a:hover {
 
 .footer__logo-icon {
   fill: #fff;
+  color: #FF4013;
 }
 
 .footer__logo-text {
@@ -13698,9 +13672,9 @@ a:hover {
 
 .case-profit__item-num {
   font-family: "MullerBold";
-  font-size: 180px;
+  font-size: 140px;
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -13711,7 +13685,7 @@ a:hover {
 }
 
 .case-profit__item-num span:not(:first-child) {
-  margin-left: -25px;
+  margin-left: -15px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -14251,6 +14225,12 @@ a:hover {
   background-position-x: 0;
 }
 
+@media only screen and (max-width: 1600px) {
+  .product-page__slider-top-item {
+    min-height: 300px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .product-page__slider-top-item {
     min-height: 260px;
@@ -14268,6 +14248,12 @@ a:hover {
   background-position-x: 0;
 }
 
+@media only screen and (max-width: 1600px) {
+  .product-page__slider-bot-item {
+    min-height: 180px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .product-page__slider-bot-item {
     min-height: 130px;
@@ -14282,7 +14268,13 @@ a:hover {
   margin-bottom: 35px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 1600px) {
+  .product-page__accordion:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .product-page__accordion:not(:last-child) .product-page__accordion-descr {
     border-bottom: 1px solid #D9DFEC;
   }
@@ -14299,12 +14291,17 @@ a:hover {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   .product-page__accordion-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.product-page__accordion-nav .button--square {
+  width: 60px;
+  height: 60px;
 }
 
 .product-page__accordion-list {
@@ -14344,7 +14341,7 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   .product-page__accordion-list {
     max-height: unset;
   }
@@ -14356,7 +14353,7 @@ a:hover {
   transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   .product-page__accordion-title {
     font-size: 25px;
     color: #FF4013;
@@ -14379,7 +14376,13 @@ a:hover {
   margin-top: 25px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 1600px) {
+  .product-page__accordion-descr {
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .product-page__accordion-descr {
     display: none;
   }

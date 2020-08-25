@@ -147,6 +147,9 @@
         min-height: 380px;
         @include cv;
         background-position-x: 0;
+        @include r(1600) {
+          min-height: 300px;
+        }
         @include r(600) {
           min-height: 260px;
         }
@@ -159,6 +162,9 @@
         @include ease;
         @include cv;
         background-position-x: 0;
+        @include r(1600) {
+          min-height: 180px;
+        }
         @include r(600) {
           min-height: 130px;
         }
@@ -170,8 +176,11 @@
     width: 100%;
     &:not(:last-child) {
       margin-bottom: 35px;
+      @include r(1600) {
+        margin-bottom: 25px;
+      }
       .product-page__accordion-descr {
-        @include rmin(600) {
+        @include rmin(1200) {
           border-bottom: 1px solid $gray2;
         }
       }
@@ -186,8 +195,12 @@
       right: 0;
       top: 0;
       display: none;
-      @include r(600) {
+      @include r(1200) {
         display: flex;
+      }
+      .button--square {
+        width: 60px;
+        height: 60px;
       }
     }
 
@@ -202,7 +215,7 @@
       @include rmin(1200) {
         padding-left: 45px;
       }
-      @include r(600) {
+      @include r(1200) {
         max-height: unset;
       }
     }
@@ -210,7 +223,7 @@
     &-title {
       cursor: pointer;
       @include cubic3;
-      @include r(600) {
+      @include r(1200) {
         font-size: 25px;
         color: $orange;
         padding-right: 100px;
@@ -225,7 +238,10 @@
 
     &-descr {
       margin-top: 25px;
-      @include rmin(600) {
+      @include r(1600) {
+        margin-top: 15px;
+      }
+      @include rmin(1200) {
         display: none;
       }
     }

@@ -62,64 +62,32 @@
     font-size: 13px;
     color: $gray;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     z-index: 1;
     @include r(600) {
       flex-direction: column;
     }
+
     &-icon {
       fill: #fff;
+      color: $orange;
+      width: 157px;
+      height: 32px;
       @include ease;
-      @include r(1600) {
-        width: 100px;
-        height: 21px;
-      }
-      @include r(1200) {
-        width: 200px;
-        height: 42px;
-      }
     }
+
     &-text {
       position: relative;
-      margin-left: 40px;
-      max-width: 140px;
+      margin-top: 5px;
       @include ease;
       @include r(1600) {
         font-size: 10px;
-        margin-left: 20px;
       }
       @include r(1300) {
         font-size: 13px;
       }
       @include r(600) {
-        max-width: unset;
-        margin-left: 0;
         margin-top: 20px;
-        br {
-          display: none;
-        }
-      }
-      &::before {
-        position: absolute;
-        content: '';
-        width: 1px;
-        height: 43px;
-        background-color: $gray;
-        left: -20px;
-        top: 50%;
-        transform: translateY(-50%);
-        @include r(1600) {
-          left: -10px;
-          height: 24px;
-        }
-        @include r(600) {
-          width: 100%;
-          max-width: 200px;
-          height: 1px;
-          left: 50%;
-          top: -10px;
-          transform: translateX(-50%);
-        }
       }
     }
     &:hover {
@@ -551,7 +519,9 @@
     @include ease;
   }
   &__wrp {
+    position: relative;
     min-height: 168px;
+    z-index: 3;
     @include r(1200) {
       min-height: auto;
     }
@@ -564,7 +534,8 @@
       .header {
         &__logo {
           &-icon {
-            fill: $dark;
+            fill: #00151D;
+            color: #41505E;
           }
           &-text {
             color: $dark;
@@ -649,7 +620,7 @@
       .header {
         &__logo {
           &-icon {
-            fill: #fff;
+            color: #96989c;
           }
           &-text {
             color: #fff;
@@ -751,11 +722,6 @@
   .header {
     &__top {
       background-color: $black;
-      //@include r(1600) {
-      //  .header__row {
-      //    padding-right: 50px;
-      //  }
-      //}
       @include r(1300) {
         .header__row {
           padding-right: 50px;
@@ -768,6 +734,7 @@
           &__logo {
             &-icon {
               fill: #fff;
+              color: $orange;
             }
             &-text {
               color: $gray2;
@@ -831,28 +798,21 @@
           }
         }
       }
-    }
-    //&__top {
-    //  visibility: hidden;
-    //  opacity: 0;
-    //}
-    &__top-in {
-      //.container {
-      //  left: 16px;
-      //  transform: translate(0, -50%);
-      //  opacity: 0;
-      //  visibility: visible;
-      //}
+      &--red {
+        .header {
+          &__logo {
+            &-icon {
+              color: $orange;
+            }
+          }
+        }
+      }
     }
     &__item:nth-child(2) {
       @include r(1300) {
         display: none;
       }
     }
-    //&__logo--fixed {
-    //  opacity: 1;
-    //  visibility: visible;
-    //}
     &__hmb {
       opacity: 1;
       visibility: visible;

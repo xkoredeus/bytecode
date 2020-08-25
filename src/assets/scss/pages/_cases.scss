@@ -51,16 +51,16 @@
 
       &-num {
         font-family: $mbold;
-        font-size: 180px;
+        font-size: 140px;
         line-height: 1;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         @include r(1200) {
           font-size: 100px;
           margin-bottom: 0;
         }
 
         span:not(:first-child) {
-          margin-left: -25px;
+          margin-left: -15px;
           @include r(1200) {
             margin-left: -10px;
           }

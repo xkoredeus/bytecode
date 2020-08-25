@@ -357,7 +357,7 @@ $(() => {
         });
 
         $('.header__dropdown').hide();
-        $('.header__nav-link .header__nav-link-arrow').on('click', function (e) {
+        $('.header__nav-link').on('click', function (e) {
             e.preventDefault();
             $(this).parents('.header__nav-link-wrp').toggleClass('active').find('.header__dropdown').slideToggle();
         })
@@ -441,7 +441,8 @@ $(() => {
                     dots: false,
                     smartSpeed: 1200,
                     autoplay: false,
-                    responsiveClass: true
+                    responsiveClass: true,
+                    mouseDrag: false,
                 })
                 .on("changed.owl.carousel", function(e) {
                     if (!flag) {
@@ -502,7 +503,7 @@ $(() => {
     });
 
     // accordion tabs
-    if ( $(window).width() > 600 ) {
+    if ( $(window).width() > 1200 ) {
         $('.product-page__accordion:first-child').addClass('active').find('.product-page__accordion-descr').show();
         $('.product-page__slider-item:not(:first-child)').hide();
         $('.product-page__slider-item:first-child').find('.product-page__slider-loader').hide();
@@ -566,9 +567,6 @@ $(() => {
             $('.product-page__accordion')
                 .hide()
                 .removeClass('active');
-
-            console.log('accordionLength', accordionLength);
-            console.log('prevIndex', prevIndex);
 
             if (prevIndex === -1) {
                 $('.product-page__accordion').eq(accordionLength).fadeIn().addClass('active');
