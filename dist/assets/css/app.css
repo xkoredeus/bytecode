@@ -9575,7 +9575,7 @@ input[type="number"] {
 
 .link-arrow__button {
   position: absolute;
-  top: calc(100% + 11.5px);
+  top: calc(100% + 11px);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all .20s ease-in-out;
@@ -9593,7 +9593,7 @@ input[type="number"] {
   .link-arrow__button {
     opacity: 1;
     visibility: visible;
-    top: calc(100% + 7.5px);
+    top: calc(100% + 7px);
   }
 }
 
@@ -9603,7 +9603,7 @@ input[type="number"] {
   font-size: 20px;
   color: #1E2127 !important;
   left: 100px;
-  top: calc(100% + 16.5px);
+  top: calc(100% + 16px);
   height: 100px;
   width: 270px;
   padding-left: 25px;
@@ -9624,7 +9624,7 @@ input[type="number"] {
 @media only screen and (max-width: 600px) {
   .link-arrow__button-text {
     left: 60px;
-    top: calc(100% + 5.5px);
+    top: calc(100% + 5px);
     height: 70px;
     width: 260px;
     opacity: 1;
