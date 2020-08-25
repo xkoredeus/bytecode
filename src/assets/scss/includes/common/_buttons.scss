@@ -252,8 +252,12 @@
     &-bg {
       position: relative;
       outline: $tr solid 0.46em;
-      -moz-outline-offset: -0.04em;
+      outline-offset: 0;
       @include ease;
+      //@include r(1200) {
+      //  box-shadow: 0 0 0 18px $tr;
+      //  outline: none;
+      //}
       @include r(600) {
         outline: $orange solid 0.46em;
       }

@@ -9543,7 +9543,7 @@ input[type="number"] {
 .link-arrow__title-bg {
   position: relative;
   outline: transparent solid 0.46em;
-  -moz-outline-offset: -0.04em;
+  outline-offset: 0;
   -webkit-transition: all .43s ease-in-out;
   transition: all .43s ease-in-out;
 }
