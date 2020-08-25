@@ -10480,6 +10480,13 @@ a:hover {
   transition: all .43s ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+  .header__logo-icon {
+    width: 200px;
+    height: 40px;
+  }
+}
+
 .header__logo-text {
   position: relative;
   margin-top: 3px;
@@ -10501,7 +10508,7 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
   .header__logo-text {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 

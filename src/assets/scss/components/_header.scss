@@ -74,6 +74,10 @@
       width: 157px;
       height: 32px;
       @include ease;
+      @include r(600) {
+        width: 200px;
+        height: 40px;
+      }
     }
 
     &-text {
@@ -87,7 +91,7 @@
         font-size: 13px;
       }
       @include r(600) {
-        margin-top: 20px;
+        margin-top: 10px;
       }
     }
     &:hover {
