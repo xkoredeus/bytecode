@@ -118,8 +118,13 @@ $(() => {
     });
 });
 
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
 $(() => {
-    if ( $(window).width() > 1200 ) {
+    if ( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+        console.log('not mobile products');
         const productSliderLength = $('.products__slider').children('.product').length;
         $('.product__count').text('0' + productSliderLength);
 
@@ -143,6 +148,7 @@ $(() => {
             $productsSlider.scrollLeft(posX * wDiff);
         }, 10);
     } else {
+        console.log('mobile products');
         $('.products__slider').addClass('owl-carousel');
 
         $('.products__slider').owlCarousel({
@@ -164,10 +170,11 @@ $(() => {
                     margin: 15,
                 },
                 1200  : {
-                    items: 3,
+                    items: 2,
                     margin: 20,
                 },
                 1531 : {
+                    items: 2,
                     autoHeight: false,
                     margin: 30,
                 }
@@ -202,7 +209,8 @@ $(() => {
     }
 });
 $(() => {
-    if ( $(window).width() > 1200 ) {
+    if ( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+        console.log('not mobile reward');
 
         const $rewardSlider = $('.reward__brands-slider'),
             galW = $rewardSlider.outerWidth(true),
@@ -224,6 +232,7 @@ $(() => {
             $rewardSlider.scrollLeft(posX * wDiff);
         }, 10);
     } else {
+        console.log('mobile reward');
         $('.reward__brands-slider').addClass('owl-carousel');
         $('.reward__brands-slider').owlCarousel({
             loop: false,
@@ -260,7 +269,8 @@ $(() => {
     }
 });
 $(() => {
-    if ( $(window).width() > 1200 ) {
+    if ( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+        console.log('not mobile news');
 
         const $newsSlider = $('.news__slider'),
             galW = $newsSlider.outerWidth(true),
@@ -282,6 +292,7 @@ $(() => {
             $newsSlider.scrollLeft(posX * wDiff);
         }, 10);
     } else {
+        console.log('mobile news');
         $('.news__slider').addClass('owl-carousel');
         $('.news__slider').owlCarousel({
             loop: false,
@@ -307,6 +318,7 @@ $(() => {
                     margin: 20,
                 },
                 1531: {
+                    items: 3,
                     autoHeight: false,
                     margin: 30,
                 }

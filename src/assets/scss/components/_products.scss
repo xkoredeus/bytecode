@@ -44,6 +44,13 @@
     }
   }
 }
+
+.owl-carousel {
+  .product {
+    opacity: .7;
+  }
+}
+
 .product {
   @include rmin(1200) {
     min-width: 570px;

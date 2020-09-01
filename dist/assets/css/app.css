@@ -9542,10 +9542,17 @@ input[type="number"] {
 
 .link-arrow__title-bg {
   position: relative;
-  -webkit-box-shadow: 0 0 0 18px transparent;
-          box-shadow: 0 0 0 18px transparent;
+  -webkit-box-shadow: 0 0 0 23px transparent;
+          box-shadow: 0 0 0 23px transparent;
   -webkit-transition: all .20s ease-in-out;
   transition: all .20s ease-in-out;
+}
+
+@media only screen and (max-width: 1600px) {
+  .link-arrow__title-bg {
+    -webkit-box-shadow: 0 0 0 18px transparent;
+            box-shadow: 0 0 0 18px transparent;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -9635,8 +9642,15 @@ input[type="number"] {
 }
 
 .link-arrow:hover .link-arrow__title-bg {
-  -webkit-box-shadow: 0 0 0 18px #FF4013;
-          box-shadow: 0 0 0 18px #FF4013;
+  -webkit-box-shadow: 0 0 0 23px #FF4013;
+          box-shadow: 0 0 0 23px #FF4013;
+}
+
+@media only screen and (max-width: 1600px) {
+  .link-arrow:hover .link-arrow__title-bg {
+    -webkit-box-shadow: 0 0 0 18px #FF4013;
+            box-shadow: 0 0 0 18px #FF4013;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -11179,8 +11193,8 @@ a:hover {
 }
 
 .header__wrp--light .header__logo-icon {
-  fill: #00151D;
-  color: #41505E;
+  fill: #41505E;
+  color: #00151D;
 }
 
 .header__wrp--light .header__logo-text {
@@ -12052,6 +12066,10 @@ a:hover {
 
 .products__count-wrp span:nth-child(1) {
   font-size: 22px;
+}
+
+.owl-carousel .product {
+  opacity: .7;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -14206,27 +14224,6 @@ a:hover {
 
 .product-page__slider-top {
   margin-bottom: 30px;
-}
-
-.product-page__slider-top-item {
-  width: 100%;
-  min-height: 380px;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: 0;
-}
-
-@media only screen and (max-width: 1600px) {
-  .product-page__slider-top-item {
-    min-height: 300px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .product-page__slider-top-item {
-    min-height: 260px;
-  }
 }
 
 .product-page__slider-bot-item {

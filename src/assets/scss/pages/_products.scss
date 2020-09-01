@@ -126,6 +126,7 @@
     }
     &-item {
       position: relative;
+
       .product-page__slider-nav {
         .button--square {
           position: absolute;
@@ -142,18 +143,6 @@
     }
     &-top {
       margin-bottom: 30px;
-      &-item {
-        width: 100%;
-        min-height: 380px;
-        @include cv;
-        background-position-x: 0;
-        @include r(1600) {
-          min-height: 300px;
-        }
-        @include r(600) {
-          min-height: 260px;
-        }
-      }
     }
     &-bot {
       &-item {

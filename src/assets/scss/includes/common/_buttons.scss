@@ -251,8 +251,11 @@
     }
     &-bg {
       position: relative;
-      box-shadow: 0 0 0 18px $tr;
+      box-shadow: 0 0 0 23px $tr;
       @include ease-fast;
+      @include r(1600) {
+        box-shadow: 0 0 0 18px $tr;
+      }
       @include r(600) {
         box-shadow: 0 0 0 13px $orange;
       }
@@ -317,7 +320,10 @@
     .link-arrow {
       &__title {
         &-bg {
-          box-shadow: 0 0 0 18px $orange;
+          box-shadow: 0 0 0 23px $orange;
+          @include r(1600) {
+            box-shadow: 0 0 0 18px $orange;
+          }
           @include r(1200) {
             box-shadow: 0 0 0 13px $orange;
           }
