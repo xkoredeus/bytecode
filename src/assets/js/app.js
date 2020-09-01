@@ -94,7 +94,7 @@ function isMobileDevice() {
 
 $(() => {
     if ( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-        console.log('not mobile products');
+
         const productSliderLength = $('.products__slider').children('.product').length;
         $('.product__count').text('0' + productSliderLength);
 
@@ -118,7 +118,7 @@ $(() => {
             $productsSlider.scrollLeft(posX * wDiff);
         }, 10);
     } else {
-        console.log('mobile products');
+
         $('.products__slider').addClass('owl-carousel');
 
         $('.products__slider').owlCarousel({
@@ -180,7 +180,7 @@ $(() => {
 });
 $(() => {
     if ( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-        console.log('not mobile reward');
+
 
         const $rewardSlider = $('.reward__brands-slider'),
             galW = $rewardSlider.outerWidth(true),
@@ -202,7 +202,7 @@ $(() => {
             $rewardSlider.scrollLeft(posX * wDiff);
         }, 10);
     } else {
-        console.log('mobile reward');
+
         $('.reward__brands-slider').addClass('owl-carousel');
         $('.reward__brands-slider').owlCarousel({
             loop: false,
@@ -240,7 +240,7 @@ $(() => {
 });
 $(() => {
     if ( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-        console.log('not mobile news');
+
 
         const $newsSlider = $('.news__slider'),
             galW = $newsSlider.outerWidth(true),
@@ -262,7 +262,7 @@ $(() => {
             $newsSlider.scrollLeft(posX * wDiff);
         }, 10);
     } else {
-        console.log('mobile news');
+
         $('.news__slider').addClass('owl-carousel');
         $('.news__slider').owlCarousel({
             loop: false,
