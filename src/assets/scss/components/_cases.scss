@@ -47,6 +47,10 @@
         padding: 0 20px;
         &-bg {
           box-shadow: 0 0 0 15px $tr;
+
+          @include r(600) {
+            box-shadow: 0 0 0 14px $orange;
+          }
           span {
             color: #fff;
           }
@@ -55,6 +59,10 @@
       &__button {
         left: 5px;
         top: calc(100% + 10.5px);
+
+        @include r(600) {
+          top: calc(100% + 9px);
+        }
       }
       &:hover {
         .link-arrow {

@@ -12452,6 +12452,13 @@ a:hover {
           box-shadow: 0 0 0 15px transparent;
 }
 
+@media only screen and (max-width: 600px) {
+  .cases__item .link-arrow__title-bg {
+    -webkit-box-shadow: 0 0 0 14px #FF4013;
+            box-shadow: 0 0 0 14px #FF4013;
+  }
+}
+
 .cases__item .link-arrow__title-bg span {
   color: #fff;
 }
@@ -12459,6 +12466,12 @@ a:hover {
 .cases__item .link-arrow__button {
   left: 5px;
   top: calc(100% + 10.5px);
+}
+
+@media only screen and (max-width: 600px) {
+  .cases__item .link-arrow__button {
+    top: calc(100% + 9px);
+  }
 }
 
 .cases__item .link-arrow:hover .link-arrow__title-bg {
